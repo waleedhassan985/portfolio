@@ -183,8 +183,6 @@
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
             // Get form fields
             const name = this.querySelector('#name');
             const email = this.querySelector('#email');
@@ -223,11 +221,11 @@
                 isValid = false;
             }
             
-            if (isValid) {
-                // Form is valid, allow Netlify to handle submission
-                // Netlify will redirect to the action URL or show success page
-                contactForm.submit();
+            // Only prevent submission if validation fails
+            if (!isValid) {
+                e.preventDefault();
             }
+            // If valid, let the form submit naturally to Netlify
         });
         
         function showError(field, message) {
