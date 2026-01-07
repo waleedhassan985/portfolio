@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad1)"/>
+  
+  <!-- Main Title -->
+  <text x="600" y="250" style="font-family: Arial, sans-serif; font-size: 56px; fill: #FFFFFF; font-weight: bold; text-anchor: middle;">Conversational RAG</text>
+  <text x="600" y="310" style="font-family: Arial, sans-serif; font-size: 36px; fill: #FFFFFF; text-anchor: middle;">PDF Q&amp;A Chatbot</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="370" style="font-family: Arial, sans-serif; font-size: 20px; fill: #FFFFFF; opacity: 0.9; text-anchor: middle;">Upload PDFs and chat with their content using AI</text>
+  
+  <!-- PDF Icon (Left) -->
+  <g transform="translate(200, 100)">
+    <rect x="0" y="0" width="80" height="100" fill="#FFFFFF" rx="6" opacity="0.95"/>
+    <polygon points="80,0 80,25 55,0" fill="#E5E7EB"/>
+    <rect x="10" y="40" width="60" height="6" fill="#EF4444" rx="3"/>
+    <rect x="10" y="52" width="45" height="4" fill="#9CA3AF" rx="2"/>
+    <rect x="10" y="60" width="55" height="4" fill="#9CA3AF" rx="2"/>
+    <rect x="10" y="68" width="40" height="4" fill="#9CA3AF" rx="2"/>
+    <text x="40" y="92" style="font-family: Arial, sans-serif; font-size: 16px; fill: #EF4444; font-weight: bold; text-anchor: middle;">PDF</text>
+  </g>
+  
+  <!-- Arrow -->
+  <line x1="310" y1="150" x2="390" y2="150" stroke="#FFFFFF" stroke-width="3"/>
+  <polygon points="390,145 400,150 390,155" fill="#FFFFFF"/>
+  
+  <!-- AI Brain Circle -->
+  <circle cx="460" cy="150" r="35" fill="#10B981"/>
+  <text x="460" y="162" style="font-family: Arial, sans-serif; font-size: 28px; fill: #FFFFFF; font-weight: bold; text-anchor: middle;">AI</text>
+  
+  <!-- Arrow -->
+  <line x1="510" y1="150" x2="590" y2="150" stroke="#FFFFFF" stroke-width="3"/>
+  <polygon points="590,145 600,150 590,155" fill="#FFFFFF"/>
+  
+  <!-- Chat Bubble (Right) -->
+  <g transform="translate(620, 100)">
+    <rect x="0" y="10" width="100" height="90" fill="#FFFFFF" rx="8" opacity="0.95"/>
+    <rect x="10" y="25" width="60" height="6" fill="#667eea" rx="3"/>
+    <rect x="10" y="36" width="80" height="5" fill="#9CA3AF" rx="2"/>
+    <rect x="10" y="45" width="75" height="5" fill="#9CA3AF" rx="2"/>
+    <rect x="10" y="54" width="70" height="5" fill="#9CA3AF" rx="2"/>
+    <rect x="15" y="68" width="75" height="24" fill="#10B981" rx="4"/>
+    <text x="52" y="84" style="font-family: Arial, sans-serif; font-size: 12px; fill: #FFFFFF; font-weight: bold; text-anchor: middle;">Answer</text>
+  </g>
+  
+  <!-- Tech Stack Badges -->
+  <rect x="280" y="440" width="90" height="30" fill="#FFFFFF" rx="15" opacity="0.25"/>
+  <text x="325" y="461" style="font-family: Arial, sans-serif; font-size: 14px; fill: #FFFFFF; font-weight: bold; text-anchor: middle;">Python</text>
+  
+  <rect x="385" y="440" width="110" height="30" fill="#FFFFFF" rx="15" opacity="0.25"/>
+  <text x="440" y="461" style="font-family: Arial, sans-serif; font-size: 14px; fill: #FFFFFF; font-weight: bold; text-anchor: middle;">LangChain</text>
+  
+  <rect x="510" y="440" width="70" height="30" fill="#FFFFFF" rx="15" opacity="0.25"/>
+  <text x="545" y="461" style="font-family: Arial, sans-serif; font-size: 14px; fill: #FFFFFF; font-weight: bold; text-anchor: middle;">RAG</text>
+  
+  <rect x="595" y="440" width="100" height="30" fill="#FFFFFF" rx="15" opacity="0.25"/>
+  <text x="645" y="461" style="font-family: Arial, sans-serif; font-size: 14px; fill: #FFFFFF; font-weight: bold; text-anchor: middle;">Streamlit</text>
+  
+  <rect x="710" y="440" width="100" height="30" fill="#FFFFFF" rx="15" opacity="0.25"/>
+  <text x="760" y="461" style="font-family: Arial, sans-serif; font-size: 14px; fill: #FFFFFF; font-weight: bold; text-anchor: middle;">Groq API</text>
+  
+  <!-- Feature Cards -->
+  <rect x="850" y="120" width="130" height="70" fill="#FFFFFF" rx="8" opacity="0.2"/>
+  <text x="915" y="150" style="font-family: Arial, sans-serif; font-size: 24px; fill: #FFFFFF; font-weight: bold; text-anchor: middle;">50MB</text>
+  <text x="915" y="172" style="font-family: Arial, sans-serif; font-size: 13px; fill: #FFFFFF; text-anchor: middle;">Max PDF Size</text>
+  
+  <rect x="850" y="210" width="130" height="70" fill="#FFFFFF" rx="8" opacity="0.2"/>
+  <text x="915" y="240" style="font-family: Arial, sans-serif; font-size: 24px; fill: #FFFFFF; font-weight: bold; text-anchor: middle;">Session</text>
+  <text x="915" y="262" style="font-family: Arial, sans-serif; font-size: 13px; fill: #FFFFFF; text-anchor: middle;">Memory</text>
+  
+  <rect x="850" y="300" width="130" height="70" fill="#FFFFFF" rx="8" opacity="0.2"/>
+  <text x="915" y="330" style="font-family: Arial, sans-serif; font-size: 24px; fill: #FFFFFF; font-weight: bold; text-anchor: middle;">Real-time</text>
+  <text x="915" y="352" style="font-family: Arial, sans-serif; font-size: 13px; fill: #FFFFFF; text-anchor: middle;">Responses</text>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="500" r="50" fill="#FFFFFF" opacity="0.1"/>
+  <circle cx="1100" cy="80" r="40" fill="#FFFFFF" opacity="0.1"/>
+</svg>

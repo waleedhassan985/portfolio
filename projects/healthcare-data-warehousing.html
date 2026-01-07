@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Healthcare Data Warehousing & Business Intelligence - Complete end-to-end BI solution with OLTP database, ETL pipelines, data warehouse, OLAP cubes, and interactive dashboards.">
+    <title>Healthcare Data Warehousing & BI - Waleed | Data Warehouse Engineer</title>
+    
+    <link rel="canonical" href="https://yoursite.com/projects/healthcare-data-warehousing.html">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="nav" role="navigation">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <span class="logo-text">Waleed Hassan</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/projects/" class="nav-link active" aria-current="page">Projects</a></li>
+                <li><a href="/about/" class="nav-link">About</a></li>
+                <li><a href="/services/" class="nav-link">Services</a></li>
+                <!-- <li><a href="/blog/" class="nav-link">Blog</a></li> -->
+                <li><a href="/contact/" class="nav-link nav-link-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Project Hero -->
+        <section class="project-hero fade-in">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="/projects/">Projects</a>
+                    <span class="separator">→</span>
+                    <span>Healthcare Data Warehousing & Business Intelligence</span>
+                </div>
+                
+                <h1 class="project-hero-title">Healthcare Data Warehousing & Business Intelligence</h1>
+                <p class="project-hero-subtitle">Enterprise-grade healthcare BI solution featuring complete data pipeline: OLTP operational database, Pentaho ETL workflows, dimensional data warehouse, SSAS OLAP cubes, and interactive Power BI dashboards</p>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Data Warehouse Engineer & BI Developer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">May 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tools</span>
+                        <span class="meta-value">SQL Server, Pentaho, ETL, SSAS, Power BI, Flask</span>
+                    </div>
+                </div>
+                
+                <div class="project-links">
+                    <a href="https://github.com/waleedhassan985/healthcare-dw-bi" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        View Repository
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Overview -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Project Overview</h2>
+                <p class="lead">Designed and implemented a comprehensive healthcare Business Intelligence solution from the ground up, covering the entire data lifecycle: operational database design (OLTP), ETL pipeline development, dimensional data warehouse architecture, OLAP cube creation, and interactive dashboard visualization. This end-to-end project demonstrates proficiency in modern data warehousing principles, dimensional modeling, ETL orchestration, and healthcare analytics.</p>
+                
+                <div class="info-card">
+                    <h3>Business Challenge</h3>
+                    <p>Healthcare organizations generate massive amounts of operational data across departments, patient admissions, medications, nursing staff, and appointments. However, this transactional data resides in normalized OLTP systems optimized for day-to-day operations, not for analytical queries or strategic insights. Stakeholders needed a robust BI infrastructure that could:</p>
+                    <ul>
+                        <li><strong>Consolidate Data:</strong> Integrate patient, department, medication, nurse, and appointment data from multiple operational sources</li>
+                        <li><strong>Enable Analytics:</strong> Transform transactional data into a dimensional model optimized for complex analytical queries and aggregations</li>
+                        <li><strong>Support Decision-Making:</strong> Provide hospital administrators, department heads, and healthcare analysts with actionable insights through interactive dashboards</li>
+                        <li><strong>Track Performance:</strong> Monitor key healthcare KPIs including patient admissions, department performance, nurse workloads, medication usage, and appointment trends</li>
+                        <li><strong>Ensure Scalability:</strong> Build a flexible architecture that can grow with increasing data volumes and evolving analytical requirements</li>
+                    </ul>
+                    <p>This project addresses these challenges by implementing a complete data warehousing and BI solution following industry best practices and dimensional modeling methodologies.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Diagram -->
+        <section class="project-section bg-elevated fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">System Architecture</h2>
+                <p>The solution follows a classic data warehousing architecture with clear separation of concerns across five distinct layers:</p>
+                
+                <div style="background: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <div style="text-align: center; padding: 3rem 1rem;">
+                        <div style="max-width: 900px; margin: 0 auto;">
+                            <!-- Architecture Flow -->
+                            <div style="display: flex; flex-direction: column; gap: 1.5rem; align-items: center;">
+                                <!-- Layer 1: OLTP -->
+                                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem 2rem; border-radius: 10px; width: 100%; max-width: 700px; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);">
+                                    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.3rem;">1. OLTP Source Database</h3>
+                                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">SQL Server - Healthcare operational database with 8 normalized tables</p>
+                                    <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; opacity: 0.8;">Patients | Departments | Nurses | Medications | Appointments | Lab Reports</p>
+                                </div>
+                                
+                                <!-- Arrow -->
+                                <div style="font-size: 2rem; color: #667eea;">↓</div>
+                                
+                                <!-- Layer 2: ETL -->
+                                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 1.5rem 2rem; border-radius: 10px; width: 100%; max-width: 700px; box-shadow: 0 4px 12px rgba(240, 147, 251, 0.3);">
+                                    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.3rem;">2. ETL Pipeline - Pentaho Data Integration</h3>
+                                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Extract, Transform, Load workflows with data cleansing and validation</p>
+                                    <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; opacity: 0.8;">Dimension ETL (5) | Fact Table ETL (5) | Job Orchestration</p>
+                                </div>
+                                
+                                <!-- Arrow -->
+                                <div style="font-size: 2rem; color: #f093fb;">↓</div>
+                                
+                                <!-- Layer 3: Data Warehouse -->
+                                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 1.5rem 2rem; border-radius: 10px; width: 100%; max-width: 700px; box-shadow: 0 4px 12px rgba(79, 172, 254, 0.3);">
+                                    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.3rem;">3. Data Warehouse - Star Schema</h3>
+                                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">SQL Server dimensional model optimized for analytical queries</p>
+                                    <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; opacity: 0.8;">Dimensions (6) | Fact Tables (5) | Optimized for OLAP</p>
+                                </div>
+                                
+                                <!-- Arrow -->
+                                <div style="font-size: 2rem; color: #4facfe;">↓</div>
+                                
+                                <!-- Layer 4: OLAP Cubes -->
+                                <div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: #1a1a1a; padding: 1.5rem 2rem; border-radius: 10px; width: 100%; max-width: 700px; box-shadow: 0 4px 12px rgba(67, 233, 123, 0.3);">
+                                    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.3rem;">4. OLAP Cubes - SSAS Multidimensional</h3>
+                                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Pre-aggregated cubes for fast multi-dimensional analysis</p>
+                                    <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; opacity: 0.8;">4 Cubes | Measures | Hierarchies | Partitions | MDX Queries</p>
+                                </div>
+                                
+                                <!-- Arrow -->
+                                <div style="font-size: 2rem; color: #43e97b;">↓</div>
+                                
+                                <!-- Layer 5: Presentation -->
+                                <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: #1a1a1a; padding: 1.5rem 2rem; border-radius: 10px; width: 100%; max-width: 700px; box-shadow: 0 4px 12px rgba(250, 112, 154, 0.3);">
+                                    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.3rem;">5. Presentation Layer</h3>
+                                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Interactive dashboards and web-based query interface</p>
+                                    <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; opacity: 0.8;">Power BI Dashboards | Flask Web App | MDX Query Interface</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-card" style="margin-top: 2rem;">
+                    <h3>Architecture Highlights</h3>
+                    <ul>
+                        <li><strong>Layered Architecture:</strong> Clean separation between operational, ETL, warehouse, OLAP, and presentation layers</li>
+                        <li><strong>Star Schema Design:</strong> Dimensional modeling with 6 dimension tables and 5 fact tables for optimal query performance</li>
+                        <li><strong>Automated ETL:</strong> Pentaho workflows with error handling, logging, and incremental load capabilities</li>
+                        <li><strong>OLAP Acceleration:</strong> Pre-aggregated cubes with partitions for sub-second query response times</li>
+                        <li><strong>Multi-Channel Access:</strong> Both interactive dashboards (Power BI) and programmatic access (MDX queries via Flask)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technical Implementation -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Technical Implementation</h2>
+                
+                <div class="approach-timeline">
+                    <!-- Phase 1 -->
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">1</div>
+                        <div class="step-content">
+                            <h3>OLTP Database Design</h3>
+                            <p>Created a normalized operational database following 3NF principles to support healthcare operations:</p>
+                            <ul>
+                                <li><strong>Departments Table:</strong> Hospital departments with bed capacity and descriptions (Primary Key: department_id)</li>
+                                <li><strong>Care Type Table:</strong> Types of medical care offered with average durations (Primary Key: care_type_id, FK: department_id)</li>
+                                <li><strong>Nurses Dataset:</strong> Nursing staff information with joining dates and shift assignments (Primary Key: nurse_id, FK: department_id)</li>
+                                <li><strong>Nurse Education & Training:</strong> Nurse qualifications, certifications, specializations, and experience (Primary Key: training_id, FK: nurse_id, department_id)</li>
+                                <li><strong>Medications Table:</strong> Medication catalog with dosage, frequency, administration routes (Primary Key: medication_id, FK: department_id)</li>
+                                <li><strong>Patients Dataset:</strong> Patient records with demographics, conditions, admission/discharge details (Primary Key: patient_id, FK: care_type_id, medication_id)</li>
+                                <li><strong>Lab Reports:</strong> Laboratory test results linked to patients and nurses (Primary Key: report_id, FK: patient_id, nurse_id)</li>
+                                <li><strong>Doctor Appointments:</strong> Appointment scheduling with status tracking (Primary Key: appointment_id, FK: patient_id, nurse_id)</li>
+                                <li>Implemented referential integrity constraints, check constraints, and proper indexing for transactional performance</li>
+                                <li>Designed for ACID compliance ensuring data consistency and reliability</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Phase 2 -->
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">2</div>
+                        <div class="step-content">
+                            <h3>Data Warehouse - Dimensional Modeling</h3>
+                            <p>Designed and implemented a star schema data warehouse optimized for analytical queries:</p>
+                            
+                            <h4 style="margin-top: 1.5rem; color: var(--accent);">Dimension Tables:</h4>
+                            <ul>
+                                <li><strong>dim_patient:</strong> Patient dimension with slowly changing dimension (SCD) Type 1 for current patient information</li>
+                                <li><strong>dim_department:</strong> Department dimension with hierarchical structure for organizational analysis</li>
+                                <li><strong>dim_medication:</strong> Medication dimension with drug classification and administration details</li>
+                                <li><strong>dim_nurse:</strong> Nurse dimension with department assignments and shift patterns</li>
+                                <li><strong>dim_care_type:</strong> Care type dimension for analyzing different treatment modalities</li>
+                                <li><strong>dim_date:</strong> Date dimension with day, month, year, weekday for comprehensive time-based analysis</li>
+                            </ul>
+                            
+                            <h4 style="margin-top: 1.5rem; color: var(--accent);">Fact Tables:</h4>
+                            <ul>
+                                <li><strong>fact_patient_admissions:</strong> Grain: One row per patient admission. Tracks admission/discharge dates, room assignments, care types, and medications</li>
+                                <li><strong>fact_medication_usage:</strong> Grain: One row per medication administration. Captures medication usage patterns, prescriber information, and administration dates</li>
+                                <li><strong>fact_nurse_workload:</strong> Grain: One row per nurse per day. Monitors nurse workload, patient assignments, and shift patterns for resource optimization</li>
+                                <li><strong>fact_department_performance:</strong> Grain: One row per department per day. Aggregates department metrics including average stay duration and patient counts</li>
+                                <li><strong>fact_appointments:</strong> Grain: One row per appointment. Tracks appointment scheduling, completion status, and patient-nurse interactions</li>
+                                <li>Implemented surrogate keys for all dimensions to handle slowly changing dimensions</li>
+                                <li>Created composite indexes on fact table foreign keys for optimal join performance</li>
+                                <li>Denormalized dimensions where appropriate to reduce query complexity</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Phase 3 -->
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">3</div>
+                        <div class="step-content">
+                            <h3>ETL Pipeline - Pentaho Data Integration</h3>
+                            <p>Developed robust ETL workflows using Pentaho Data Integration (Kettle) for automated data movement:</p>
+                            
+                            <h4 style="margin-top: 1.5rem; color: var(--accent);">Dimension ETL Transformations:</h4>
+                            <ul>
+                                <li><strong>CareType.ktr:</strong> Extracts care type data, applies business rules, loads dim_care_type with lookup transformations</li>
+                                <li><strong>Date.ktr:</strong> Generates date dimension with calendar calculations, fiscal periods, and holiday flags</li>
+                                <li><strong>Department.ktr:</strong> Loads department dimension with data quality checks and deduplication</li>
+                                <li><strong>Medication.ktr:</strong> Processes medication data with drug classification and standardization logic</li>
+                                <li><strong>Nurses.ktr:</strong> Handles nurse dimension with shift pattern validation and department assignment</li>
+                                <li><strong>Patients.ktr:</strong> Loads patient dimension with data cleansing, age calculation, and demographic validation</li>
+                            </ul>
+                            
+                            <h4 style="margin-top: 1.5rem; color: var(--accent);">Fact ETL Transformations:</h4>
+                            <ul>
+                                <li><strong>Patients Admission.ktr:</strong> Populates fact_patient_admissions with surrogate key lookups and date calculations</li>
+                                <li><strong>Medication Usuage.ktr:</strong> Loads fact_medication_usage with temporal validation and outlier detection</li>
+                                <li><strong>Nurse Workload.ktr:</strong> Calculates nurse workload metrics and loads fact_nurse_workload with aggregations</li>
+                                <li><strong>Department Performance.ktr:</strong> Computes department KPIs including average length of stay and patient throughput</li>
+                                <li><strong>Appointments.ktr:</strong> Processes appointment data with status validation and historical tracking</li>
+                            </ul>
+                            
+                            <h4 style="margin-top: 1.5rem; color: var(--accent);">Job Orchestration:</h4>
+                            <ul>
+                                <li><strong>Job 1.kjb:</strong> Master job orchestrating dimension loads followed by fact table loads with dependency management</li>
+                                <li>Implemented error handling with email notifications and detailed logging (hospital_etl_log1.txt)</li>
+                                <li>Created etl.bat batch file for scheduling and automated execution</li>
+                                <li>Built incremental load logic using watermark tables for efficient updates</li>
+                                <li>Configured parallel execution for independent transformations to optimize runtime</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Phase 4 -->
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">4</div>
+                        <div class="step-content">
+                            <h3>OLAP Cubes - SSAS Multidimensional</h3>
+                            <p>Designed and deployed SSAS (SQL Server Analysis Services) multidimensional cubes for advanced analytics:</p>
+                            
+                            <h4 style="margin-top: 1.5rem; color: var(--accent);">Cube Structures:</h4>
+                            <ul>
+                                <li><strong>Appointments Cube (Appointments.cube):</strong> 
+                                    <ul>
+                                        <li>Measures: Appointment count, completion rate, cancellation rate, average wait time</li>
+                                        <li>Dimensions: Date, Patient, Nurse, Department</li>
+                                        <li>Hierarchies: Date (Year → Quarter → Month → Day), Department (Hospital → Department)</li>
+                                        <li>Partitions (Appointments.partitions): Monthly partitions for efficient processing and querying</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Department Performance Cube (Department Performance.cube):</strong>
+                                    <ul>
+                                        <li>Measures: Patient count, average length of stay, bed occupancy rate, department efficiency</li>
+                                        <li>Dimensions: Date, Department, Care Type</li>
+                                        <li>Calculated Members: Occupancy percentage, patient turnover rate, efficiency score</li>
+                                        <li>Partitions (Department Performance.partitions): Quarterly partitions with aggregation design</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Medication Usage Cube (Medication Usuage.cube):</strong>
+                                    <ul>
+                                        <li>Measures: Medication quantity, usage frequency, cost per medication, prescription rate</li>
+                                        <li>Dimensions: Date, Medication, Patient, Department, Nurse</li>
+                                        <li>KPIs: High-utilization medications, medication adherence rate, cost efficiency</li>
+                                        <li>Partitions (Medication Usuage.partitions): Date-based partitions with incremental processing</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Additional Cubes:</strong> Patient Admissions cube tracking admission patterns and length of stay analytics</li>
+                            </ul>
+                            
+                            <h4 style="margin-top: 1.5rem; color: var(--accent);">SSAS Project Components:</h4>
+                            <ul>
+                                <li><strong>Data Source (DW Health Care.ds):</strong> Connection to SQL Server data warehouse with integrated security</li>
+                                <li><strong>Data Source View (DW Health Care.dsv):</strong> Logical view defining relationships between dimensions and facts</li>
+                                <li><strong>Dimension Definitions:</strong> Dim Care Type.dim, Dim Date.dim, Dim Department.dim, Dim Medication.dim, Dim Nurse.dim, Dim Patient.dim</li>
+                                <li><strong>Fact Definitions:</strong> Fact Appointments.dim, Fact Medication Usage.dim, Fact Nurse Workload.dim, Fact Patient Admissions.dim</li>
+                                <li><strong>Database Configuration (HealthCare Cube.database):</strong> Processing options, caching strategies, aggregation design</li>
+                                <li>Implemented attribute relationships for optimal aggregation and query performance</li>
+                                <li>Created user hierarchies enabling drill-down/drill-up navigation</li>
+                                <li>Configured partition strategies for large fact tables to enable parallel processing</li>
+                                <li>Built calculated measures and KPIs using MDX (Multidimensional Expressions)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Phase 5 -->
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">5</div>
+                        <div class="step-content">
+                            <h3>Presentation Layer</h3>
+                            <p>Developed multiple interfaces for data access and visualization:</p>
+                            
+                            <h4 style="margin-top: 1.5rem; color: var(--accent);">Power BI Dashboards:</h4>
+                            <ul>
+                                <li><strong>Dashboard.pbix:</strong> Executive dashboard with high-level KPIs and trend analysis</li>
+                                <li><strong>OLAP Cube.pbix:</strong> Power BI connected directly to SSAS cubes for real-time OLAP reporting</li>
+                                <li>Interactive visualizations: KPI cards, line charts, bar charts, heat maps, geographic maps</li>
+                                <li>Drill-through pages for detailed analysis from summary views</li>
+                                <li>Slicers and filters for dynamic data exploration</li>
+                                <li>Mobile-optimized layouts for on-the-go access</li>
+                            </ul>
+                            
+                            <h4 style="margin-top: 1.5rem; color: var(--accent);">Flask Web Application (Frontend/):</h4>
+                            <ul>
+                                <li><strong>app.py (639 lines):</strong> Flask web server providing multiple interfaces:
+                                    <ul>
+                                        <li>Dashboard page displaying database tables and summary statistics</li>
+                                        <li>Insert forms for data entry into OLTP and DW databases</li>
+                                        <li>View table interface for browsing dimension and fact tables</li>
+                                        <li>Query interface for executing MDX queries against SSAS cubes</li>
+                                        <li>DW Healthcare page for data warehouse schema exploration</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Templates:</strong> Jinja2 HTML templates with responsive design
+                                    <ul>
+                                        <li>base.html: Base template with navigation and common layout</li>
+                                        <li>dashboard.html: Main dashboard with table listings</li>
+                                        <li>dw_healthcare.html: Data warehouse schema viewer</li>
+                                        <li>insert_form.html: Dynamic form for data insertion</li>
+                                        <li>insert_hub.html: Central hub for selecting insert operations</li>
+                                        <li>query_interface.html: MDX query editor with syntax highlighting</li>
+                                        <li>view_table.html: Data grid for viewing table contents</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Static Assets:</strong> style.css for consistent UI styling and branding</li>
+                                <li>Integrated pyodbc for SQL Server connectivity and pyadomd for SSAS/MDX queries</li>
+                                <li>Implemented CRUD operations for both OLTP and data warehouse databases</li>
+                                <li>Built foreign key dropdown menus for maintaining referential integrity during data entry</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Key Features -->
+        <section class="project-section bg-elevated fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Key Features & Capabilities</h2>
+                
+                <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                    <div class="feature-card" style="background: var(--bg-primary); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent);">
+                        <h3 style="margin-top: 0; color: var(--accent);">🏥 Complete Healthcare Analytics</h3>
+                        <p>End-to-end BI solution covering patient care, department operations, medication management, nurse workload, and appointment scheduling with full traceability from source to dashboard.</p>
+                    </div>
+                    
+                    <div class="feature-card" style="background: var(--bg-primary); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent);">
+                        <h3 style="margin-top: 0; color: var(--accent);">⚡ High-Performance OLAP</h3>
+                        <p>Pre-aggregated multidimensional cubes with partitioning and intelligent caching deliver sub-second query response times even for complex analytical queries across millions of records.</p>
+                    </div>
+                    
+                    <div class="feature-card" style="background: var(--bg-primary); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent);">
+                        <h3 style="margin-top: 0; color: var(--accent);">🔄 Automated ETL Workflows</h3>
+                        <p>Pentaho ETL pipelines with job orchestration, error handling, logging, and incremental loads ensure reliable data movement from operational systems to the warehouse with minimal manual intervention.</p>
+                    </div>
+                    
+                    <div class="feature-card" style="background: var(--bg-primary); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent);">
+                        <h3 style="margin-top: 0; color: var(--accent);">📊 Interactive Dashboards</h3>
+                        <p>Power BI dashboards connected to SSAS cubes provide real-time insights with drill-down capabilities, interactive filters, and mobile-responsive layouts for decision-makers at all levels.</p>
+                    </div>
+                    
+                    <div class="feature-card" style="background: var(--bg-primary); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent);">
+                        <h3 style="margin-top: 0; color: var(--accent);">🌐 Web-Based Interface</h3>
+                        <p>Flask web application provides browser-based access to data warehouse operations, MDX query execution, and CRUD operations, enabling users to interact with the BI system without specialized tools.</p>
+                    </div>
+                    
+                    <div class="feature-card" style="background: var(--bg-primary); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent);">
+                        <h3 style="margin-top: 0; color: var(--accent);">📐 Dimensional Modeling</h3>
+                        <p>Star schema design with 6 dimension tables and 5 fact tables follows Kimball methodology, optimizing query performance while maintaining data integrity and supporting complex analytical scenarios.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technologies & Tools -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Technologies & Tools</h2>
+                
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--accent); margin-bottom: 1rem;">Database & Data Warehousing</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">SQL Server</span>
+                        <span class="tech-badge">T-SQL</span>
+                        <span class="tech-badge">Data Warehouse</span>
+                        <span class="tech-badge">Star Schema</span>
+                        <span class="tech-badge">Dimensional Modeling</span>
+                        <span class="tech-badge">Database Design</span>
+                        <span class="tech-badge">OLTP</span>
+                        <span class="tech-badge">OLAP</span>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--accent); margin-bottom: 1rem;">ETL & Data Integration</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Pentaho Data Integration</span>
+                        <span class="tech-badge">ETL</span>
+                        <span class="tech-badge">Data Transformation</span>
+                        <span class="tech-badge">Job Orchestration</span>
+                        <span class="tech-badge">Data Quality</span>
+                        <span class="tech-badge">Incremental Loading</span>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--accent); margin-bottom: 1rem;">Business Intelligence & Analytics</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">SSAS (SQL Server Analysis Services)</span>
+                        <span class="tech-badge">Multidimensional Cubes</span>
+                        <span class="tech-badge">MDX</span>
+                        <span class="tech-badge">Power BI</span>
+                        <span class="tech-badge">DAX</span>
+                        <span class="tech-badge">Data Visualization</span>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--accent); margin-bottom: 1rem;">Application Development</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Flask</span>
+                        <span class="tech-badge">Jinja2</span>
+                        <span class="tech-badge">pyodbc</span>
+                        <span class="tech-badge">pyadomd</span>
+                        <span class="tech-badge">HTML/CSS</span>
+                        <span class="tech-badge">Web Development</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Outcomes -->
+        <section class="project-section bg-elevated fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Project Outcomes & Impact</h2>
+                
+                <div class="info-card">
+                    <h3>Achievements</h3>
+                    <ul>
+                        <li><strong>Comprehensive BI Infrastructure:</strong> Successfully designed and implemented a complete data warehousing solution from source system to dashboards, demonstrating end-to-end BI expertise</li>
+                        <li><strong>Performance Optimization:</strong> OLAP cubes with partitioning deliver sub-second query response for complex analytical queries, enabling real-time decision-making</li>
+                        <li><strong>Automation:</strong> Pentaho ETL workflows automate data movement with error handling and logging, reducing manual effort and ensuring data consistency</li>
+                        <li><strong>Scalable Architecture:</strong> Star schema design and partitioned cubes support future growth in data volume and analytical complexity</li>
+                        <li><strong>Multi-Channel Access:</strong> Both Power BI dashboards and Flask web interface provide flexible access patterns for different user personas</li>
+                        <li><strong>Healthcare-Specific Analytics:</strong> Domain-specific dimensions and measures enable meaningful healthcare KPIs including patient flow, nurse workload, medication usage, and department efficiency</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Technical Skills Demonstrated</h3>
+                    <ul>
+                        <li>Data warehouse design and dimensional modeling (Kimball methodology)</li>
+                        <li>ETL development and job orchestration using Pentaho Data Integration</li>
+                        <li>SSAS multidimensional cube design with partitioning and aggregation design</li>
+                        <li>MDX query development for complex analytical scenarios</li>
+                        <li>Power BI dashboard design with SSAS connectivity</li>
+                        <li>SQL Server database administration and T-SQL development</li>
+                        <li>Python web application development with Flask</li>
+                        <li>Healthcare domain knowledge and analytical modeling</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Structure -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Project Structure</h2>
+                <p>The complete project is organized into the following components:</p>
+                
+                <div style="background: #1e1e1e; color: #d4d4d4; padding: 1.5rem; border-radius: 8px; font-family: 'Consolas', monospace; font-size: 0.9rem; overflow-x: auto; margin-top: 1.5rem;">
+<pre style="margin: 0;">DW&BI/
+├── <span style="color: #4fc3f7;">HealthCare_DB_DDL.sql</span>          # OLTP database schema (8 tables)
+├── <span style="color: #4fc3f7;">HealthCare_DB_Insert.sql</span>       # Sample data for OLTP database
+├── <span style="color: #4fc3f7;">DW_dim.sql</span>                     # Data warehouse schema (star schema)
+│
+├── <span style="color: #ce93d8;">Pentaho ETL/</span>                  # ETL workflows
+│   ├── Job 1.kjb                 # Master job orchestration
+│   ├── CareType.ktr              # Care type dimension ETL
+│   ├── Date.ktr                  # Date dimension ETL
+│   ├── Department.ktr            # Department dimension ETL
+│   ├── Medication.ktr            # Medication dimension ETL
+│   ├── Nurses.ktr                # Nurse dimension ETL
+│   ├── Patients.ktr              # Patient dimension ETL
+│   ├── <span style="color: #ce93d8;">Facts/</span>
+│   │   ├── Appointments.ktr      # Appointment fact ETL
+│   │   ├── Department Performance.ktr
+│   │   ├── Medication Usuage.ktr
+│   │   ├── Nurse Workload.ktr
+│   │   └── Patients Admission.ktr
+│   ├── etl.bat                   # Batch execution script
+│   └── hospital_etl_log1.txt     # ETL execution log
+│
+├── <span style="color: #ce93d8;">HealthCare Cube/</span>              # SSAS multidimensional project
+│   ├── HealthCare Cube.sln       # Visual Studio solution
+│   ├── <span style="color: #ce93d8;">HealthCare Cube/</span>
+│   │   ├── DW Health Care.ds     # Data source
+│   │   ├── DW Health Care.dsv    # Data source view
+│   │   ├── Dim *.dim             # 6 dimension definitions
+│   │   ├── Fact *.dim            # 5 fact definitions
+│   │   ├── Appointments.cube     # Appointments cube
+│   │   ├── Appointments.partitions
+│   │   ├── Department Performance.cube
+│   │   ├── Department Performance.partitions
+│   │   ├── Medication Usuage.cube
+│   │   ├── Medication Usuage.partitions
+│   │   └── HealthCare Cube.database
+│
+├── <span style="color: #ce93d8;">Frontend/</span>                     # Flask web application
+│   ├── app.py                    # Main Flask application (639 lines)
+│   ├── <span style="color: #ce93d8;">templates/</span>
+│   │   ├── base.html
+│   │   ├── dashboard.html
+│   │   ├── dw_healthcare.html
+│   │   ├── insert_form.html
+│   │   ├── insert_hub.html
+│   │   ├── query_interface.html
+│   │   └── view_table.html
+│   └── <span style="color: #ce93d8;">static/</span>
+│       └── style.css
+│
+├── <span style="color: #4fc3f7;">Dashboard.pbix</span>                # Power BI dashboard
+├── <span style="color: #4fc3f7;">OLAP Cube.pbix</span>                # Power BI with SSAS connection
+└── <span style="color: #4fc3f7;">Project.pdf</span>                   # Project documentation</pre>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <div class="cta-card" style="background: linear-gradient(135deg, var(--accent) 0%, #764ba2 100%); color: white; padding: 3rem; border-radius: 12px; text-align: center;">
+                    <h2 style="margin-top: 0; font-size: 2rem;">Interested in Data Warehousing & BI Solutions?</h2>
+                    <p style="font-size: 1.1rem; margin: 1.5rem 0; opacity: 0.95;">Let's discuss how I can help design and implement enterprise-grade data warehousing and business intelligence solutions for your organization.</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                        <a href="/contact/" class="btn" style="background: white; color: var(--accent); border: none; padding: 0.875rem 2rem; font-weight: 600;">Get in Touch</a>
+                        <a href="https://github.com/waleedhassan985/healthcare-dw-bi" class="btn" style="background: transparent; color: white; border: 2px solid white; padding: 0.875rem 2rem; font-weight: 600;" target="_blank" rel="noopener">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-heading">Waleed Hassan</h3>
+                    <p class="footer-text">Data Scientist & AI Developer specializing in Python-first solutions with measurable business impact.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <!-- <li><a href="/blog/">Blog</a></li> -->
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Expertise</h4>
+                    <ul class="footer-links">
+                        <li>Python & Data Analysis</li>
+                        <li>Machine Learning</li>
+                        <li>Generative AI</li>
+                        <li>Data Visualization</li>
+                        <li>BI Dashboards</li>
+                        <li>Workflow Automation</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="mailto:wh937492@gmail.com">wh937492@gmail.com</a>
+                        </li>
+                        <li>Green Avenue Islamabad, Pakistan</li>
+                        <li>
+                            <a href="/assets/Waleed_Resume.pdf" download>Download Resume</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Waleed Hassan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

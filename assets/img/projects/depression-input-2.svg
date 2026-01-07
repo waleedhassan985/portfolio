@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 768">
+  <!-- Background -->
+  <rect width="1000" height="768" fill="#FFFFFF"/>
+  
+  <!-- Section Header -->
+  <text x="46" y="60" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 28px; fill: #1F2937; font-weight: 600;">Academic &amp; Work Pressure</text>
+  
+  <!-- Academic Pressure Label -->
+  <text x="46" y="120" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; fill: #374151; font-weight: 500;">Academic Pressure</text>
+  
+  <!-- Academic Pressure Value -->
+  <text x="423" y="155" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 24px; fill: #EF4444; font-weight: 600;">2</text>
+  
+  <!-- Academic Pressure Slider -->
+  <rect x="46" y="173" width="942" height="6" fill="#E5E7EB" rx="3"/>
+  <rect x="46" y="173" width="377" height="6" fill="#EF4444" rx="3"/>
+  <circle cx="423" cy="176" r="10" fill="#EF4444" stroke="#FFFFFF" stroke-width="2"/>
+  
+  <!-- Academic Pressure Range -->
+  <text x="46" y="203" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; fill: #6B7280;">0</text>
+  <text x="968" y="203" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; fill: #6B7280; text-anchor: end;">5</text>
+  
+  <!-- Academic Pressure Note -->
+  <text x="46" y="238" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; fill: #9CA3AF;">📌 Scale: 0 = No pressure, 5 = Extreme pressure</text>
+  
+  <!-- Work Pressure Label -->
+  <text x="46" y="295" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; fill: #374151; font-weight: 500;">Work Pressure</text>
+  
+  <!-- Work Pressure Value -->
+  <text x="423" y="330" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 24px; fill: #EF4444; font-weight: 600;">2</text>
+  
+  <!-- Work Pressure Slider -->
+  <rect x="46" y="348" width="942" height="6" fill="#E5E7EB" rx="3"/>
+  <rect x="46" y="348" width="377" height="6" fill="#EF4444" rx="3"/>
+  <circle cx="423" cy="351" r="10" fill="#EF4444" stroke="#FFFFFF" stroke-width="2"/>
+  
+  <!-- Work Pressure Range -->
+  <text x="46" y="378" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; fill: #6B7280;">0</text>
+  <text x="968" y="378" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; fill: #6B7280; text-anchor: end;">5</text>
+  
+  <!-- Work Pressure Note -->
+  <text x="46" y="413" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; fill: #9CA3AF;">📌 Scale: 0 = No pressure, 5 = Extreme pressure</text>
+  
+  <!-- CGPA Label -->
+  <text x="46" y="475" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; fill: #374151; font-weight: 500;">CGPA</text>
+  
+  <!-- CGPA Input Box -->
+  <rect x="46" y="490" width="942" height="48" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1" rx="6"/>
+  <text x="66" y="518" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937;">3.94</text>
+  
+  <!-- Stepper Buttons -->
+  <rect x="910" y="500" width="30" height="28" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1" rx="4"/>
+  <text x="925" y="518" style="font-family: monospace; font-size: 14px; fill: #6B7280; text-anchor: middle;">−</text>
+  <rect x="948" y="500" width="30" height="28" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1" rx="4"/>
+  <text x="963" y="518" style="font-family: monospace; font-size: 14px; fill: #6B7280; text-anchor: middle;">+</text>
+  
+  <!-- CGPA Note -->
+  <text x="46" y="568" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; fill: #9CA3AF;">📌 Cumulative Grade Point Average (0.0 to 10.0)</text>
+  
+  <!-- Satisfaction Levels Header -->
+  <text x="46" y="635" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 28px; fill: #1F2937; font-weight: 600;">Satisfaction Levels</text>
+  
+  <!-- Study Satisfaction Label -->
+  <text x="46" y="690" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; fill: #374151; font-weight: 500;">Study Satisfaction</text>
+  
+  <!-- Study Satisfaction Value -->
+  <text x="800" y="728" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 24px; fill: #EF4444; font-weight: 600;">4</text>
+  
+  <!-- Study Satisfaction Slider -->
+  <rect x="46" y="746" width="942" height="6" fill="#E5E7EB" rx="3"/>
+  <rect x="46" y="746" width="754" height="6" fill="#EF4444" rx="3"/>
+  <circle cx="800" cy="749" r="10" fill="#EF4444" stroke="#FFFFFF" stroke-width="2"/>
+</svg>

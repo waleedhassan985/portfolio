@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800">
+  <defs>
+    <linearGradient id="bg-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f2744;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cyan-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1400" height="800" fill="url(#bg-dark)"/>
+  
+  <!-- Header -->
+  <rect x="300" y="10" width="800" height="80" rx="20" fill="#1e3a5f" stroke="#334155" stroke-width="2"/>
+  <text x="700" y="60" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#67d1ed" text-anchor="middle">Sales Dashboard</text>
+  
+  <!-- Date Filter -->
+  <rect x="20" y="10" width="260" height="240" rx="16" fill="url(#card-bg)" stroke="#334155" stroke-width="2"/>
+  <text x="150" y="35" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Date</text>
+  <rect x="35" y="48" width="95" height="32" rx="6" fill="#0f2744" stroke="#475569" stroke-width="1"/>
+  <text x="82" y="70" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">1/1/2023</text>
+  <rect x="150" y="48" width="110" height="32" rx="6" fill="#0f2744" stroke="#475569" stroke-width="1"/>
+  <text x="205" y="70" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">3/30/2025</text>
+  
+  <!-- Slider -->
+  <line x1="40" y1="105" x2="240" y2="105" stroke="#475569" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="50" cy="105" r="12" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="230" cy="105" r="12" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  
+  <!-- Units Sold KPI -->
+  <rect x="35" y="135" width="210" height="100" rx="12" fill="#0f2744"/>
+  <text x="140" y="185" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#67d1ed" text-anchor="middle">72K</text>
+  <text x="140" y="215" font-family="Arial, sans-serif" font-size="14" fill="#fbbf24" text-anchor="middle">Units Sold</text>
+  
+  <!-- Average Order Value -->
+  <rect x="1120" y="10" width="250" height="100" rx="16" fill="url(#card-bg)" stroke="#334155" stroke-width="2"/>
+  <text x="1245" y="60" font-family="Arial, sans-serif" font-size="44" font-weight="bold" fill="#67d1ed" text-anchor="middle">6.67K</text>
+  <text x="1245" y="90" font-family="Arial, sans-serif" font-size="14" fill="#fbbf24" text-anchor="middle">Average Order Value</text>
+  
+  <!-- Navigation Tabs -->
+  <rect x="245" y="138" width="195" height="80" rx="30" fill="#3b6b8f" stroke="#475569" stroke-width="1"/>
+  <text x="342" y="183" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#f1f5f9" text-anchor="middle">Main</text>
+  
+  <rect x="465" y="138" width="218" height="80" rx="30" fill="#0f2744" stroke="#475569" stroke-width="1"/>
+  <text x="574" y="183" font-family="Arial, sans-serif" font-size="15" fill="#fbbf24" text-anchor="middle">Customer Segmentation</text>
+  
+  <rect x="703" y="138" width="210" height="80" rx="30" fill="#0f2744" stroke="#475569" stroke-width="1"/>
+  <text x="808" y="183" font-family="Arial, sans-serif" font-size="15" fill="#fbbf24" text-anchor="middle">Inventory & Supply Chain</text>
+  
+  <rect x="933" y="138" width="165" height="80" rx="30" fill="#0f2744" stroke="#475569" stroke-width="1"/>
+  <text x="1015" y="183" font-family="Arial, sans-serif" font-size="15" fill="#fbbf24" text-anchor="middle">Marketing</text>
+  
+  <rect x="1160" y="150" width="195" height="56" rx="28" fill="transparent" stroke="#475569" stroke-width="1"/>
+  <text x="1257" y="183" font-family="Arial, sans-serif" font-size="14" fill="#fbbf24" text-anchor="middle">Clear all slicers</text>
+  
+  <!-- KPI Cards Row -->
+  <rect x="20" y="255" width="210" height="130" rx="16" fill="url(#card-bg)" stroke="#334155" stroke-width="2"/>
+  <text x="125" y="310" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#67d1ed" text-anchor="middle">53.38M</text>
+  <text x="125" y="345" font-family="Arial, sans-serif" font-size="13" fill="#fbbf24" text-anchor="middle">Total Revenue</text>
+  
+  <rect x="245" y="255" width="208" height="130" rx="16" fill="url(#card-bg)" stroke="#334155" stroke-width="2"/>
+  <text x="349" y="310" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#67d1ed" text-anchor="middle">17.27M</text>
+  <text x="349" y="345" font-family="Arial, sans-serif" font-size="13" fill="#fbbf24" text-anchor="middle">Gross Margin</text>
+  
+  <rect x="468" y="255" width="215" height="130" rx="16" fill="url(#card-bg)" stroke="#334155" stroke-width="2"/>
+  <text x="575" y="310" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#67d1ed" text-anchor="middle">39.19K</text>
+  <text x="575" y="345" font-family="Arial, sans-serif" font-size="13" fill="#fbbf24" text-anchor="middle">Customer Life Value</text>
+  
+  <rect x="698" y="255" width="218" height="130" rx="16" fill="url(#card-bg)" stroke="#334155" stroke-width="2"/>
+  <text x="807" y="310" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#67d1ed" text-anchor="middle">1.65</text>
+  <text x="807" y="345" font-family="Arial, sans-serif" font-size="12" fill="#fbbf24" text-anchor="middle">Year Over Year Revenue Gr...</text>
+  
+  <rect x="931" y="255" width="215" height="130" rx="16" fill="url(#card-bg)" stroke="#334155" stroke-width="2"/>
+  <text x="1038" y="310" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#67d1ed" text-anchor="middle">39.19K</text>
+  <text x="1038" y="345" font-family="Arial, sans-serif" font-size="12" fill="#fbbf24" text-anchor="middle">Customer Life Time Value</text>
+  
+  <rect x="1161" y="255" width="219" height="130" rx="16" fill="url(#card-bg)" stroke="#334155" stroke-width="2"/>
+  <text x="1270" y="310" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#67d1ed" text-anchor="middle">0.08</text>
+  <text x="1270" y="345" font-family="Arial, sans-serif" font-size="13" fill="#fbbf24" text-anchor="middle">Return Rate</text>
+  
+  <!-- Top 10 Products Chart -->
+  <rect x="15" y="400" width="475" height="385" rx="16" fill="url(#card-bg)" stroke="#334155" stroke-width="2"/>
+  <text x="25" y="425" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#67d1ed">Top 10 Products By Total Revenue</text>
+  <text x="25" y="450" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">Total Revenue  0.24M</text>
+  <line x1="155" y1="445" x2="245" y2="445" stroke="#06b6d4" stroke-width="3"/>
+  <text x="255" y="450" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">0.31M</text>
+  
+  <!-- Horizontal Bars -->
+  <g transform="translate(35, 470)">
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1">High-performan...</text>
+    <rect x="120" y="2" width="280" height="18" rx="4" fill="url(#cyan-gradient)"/>
+    <text x="410" y="15" font-family="Arial, sans-serif" font-size="11" fill="#fbbf24">0.31M</text>
+    
+    <text x="0" y="40" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1">Basic Cable N903</text>
+    <rect x="120" y="27" width="255" height="18" rx="4" fill="url(#cyan-gradient)"/>
+    <text x="385" y="40" font-family="Arial, sans-serif" font-size="11" fill="#fbbf24">0.29M</text>
+    
+    <text x="0" y="65" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1">Portable Smartp...</text>
+    <rect x="120" y="52" width="235" height="18" rx="4" fill="url(#cyan-gradient)"/>
+    <text x="365" y="65" font-family="Arial, sans-serif" font-size="11" fill="#fbbf24">0.27M</text>
+    
+    <text x="0" y="90" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1">Smart Server G984</text>
+    <rect x="120" y="77" width="230" height="18" rx="4" fill="url(#cyan-gradient)"/>
+    <text x="360" y="90" font-family="Arial, sans-serif" font-size="11" fill="#fbbf24">0.26M</text>
+    
+    <text x="0" y="115" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1">Deluxe Laptop K...</text>
+    <rect x="120" y="102" width="230" height="18" rx="4" fill="url(#cyan-gradient)"/>
+    <text x="360" y="115" font-family="Arial, sans-serif" font-size="11" fill="#fbbf24">0.26M</text>
+    
+    <text x="0" y="140" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1">Basic Keyboard B...</text>
+    <rect x="120" y="127" width="220" height="18" rx="4" fill="url(#cyan-gradient)"/>
+    <text x="350" y="140" font-family="Arial, sans-serif" font-size="11" fill="#fbbf24">0.25M</text>
+    
+    <text x="0" y="165" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1">Premium Adapte...</text>
+    <rect x="120" y="152" width="220" height="18" rx="4" fill="url(#cyan-gradient)"/>
+    <text x="350" y="165" font-family="Arial, sans-serif" font-size="11" fill="#fbbf24">0.25M</text>
+    
+    <text x="0" y="190" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1">Elite Power Bank...</text>
+    <rect x="120" y="177" width="220" height="18" rx="4" fill="url(#cyan-gradient)"/>
+    <text x="350" y="190" font-family="Arial, sans-serif" font-size="11" fill="#fbbf24">0.25M</text>
+    
+    <text x="0" y="215" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1">Wireless Smartp...</text>
+    <rect x="120" y="202" width="215" height="18" rx="4" fill="url(#cyan-gradient)"/>
+    <text x="345" y="215" font-family="Arial, sans-serif" font-size="11" fill="#fbbf24">0.24M</text>
+  </g>
+  
+  <text x="35" y="750" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">0.0M</text>
+  <text x="240" y="750" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">0.2M</text>
+  <text x="180" y="770" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#fbbf24" text-anchor="middle">Total Revenue</text>
+  
+  <!-- Revenue by Year Month Chart -->
+  <rect x="505" y="400" width="455" height="385" rx="16" fill="url(#card-bg)" stroke="#334155" stroke-width="2"/>
+  <text x="515" y="425" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#67d1ed">Total Revenue by Year Month</text>
+  
+  <!-- Line Chart -->
+  <g transform="translate(530, 450)">
+    <text x="-10" y="20" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">4.3M</text>
+    <text x="-10" y="60" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">4M</text>
+    <text x="-10" y="140" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">2M</text>
+    <text x="-10" y="220" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">0M</text>
+    
+    <!-- Y-axis grid lines -->
+    <line x1="0" y1="60" x2="400" y2="60" stroke="#334155" stroke-width="1" stroke-dasharray="4 4"/>
+    <line x1="0" y1="140" x2="400" y2="140" stroke="#334155" stroke-width="1" stroke-dasharray="4 4"/>
+    
+    <!-- Line path -->
+    <path d="M 10,20 L 30,35 L 50,40 L 70,30 L 90,45 L 110,50 L 130,80 L 150,65 L 170,75 L 190,85 L 210,100 L 230,110 L 250,100 L 270,110 L 290,120 L 310,130 L 330,140 L 350,150 L 370,160 L 390,155" 
+          stroke="#06b6d4" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Data point labels -->
+    <text x="10" y="10" font-family="Arial, sans-serif" font-size="10" fill="#67d1ed">4.3M</text>
+    <text x="110" y="40" font-family="Arial, sans-serif" font-size="10" fill="#67d1ed">3.4M</text>
+    <text x="190" y="75" font-family="Arial, sans-serif" font-size="10" fill="#67d1ed">2.7M</text>
+    
+    <!-- X-axis labels -->
+    <text x="10" y="240" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" transform="rotate(-45 10 240)">Mar 2023</text>
+    <text x="70" y="240" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" transform="rotate(-45 70 240)">Jun 2023</text>
+    <text x="130" y="240" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" transform="rotate(-45 130 240)">Sep 2023</text>
+    <text x="190" y="240" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" transform="rotate(-45 190 240)">Dec 2023</text>
+    <text x="250" y="240" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" transform="rotate(-45 250 240)">Mar 2024</text>
+    <text x="310" y="240" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" transform="rotate(-45 310 240)">Jun 2024</text>
+    <text x="370" y="240" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" transform="rotate(-45 370 240)">Oct 2024</text>
+  </g>
+  
+  <text x="730" y="770" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#fbbf24" text-anchor="middle">YearMonth</text>
+  
+  <!-- Map Chart -->
+  <rect x="975" y="400" width="405" height="385" rx="16" fill="url(#card-bg)" stroke="#334155" stroke-width="2"/>
+  <text x="985" y="425" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#67d1ed">Total Revenue by Country</text>
+  
+  <!-- Simplified world map -->
+  <g transform="translate(1010, 450)">
+    <rect width="340" height="280" rx="8" fill="#93c5fd" opacity="0.3"/>
+    
+    <!-- Map regions -->
+    <text x="120" y="140" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">EUROPE</text>
+    <text x="270" y="140" font-family="Arial, sans-serif" font-size="14" fill="#334155">ASIA</text>
+    <text x="60" y="250" font-family="Arial, sans-serif" font-size="12" fill="#334155">SOUTH AMERICA</text>
+    <text x="140" y="210" font-family="Arial, sans-serif" font-size="12" fill="#334155">AFRICA</text>
+    <text x="70" y="100" font-family="Arial, sans-serif" font-size="11" fill="#475569">Atlantic<tspan x="70" dy="15">Ocean</tspan></text>
+    <text x="260" y="250" font-family="Arial, sans-serif" font-size="11" fill="#475569">Indian<tspan x="260" dy="15">Ocean</tspan></text>
+    
+    <!-- Zoom controls -->
+    <circle cx="320" cy="25" r="18" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="320" y="33" font-family="Arial, sans-serif" font-size="20" fill="#334155" text-anchor="middle">+</text>
+    
+    <circle cx="320" cy="65" r="18" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="320" y="72" font-family="Arial, sans-serif" font-size="24" fill="#334155" text-anchor="middle">−</text>
+  </g>
+</svg>

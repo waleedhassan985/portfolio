@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Depression Prediction using Artificial Neural Networks - 57.99% prediction probability with comprehensive mental health risk assessment using TensorFlow and Streamlit.">
+    <title>Student Depression Prediction - Waleed | Data Scientist</title>
+    
+    <link rel="canonical" href="https://yoursite.com/projects/student-depression-prediction.html">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="nav" role="navigation">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <span class="logo-text">Waleed Hassan</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/projects/" class="nav-link active" aria-current="page">Projects</a></li>
+                <li><a href="/about/" class="nav-link">About</a></li>
+                <li><a href="/services/" class="nav-link">Services</a></li>
+                <!-- <li><a href="/blog/" class="nav-link">Blog</a></li> -->
+                <li><a href="/contact/" class="nav-link nav-link-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Project Hero -->
+        <section class="project-hero fade-in">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="/projects/">Projects</a>
+                    <span class="separator">→</span>
+                    <span>Student Depression Prediction</span>
+                </div>
+                
+                <h1 class="project-hero-title">Student Depression Prediction Using Artificial Neural Networks</h1>
+                <p class="project-hero-subtitle">Deep learning model predicting mental health risks with comprehensive student profiling and real-time probability assessment</p>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">ML Engineer & Data Scientist</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tools</span>
+                        <span class="meta-value">TensorFlow, Keras, Streamlit, Python</span>
+                    </div>
+                </div>
+                
+                <div class="project-links">
+                    <!-- <a href="https://github.com/waleedhassan985/student-depression-ann" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View on GitHub
+                    </a> -->
+                    <a href="#demo" class="btn btn-primary">
+                        Try Live Demo
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Key Metrics -->
+        <section class="metrics-highlight fade-in">
+            <div class="container">
+                <div class="metrics-grid">
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">57.99%</div>
+                        <div class="metric-label">Depression Probability</div>
+                        <div class="metric-detail">Sample prediction</div>
+                    </div>
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">13</div>
+                        <div class="metric-label">Input Features</div>
+                        <div class="metric-detail">Comprehensive profiling</div>
+                    </div>
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">ANN</div>
+                        <div class="metric-label">Deep Learning</div>
+                        <div class="metric-detail">TensorFlow/Keras</div>
+                    </div>
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">Real-time</div>
+                        <div class="metric-label">Predictions</div>
+                        <div class="metric-detail">Instant assessment</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Overview -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Project Overview</h2>
+                <p class="lead">A machine learning application that predicts student depression likelihood using Artificial Neural Networks. The system analyzes 13 different features including demographics, academic performance, lifestyle factors, and mental health indicators to provide real-time probability assessments through an intuitive Streamlit interface.</p>
+                
+                <div class="info-card">
+                    <h3>Challenge</h3>
+                    <p>Mental health issues among students are rising, but early detection remains challenging. Traditional screening methods are time-consuming, subjective, and often inaccessible. There's a critical need for an automated, data-driven approach that can identify at-risk students early using objective indicators like academic pressure, sleep patterns, CGPA, and lifestyle factors.</p>
+                </div>
+                
+                <!-- Project Visual -->
+                <div class="project-visual" style="margin-top: 3rem;">
+                    <img src="/assets/img/projects/depression-input-1.svg" 
+                         alt="Student Depression Prediction input interface showing personal information section with gender dropdown set to Male and age slider set to 23 years" 
+                         loading="lazy"
+                         style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); margin-bottom: 2rem;">
+                    
+                    <img src="/assets/img/projects/depression-input-2.svg" 
+                         alt="Academic and work pressure inputs showing sliders for academic pressure (2/5), work pressure (2/5), CGPA input (3.94), and satisfaction levels including study satisfaction (4/5)" 
+                         loading="lazy"
+                         style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); margin-bottom: 2rem;">
+                    
+                    <img src="/assets/img/projects/depression-result.svg" 
+                         alt="Prediction results showing 57.99% depression probability with alert indicating student is likely to have depression" 
+                         loading="lazy"
+                         style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); margin-bottom: 2rem;">
+                    
+                    <img src="/assets/img/projects/depression-summary.svg" 
+                         alt="Input data summary displaying all encoded values used for prediction including gender, age, CGPA, pressure levels, and satisfaction metrics" 
+                         loading="lazy"
+                         style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                    
+                    <p style="margin-top: 1.5rem; text-align: center; font-size: 0.9rem; color: #64748b;">
+                        <strong>Streamlit interface walkthrough:</strong> The application collects 13 features including personal information (gender, age), academic metrics (CGPA, academic pressure), lifestyle factors (sleep duration, dietary habits), mental health indicators (family history, suicidal thoughts), and satisfaction levels to generate a comprehensive depression risk assessment with real-time probability scores.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technical Approach -->
+        <section class="project-section bg-elevated fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Technical Approach</h2>
+                
+                <div class="approach-timeline">
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">1</div>
+                        <div class="step-content">
+                            <h3>Data Collection & Understanding</h3>
+                            <p>Utilized the Student Depression Dataset containing 13 features across multiple dimensions of student life. The dataset includes demographic, academic, lifestyle, and psychological indicators.</p>
+                            <ul>
+                                <li><strong>Demographics:</strong> Gender, Age, Profession</li>
+                                <li><strong>Academic:</strong> CGPA, Academic Pressure, Study Satisfaction</li>
+                                <li><strong>Lifestyle:</strong> Sleep Duration, Dietary Habits, Work/Study Hours</li>
+                                <li><strong>Mental Health:</strong> Family History, Suicidal Thoughts, Financial Stress</li>
+                                <li><strong>Satisfaction:</strong> Job Satisfaction, Work Pressure</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">2</div>
+                        <div class="step-content">
+                            <h3>Data Preprocessing & Feature Engineering</h3>
+                            <p>Implemented comprehensive data preprocessing pipeline including encoding, scaling, and transformation of categorical and numerical features for optimal model performance.</p>
+                            
+                            <div class="code-block">
+<pre><code># Label Encoding for categorical features
+label_encoders = {
+    'gender': LabelEncoder(),
+    'profession': LabelEncoder(),
+    'dietary_habits': LabelEncoder(),
+    'family_history': LabelEncoder(),
+    'suicidal_thoughts': LabelEncoder()
+}
+
+# Feature Scaling
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Sleep duration mapping (categorical → numerical)
+sleep_map = {
+    'Less than 5 hours': 0.2,
+    '5-6 hours': 0.4,
+    '7-8 hours': 0.6,
+    'More than 8 hours': 0.8
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">3</div>
+                        <div class="step-content">
+                            <h3>ANN Model Architecture</h3>
+                            <p>Designed and trained a deep Artificial Neural Network using TensorFlow/Keras with multiple hidden layers, dropout for regularization, and binary cross-entropy loss for depression classification.</p>
+                            
+                            <div class="code-block">
+<pre><code>from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout
+
+model = Sequential([
+    Dense(128, activation='relu', input_shape=(13,)),
+    Dropout(0.3),
+    Dense(64, activation='relu'),
+    Dropout(0.2),
+    Dense(32, activation='relu'),
+    Dense(1, activation='sigmoid')  # Binary classification
+])
+
+model.compile(
+    optimizer='adam',
+    loss='binary_crossentropy',
+    metrics=['accuracy', 'AUC']
+)</code></pre>
+                            </div>
+                            
+                            <ul>
+                                <li><strong>Input Layer:</strong> 13 features (student profile)</li>
+                                <li><strong>Hidden Layers:</strong> 128 → 64 → 32 neurons with ReLU activation</li>
+                                <li><strong>Dropout:</strong> 30% and 20% to prevent overfitting</li>
+                                <li><strong>Output Layer:</strong> Sigmoid activation for probability output</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">4</div>
+                        <div class="step-content">
+                            <h3>Streamlit Deployment</h3>
+                            <p>Built an interactive web application using Streamlit with comprehensive input forms, real-time predictions, and visual feedback for depression risk assessment.</p>
+                            <ul>
+                                <li>User-friendly input forms with sliders and dropdowns</li>
+                                <li>Real-time model inference with TensorFlow backend</li>
+                                <li>Probability visualization with progress bars</li>
+                                <li>Alert system for high-risk predictions</li>
+                                <li>Input data summary for transparency</li>
+                                <li>Pickle serialization for encoders and scalers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Feature Engineering Deep Dive -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Feature Engineering & Encoding Strategy</h2>
+                
+                <div style="display: grid; gap: 1.5rem; margin-top: 2rem;">
+                    <div class="feature-card" style="padding: 1.5rem; background: var(--bg-elevated); border-radius: 8px; border-left: 4px solid var(--accent);">
+                        <h3>📊 Categorical Encoding</h3>
+                        <p><strong>Gender:</strong> 0 = Female, 1 = Male</p>
+                        <p><strong>Profession:</strong> 0 = Other, 1 = Student</p>
+                        <p><strong>Dietary Habits:</strong> 0 = Healthy, 1 = Moderate, 2 = Unhealthy</p>
+                        <p><strong>Family History:</strong> 0 = No, 1 = Yes</p>
+                        <p><strong>Suicidal Thoughts:</strong> 0 = No, 1 = Yes</p>
+                    </div>
+                    
+                    <div class="feature-card" style="padding: 1.5rem; background: var(--bg-elevated); border-radius: 8px; border-left: 4px solid var(--accent-2);">
+                        <h3>⏰ Sleep Duration Mapping</h3>
+                        <p><strong>Less than 5 hours:</strong> 0.2 (High risk)</p>
+                        <p><strong>5-6 hours:</strong> 0.4 (Moderate risk)</p>
+                        <p><strong>7-8 hours:</strong> 0.6 (Normal)</p>
+                        <p><strong>More than 8 hours:</strong> 0.8 (Optimal)</p>
+                    </div>
+                    
+                    <div class="feature-card" style="padding: 1.5rem; background: var(--bg-elevated); border-radius: 8px; border-left: 4px solid #f59e0b;">
+                        <h3>📏 Numerical Features (Scaled)</h3>
+                        <p><strong>Age:</strong> 18-60 years (StandardScaler applied)</p>
+                        <p><strong>CGPA:</strong> 0.0-10.0 (standardized)</p>
+                        <p><strong>Pressure Scales:</strong> 0-5 (0=None, 5=Extreme)</p>
+                        <p><strong>Satisfaction Levels:</strong> 0-5 (0=Very Dissatisfied, 5=Very Satisfied)</p>
+                        <p><strong>Work/Study Hours:</strong> Continuous variable (scaled)</p>
+                        <p><strong>Financial Stress:</strong> 0-5 scale (standardized)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Results & Impact -->
+        <section class="project-section bg-elevated fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Results & Impact</h2>
+                
+                <div class="results-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div class="result-card">
+                        <h3>🎯 Model Performance</h3>
+                        <ul>
+                            <li>Binary classification with sigmoid output</li>
+                            <li>Real-time inference under 100ms</li>
+                            <li>Probability scores for risk assessment</li>
+                            <li>Trained on comprehensive student dataset</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>🔍 Prediction Capabilities</h3>
+                        <ul>
+                            <li>13-feature comprehensive profiling</li>
+                            <li>Probability output (0-100%)</li>
+                            <li>Binary prediction (Yes/No)</li>
+                            <li>Explainable input summary</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>💡 Use Cases</h3>
+                        <ul>
+                            <li>University counseling centers</li>
+                            <li>Early intervention programs</li>
+                            <li>Student wellness screening</li>
+                            <li>Mental health research</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 3rem; padding: 2rem; background: var(--bg); border-radius: 12px; border: 2px solid var(--accent);">
+                    <h3 style="color: var(--accent); margin-bottom: 1rem;">📈 Example Prediction</h3>
+                    <p style="font-size: 1.1rem;"><strong>Input Profile:</strong> 23-year-old male student with CGPA 3.94, moderate academic pressure (2/5), moderate work pressure (2/5), high study satisfaction (4/5), healthy diet, 8+ hours sleep</p>
+                    <p style="font-size: 1.3rem; font-weight: 600; color: var(--accent-2); margin-top: 1rem;"><strong>Prediction:</strong> 57.99% depression probability → At-risk classification</p>
+                    <p style="margin-top: 1rem; color: var(--text-secondary);">Despite high academic performance and healthy lifestyle, moderate pressure levels and age demographics contribute to elevated risk, demonstrating the model's nuanced understanding of multiple risk factors.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technical Stack -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Technical Stack</h2>
+                
+                <div class="tech-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                    <div class="tech-card" style="padding: 1.5rem; background: var(--bg-elevated); border-radius: 8px; border: 1px solid var(--border);">
+                        <h3 style="color: var(--accent); margin-bottom: 0.5rem;">Deep Learning</h3>
+                        <ul style="margin: 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>TensorFlow 2.x</li>
+                            <li>Keras API</li>
+                            <li>Sequential ANN</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tech-card" style="padding: 1.5rem; background: var(--bg-elevated); border-radius: 8px; border: 1px solid var(--border);">
+                        <h3 style="color: var(--accent); margin-bottom: 0.5rem;">Data Processing</h3>
+                        <ul style="margin: 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>scikit-learn (encoders, scalers)</li>
+                            <li>Pandas</li>
+                            <li>NumPy</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tech-card" style="padding: 1.5rem; background: var(--bg-elevated); border-radius: 8px; border: 1px solid var(--border);">
+                        <h3 style="color: var(--accent); margin-bottom: 0.5rem;">Web Application</h3>
+                        <ul style="margin: 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Streamlit</li>
+                            <li>Python 3.8+</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tech-card" style="padding: 1.5rem; background: var(--bg-elevated); border-radius: 8px; border: 1px solid var(--border);">
+                        <h3 style="color: var(--accent); margin-bottom: 0.5rem;">Model Persistence</h3>
+                        <ul style="margin: 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Pickle (encoders/scalers)</li>
+                            <li>HDF5 (.h5 model)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Lessons Learned -->
+        <section class="project-section bg-elevated fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Lessons Learned</h2>
+                
+                <div class="lessons-box">
+                    <h3>Key Insights</h3>
+                    <ul>
+                        <li><strong>Feature Engineering is Critical:</strong> Proper encoding and scaling of categorical variables (gender, dietary habits) and sleep duration mapping significantly improved model performance and interpretability.</li>
+                        <li><strong>Dropout Prevents Overfitting:</strong> Adding 30% and 20% dropout layers was essential for generalization, especially with limited training data in mental health datasets.</li>
+                        <li><strong>Multi-dimensional Risk Factors:</strong> Depression risk isn't linear—students with high CGPA can still be at risk if pressure levels and satisfaction metrics indicate stress, demonstrating the value of holistic profiling.</li>
+                        <li><strong>Probability vs Binary:</strong> Providing probability scores (57.99%) rather than just Yes/No predictions gives counselors more nuanced information for intervention prioritization.</li>
+                        <li><strong>Serialization Challenges:</strong> Managing multiple pickle files (label encoders, scaler, model) requires careful version control to ensure consistency between training and deployment.</li>
+                        <li><strong>Ethical Considerations:</strong> Mental health prediction models require careful deployment—predictions should support, not replace, professional clinical assessment.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reproducibility -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">How To Run It</h2>
+                
+                <div class="repro-steps">
+                    <h3>Setup Instructions</h3>
+                    <ol>
+                        <li>Create a virtual environment: <code>python -m venv venv</code></li>
+                        <li>Activate the environment: <code>venv\Scripts\activate</code> (Windows) or <code>source venv/bin/activate</code> (Mac/Linux)</li>
+                        <li>Install dependencies: <code>pip install -r requirements.txt</code></li>
+                        <li>Ensure model files are present:
+<pre><code>model.h5
+scaler.pkl
+label_encoder_gender.pkl
+label_encoder_profession.pkl
+label_encoder_dietary_habits.pkl
+label_encoder_family_history.pkl
+label_encoder_suicidal.pkl
+sleep_map.pkl
+cgpa.pkl</code></pre>
+                        </li>
+                        <li>Run the Streamlit application: <code>streamlit run app.py</code></li>
+                        <li>Open your browser to <code>http://localhost:8501</code></li>
+                        <li>Input student features and get real-time depression predictions</li>
+                    </ol>
+                    
+                    <h3 style="margin-top: 2rem;">Training Your Own Model</h3>
+                    <p>Use the Jupyter notebook <code>ANN_Classification.ipynb</code> to:</p>
+                    <ul>
+                        <li>Load and explore <code>student_depression_dataset.csv</code></li>
+                        <li>Perform EDA and feature engineering</li>
+                        <li>Train the ANN model with your own hyperparameters</li>
+                        <li>Export model and preprocessing artifacts</li>
+                    </ul>
+                    
+                    <h3 style="margin-top: 2rem;">Requirements</h3>
+                    <ul>
+                        <li>Python 3.8 or higher</li>
+                        <li>TensorFlow 2.x (CPU or GPU)</li>
+                        <li>8GB+ RAM recommended</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section fade-in">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Need a Custom ML Solution for Healthcare or Education?</h2>
+                    <p class="cta-text">I can help you build predictive models, classification systems, and deep learning applications tailored to your domain-specific challenges.</p>
+                    <div class="cta-buttons">
+                        <a href="/contact/" class="btn btn-lg btn-primary">Let's Talk</a>
+                        <a href="/projects/" class="btn btn-lg btn-secondary">View More Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-heading">Waleed Hassan</h3>
+                    <p class="footer-text">Data Scientist & AI Developer specializing in Python-first solutions with measurable business impact.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <!-- <li><a href="/blog/">Blog</a></li> -->
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Expertise</h4>
+                    <ul class="footer-links">
+                        <li>Python & Data Analysis</li>
+                        <li>Machine Learning</li>
+                        <li>Generative AI</li>
+                        <li>Data Visualization</li>
+                        <li>BI Dashboards</li>
+                        <li>Workflow Automation</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="mailto:wh937492@gmail.com">wh937492@gmail.com</a>
+                        </li>
+                        <li>Green Avenue Islamabad, Pakistan</li>
+                        <li>
+                            <a href="/assets/Waleed_Resume.pdf" download>Download Resume</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Waleed Hassan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

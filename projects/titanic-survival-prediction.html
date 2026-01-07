@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Titanic Survival Prediction using Machine Learning - Achieved 76% accuracy with Naive Bayes classifier. Comprehensive analysis using Logistic Regression, SVM, Decision Tree, and KNN models.">
+    <title>Titanic Survival Prediction - Waleed | Data Scientist</title>
+    
+    <link rel="canonical" href="https://yoursite.com/projects/titanic-survival-prediction.html">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/modern-enhancements.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="nav" role="navigation">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <span class="logo-text">Waleed Hassan</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/projects/" class="nav-link active" aria-current="page">Projects</a></li>
+                <li><a href="/about/" class="nav-link">About</a></li>
+                <li><a href="/services/" class="nav-link">Services</a></li>
+                <!-- <li><a href="/blog/" class="nav-link">Blog</a></li> -->
+                <li><a href="/contact/" class="nav-link nav-link-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Project Hero -->
+        <section class="project-hero fade-in">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="/projects/">Projects</a>
+                    <span class="separator">→</span>
+                    <span>Titanic Survival Prediction</span>
+                </div>
+                
+                <h1 class="project-hero-title">Titanic Survival Prediction Using Machine Learning</h1>
+                <p class="project-hero-subtitle">Comparative analysis of 5 ML algorithms achieving 76% accuracy with Naive Bayes classifier</p>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Data Scientist & ML Engineer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tools</span>
+                        <span class="meta-value">Python, scikit-learn, Pandas</span>
+                    </div>
+                </div>
+                
+                <div class="project-links">
+                    <a href="https://github.com/waleedhassan985/Titanic_Survival_Prediction" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View on GitHub
+                    </a>
+                    <a href="https://github.com/waleedhassan985/Titanic_Survival_Prediction/blob/main/Titanic%20Predication.ipynb" class="btn btn-secondary" target="_blank" rel="noopener">
+                        View Notebook
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Key Metrics -->
+        <section class="metrics-highlight fade-in">
+            <div class="container">
+                <div class="metrics-grid">
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">76%</div>
+                        <div class="metric-label">Best Accuracy</div>
+                        <div class="metric-detail">Naive Bayes</div>
+                    </div>
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">5</div>
+                        <div class="metric-label">ML Algorithms</div>
+                        <div class="metric-detail">Compared</div>
+                    </div>
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">891</div>
+                        <div class="metric-label">Training Samples</div>
+                        <div class="metric-detail">Passengers</div>
+                    </div>
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Python</div>
+                        <div class="metric-detail">Jupyter Notebook</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Overview -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Project Overview</h2>
+                <p class="lead">This project analyzes the famous Titanic passenger dataset to predict survival outcomes using various machine learning classification algorithms. The analysis includes comprehensive exploratory data analysis, feature engineering, model training, and comparative evaluation of multiple ML techniques.</p>
+                
+                <div class="info-card">
+                    <h3>Challenge</h3>
+                    <p>The Titanic dataset presents a classic binary classification problem: predicting whether a passenger survived the disaster based on features like age, sex, ticket class, fare, and family relationships. The challenge involves handling missing data, engineering meaningful features, and selecting the optimal algorithm for maximum accuracy.</p>
+                </div>
+                
+                <!-- Project Visual -->
+                <div class="project-visual" style="margin-top: 3rem;">
+                    <img src="/assets/img/projects/titanic-survival.png" 
+                         alt="Titanic Survival Prediction Analysis - Data visualization showing survival patterns and model performance metrics" 
+                         loading="lazy"
+                         style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technical Approach -->
+        <section class="project-section bg-elevated fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Technical Approach</h2>
+                
+                <div class="approach-timeline">
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">1</div>
+                        <div class="step-content">
+                            <h3>Exploratory Data Analysis (EDA)</h3>
+                            <p>Analyzed survival patterns across different demographics and passenger classes. Visualized relationships between features like gender, age groups, ticket class, and survival rates to identify key predictive factors.</p>
+                            <ul>
+                                <li>Survival rate analysis by gender and class</li>
+                                <li>Age distribution and correlation studies</li>
+                                <li>Feature correlation heatmaps</li>
+                                <li>Missing data assessment and patterns</li>
+                            </ul>
+                            
+                            <!-- EDA Visualization -->
+                            <div style="margin-top: 2rem; padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                <h4 style="margin-bottom: 1rem; color: #1e293b; font-size: 1.1rem;">Port of Embarkation Distribution</h4>
+                                <img src="/assets/img/projects/titanic-embarked-distribution.svg" 
+                                     alt="Pie chart showing distribution of passengers by port of embarkation: Cherbourg 43.24%, Queenstown 30.43%, Southampton 26.32%" 
+                                     loading="lazy"
+                                     style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+                                <p style="margin-top: 1rem; font-size: 0.9rem; color: #64748b; text-align: center;">
+                                    Analysis revealed that most passengers embarked from Cherbourg (43.24%), followed by Queenstown (30.43%) and Southampton (26.32%). This feature showed correlation with survival rates due to socioeconomic differences between ports.
+                                </p>
+                            </div>
+                            
+                            <!-- Survival Status Distribution -->
+                            <div style="margin-top: 2rem; padding: 1.5rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                <h4 style="margin-bottom: 1rem; color: #1e293b; font-size: 1.1rem;">Survival Status Distribution</h4>
+                                <img src="/assets/img/projects/titanic-survival-status.svg" 
+                                     alt="Bar chart showing survival status: 342 passengers survived, 549 passengers died" 
+                                     loading="lazy"
+                                     style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+                                <p style="margin-top: 1rem; font-size: 0.9rem; color: #64748b; text-align: center;">
+                                    The dataset shows a class imbalance with 549 passengers who died (61.6%) versus 342 who survived (38.4%). This imbalance was considered during model training to prevent bias toward the majority class.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">2</div>
+                        <div class="step-content">
+                            <h3>Data Preprocessing & Feature Engineering</h3>
+                            <p>Cleaned the dataset and engineered new features to improve model performance. Handled missing values using statistical imputation and created derived features from existing data.</p>
+                            <ul>
+                                <li>Missing value imputation for Age and Cabin</li>
+                                <li>Created family size feature (SibSp + Parch)</li>
+                                <li>Extracted titles from passenger names</li>
+                                <li>One-hot encoding for categorical variables</li>
+                                <li>Feature scaling and normalization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">3</div>
+                        <div class="step-content">
+                            <h3>Model Training & Evaluation</h3>
+                            <p>Trained and evaluated five different machine learning algorithms on the preprocessed data. Used cross-validation and multiple metrics to assess model performance comprehensively.</p>
+                            <ul>
+                                <li><strong>Naive Bayes:</strong> 76% accuracy (best performer)</li>
+                                <li><strong>Logistic Regression:</strong> 75% accuracy</li>
+                                <li><strong>Decision Tree:</strong> 74% accuracy</li>
+                                <li><strong>Support Vector Machine:</strong> 66% accuracy</li>
+                                <li><strong>K-Nearest Neighbors:</strong> 66% accuracy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">4</div>
+                        <div class="step-content">
+                            <h3>Model Comparison & Selection</h3>
+                            <p>Compared all models based on accuracy, precision, recall, and F1-score. Selected Naive Bayes as the final model due to its superior performance and computational efficiency for this dataset.</p>
+                            <ul>
+                                <li>Performance benchmarking across all models</li>
+                                <li>Confusion matrix analysis</li>
+                                <li>ROC curve and AUC evaluation</li>
+                                <li>Cross-validation for generalization testing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Model Results -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Model Performance Comparison</h2>
+                
+                <div class="results-table-wrapper">
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Accuracy</th>
+                                <th>Performance</th>
+                                <th>Best Use Case</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlight-row">
+                                <td><strong>Naive Bayes</strong></td>
+                                <td><span class="badge badge-success">76%</span></td>
+                                <td>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 76%"></div>
+                                    </div>
+                                </td>
+                                <td>Probabilistic classification with independent features</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Logistic Regression</strong></td>
+                                <td><span class="badge badge-success">75%</span></td>
+                                <td>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                    </div>
+                                </td>
+                                <td>Linear decision boundaries, interpretable coefficients</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Decision Tree</strong></td>
+                                <td><span class="badge badge-success">74%</span></td>
+                                <td>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 74%"></div>
+                                    </div>
+                                </td>
+                                <td>Non-linear patterns, feature importance analysis</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Support Vector Machine</strong></td>
+                                <td><span class="badge badge-warning">66%</span></td>
+                                <td>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 66%"></div>
+                                    </div>
+                                </td>
+                                <td>Complex decision boundaries, kernel methods</td>
+                            </tr>
+                            <tr>
+                                <td><strong>K-Nearest Neighbors</strong></td>
+                                <td><span class="badge badge-warning">66%</span></td>
+                                <td>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 66%"></div>
+                                    </div>
+                                </td>
+                                <td>Instance-based learning, similarity metrics</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="info-card success-card">
+                    <h3>🏆 Key Findings</h3>
+                    <ul>
+                        <li><strong>Naive Bayes emerged as the top performer</strong> with 76% accuracy, demonstrating the effectiveness of probabilistic approaches for this classification problem.</li>
+                        <li><strong>Gender was the strongest predictor</strong> of survival, with female passengers having significantly higher survival rates.</li>
+                        <li><strong>Passenger class (Pclass) strongly correlated</strong> with survival—1st class passengers had much better survival odds.</li>
+                        <li><strong>Age groups showed distinct patterns:</strong> Children had higher survival rates, while middle-aged passengers had lower rates.</li>
+                        <li><strong>Family size influenced outcomes:</strong> Passengers with small families (1-3 members) had better survival chances than solo travelers or large families.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Visualizations Section -->
+        <section class="project-section bg-elevated fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Data Visualizations</h2>
+                <p>The project includes comprehensive visualizations to understand survival patterns:</p>
+                
+                <div class="visualization-grid">
+                    <div class="viz-card">
+                        <h4>📊 Survival by Gender</h4>
+                        <p>Bar charts showing dramatic survival rate differences between male and female passengers</p>
+                    </div>
+                    <div class="viz-card">
+                        <h4>📈 Class Distribution</h4>
+                        <p>Visualization of survival rates across 1st, 2nd, and 3rd class passengers</p>
+                    </div>
+                    <div class="viz-card">
+                        <h4>🔥 Feature Correlation Heatmap</h4>
+                        <p>Correlation matrix showing relationships between all features and survival</p>
+                    </div>
+                    <div class="viz-card">
+                        <h4>📉 Age Distribution Analysis</h4>
+                        <p>Histograms and box plots analyzing survival patterns by age groups</p>
+                    </div>
+                    <div class="viz-card">
+                        <h4>🎯 Model Performance Metrics</h4>
+                        <p>Comparative charts showing accuracy, precision, recall, and F1-scores</p>
+                    </div>
+                    <div class="viz-card">
+                        <h4>📍 Confusion Matrices</h4>
+                        <p>Detailed confusion matrices for each model showing true/false positives and negatives</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tech Stack -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Technology Stack</h2>
+                
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h3>Programming & Analysis</h3>
+                        <div class="tech-tags">
+                            <span class="tag">Python 3.11+</span>
+                            <span class="tag">Jupyter Notebook</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">NumPy</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h3>Machine Learning</h3>
+                        <div class="tech-tags">
+                            <span class="tag">scikit-learn</span>
+                            <span class="tag">Naive Bayes</span>
+                            <span class="tag">Logistic Regression</span>
+                            <span class="tag">Decision Trees</span>
+                            <span class="tag">SVM</span>
+                            <span class="tag">KNN</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h3>Visualization</h3>
+                        <div class="tech-tags">
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">Seaborn</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h3>Data Processing</h3>
+                        <div class="tech-tags">
+                            <span class="tag">Feature Engineering</span>
+                            <span class="tag">Data Imputation</span>
+                            <span class="tag">One-Hot Encoding</span>
+                            <span class="tag">Cross-Validation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Lessons Learned -->
+        <section class="project-section bg-elevated fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Lessons Learned & Insights</h2>
+                
+                <div class="lessons-grid">
+                    <div class="lesson-card">
+                        <h3>💡 Model Selection Matters</h3>
+                        <p>Different algorithms excel at different tasks. Naive Bayes' simplicity and assumption of feature independence worked surprisingly well for this dataset, outperforming more complex models like SVM and KNN.</p>
+                    </div>
+                    
+                    <div class="lesson-card">
+                        <h3>🎯 Feature Engineering Impact</h3>
+                        <p>Creating derived features like family size and extracting titles from names significantly improved model accuracy. Good features matter more than complex algorithms.</p>
+                    </div>
+                    
+                    <div class="lesson-card">
+                        <h3>📊 EDA is Critical</h3>
+                        <p>Thorough exploratory data analysis revealed crucial patterns (gender, class, age) that guided feature selection and model interpretation.</p>
+                    </div>
+                    
+                    <div class="lesson-card">
+                        <h3>⚖️ Handling Missing Data</h3>
+                        <p>Strategic imputation of missing values (Age, Cabin) preserved data integrity while maximizing the training set size for better model performance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Links -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Project Resources</h2>
+                
+                <div class="resource-links">
+                    <a href="https://github.com/waleedhassan985/Titanic_Survival_Prediction" class="resource-card" target="_blank" rel="noopener">
+                        <div class="resource-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <div class="resource-content">
+                            <h3>GitHub Repository</h3>
+                            <p>Full source code, datasets, and Jupyter notebook</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://github.com/waleedhassan985/Titanic_Survival_Prediction/blob/main/Titanic%20Predication.ipynb" class="resource-card" target="_blank" rel="noopener">
+                        <div class="resource-icon">📓</div>
+                        <div class="resource-content">
+                            <h3>Jupyter Notebook</h3>
+                            <p>Interactive analysis with code, visualizations, and results</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section fade-in">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Interested in Machine Learning Solutions?</h2>
+                    <p class="cta-text">Let's discuss how classification models and predictive analytics can solve your business challenges.</p>
+                    <div class="cta-buttons">
+                        <a href="/contact/" class="btn btn-primary btn-lg">Start a Conversation</a>
+                        <a href="/projects/" class="btn btn-secondary btn-lg">View More Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-heading">Waleed Hassan</h3>
+                    <p class="footer-text">Data Scientist & AI Developer specializing in Python-first solutions with measurable business impact.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <!-- <li><a href="/blog/">Blog</a></li> -->
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Expertise</h4>
+                    <ul class="footer-links">
+                        <li>Python & Data Analysis</li>
+                        <li>Machine Learning</li>
+                        <li>Generative AI</li>
+                        <li>Data Visualization</li>
+                        <li>BI Dashboards</li>
+                        <li>Workflow Automation</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="mailto:wh937492@gmail.com">wh937492@gmail.com</a>
+                        </li>
+                        <li>Green Avenue Islamabad, Pakistan</li>
+                        <li>
+                            <a href="/assets/Waleed_Resume.pdf" download>Download Resume</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Waleed Hassan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/modern-interactions.js" defer></script>
+</body>
+</html>

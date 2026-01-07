@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" style="background:#fff">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .title { font-size: 16px; font-weight: 600; fill: #1e293b; }
+      .label { font-size: 14px; fill: #334155; }
+      .percentage { font-size: 18px; font-weight: 600; fill: #fff; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" class="title">Embarked Distribution</text>
+  
+  <!-- Pie Chart -->
+  <g transform="translate(300, 250)">
+    <!-- C = Cherbourg (43.24%) - Blue -->
+    <path d="M 0,-150 A 150,150 0 0,1 110,101 L 0,0 Z" fill="#2e7aaf" />
+    
+    <!-- S = Southampton (26.32%) - Green -->
+    <path d="M 110,101 A 150,150 0 0,1 -35,146 L 0,0 Z" fill="#4ba655" />
+    
+    <!-- Q = Queenstown (30.43%) - Orange -->
+    <path d="M -35,146 A 150,150 0 0,1 0,-150 L 0,0 Z" fill="#f57c1f" />
+    
+    <!-- Percentage Labels -->
+    <text x="40" y="-60" class="percentage" text-anchor="middle">43.24%</text>
+    <text x="40" y="100" class="percentage" text-anchor="middle">26.32%</text>
+    <text x="-60" y="30" class="percentage" text-anchor="middle">30.43%</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(50, 430)">
+    <!-- Cherbourg -->
+    <rect x="0" y="0" width="20" height="20" fill="#2e7aaf" rx="3"/>
+    <text x="30" y="15" class="label">C = Cherbourg</text>
+    
+    <!-- Southampton -->
+    <rect x="200" y="0" width="20" height="20" fill="#4ba655" rx="3"/>
+    <text x="230" y="15" class="label">S = Southampton</text>
+    
+    <!-- Queenstown -->
+    <rect x="400" y="0" width="20" height="20" fill="#f57c1f" rx="3"/>
+    <text x="430" y="15" class="label">Q = Queenstown</text>
+  </g>
+</svg>

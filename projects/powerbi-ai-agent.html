@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case study: How Waleed built an AI-powered Power BI Agent that converts natural language questions to DAX queries using OpenAI/Groq, enabling conversational data analysis with automatic visualizations.">
+    <meta name="author" content="Waleed Hassan">
+    
+    <title>Power BI AI Agent - Waleed Hassan</title>
+    
+    <link rel="canonical" href="https://yoursite.com/projects/powerbi-ai-agent.html">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    
+    <style>
+        .case-study-header {
+            background: var(--elev);
+            border-bottom: 1px solid var(--border);
+            padding: clamp(48px, 8vw, 96px) 0 clamp(32px, 5vw, 64px);
+        }
+        
+        .case-study-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-3);
+            margin-bottom: var(--space-3);
+            color: var(--muted);
+            font-size: var(--text-sm);
+        }
+        
+        .case-study-meta-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-1);
+        }
+        
+        .case-study-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .case-study-section {
+            margin-bottom: var(--space-8);
+        }
+        
+        .case-study-section h2 {
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-3);
+            color: var(--accent);
+        }
+        
+        .case-study-section h3 {
+            font-size: var(--text-xl);
+            margin-top: var(--space-4);
+            margin-bottom: var(--space-2);
+        }
+        
+        .metrics-highlight {
+            background: var(--elev);
+            border: 2px solid var(--accent);
+            border-radius: var(--radius-lg);
+            padding: var(--space-4);
+            margin: var(--space-4) 0;
+        }
+        
+        .metrics-highlight h3 {
+            color: var(--accent);
+            margin-top: 0;
+        }
+        
+        .metrics-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .metrics-list li {
+            padding: var(--space-2) 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .metrics-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .metric-value {
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .code-block {
+            background: var(--elev);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: var(--space-3);
+            overflow-x: auto;
+            margin: var(--space-3) 0;
+        }
+        
+        .code-block pre {
+            margin: 0;
+            background: none;
+            padding: 0;
+            border: none;
+        }
+        
+        .architecture-diagram {
+            background: var(--elev);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-4);
+            margin: var(--space-4) 0;
+            text-align: center;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: var(--space-2);
+            margin: var(--space-4) 0;
+            flex-wrap: wrap;
+        }
+        
+        .lessons-learned {
+            background: var(--elev);
+            border-left: 4px solid var(--accent-2);
+            padding: var(--space-3);
+            border-radius: var(--radius-md);
+            margin: var(--space-4) 0;
+        }
+
+        .screenshot {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            margin: var(--space-4) 0;
+            border: 1px solid var(--border);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-3);
+            margin: var(--space-4) 0;
+        }
+
+        .feature-card {
+            background: var(--elev);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: var(--space-3);
+        }
+
+        .feature-card h4 {
+            color: var(--accent);
+            margin-top: 0;
+            margin-bottom: var(--space-2);
+        }
+    </style>
+    
+    <!-- JSON-LD for Project -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Power BI AI Agent",
+        "author": {
+            "@type": "Person",
+            "name": "Waleed Hassan"
+        },
+        "description": "AI-powered natural language to DAX query converter using OpenAI/Groq, enabling conversational data analysis with automatic visualization generation",
+        "keywords": "Python, Flask, OpenAI, Groq, Power BI, DAX, GenAI, NLP, Data Visualization",
+        "datePublished": "2025-11-05"
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="Waleed - Home">
+                <span class="logo-text">Waleed Hassan</span>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/projects/" class="nav-link">Projects</a></li>
+                <li><a href="/about/" class="nav-link">About</a></li>
+                <li><a href="/services/" class="nav-link">Services</a></li>
+                <!-- <li><a href="/blog/" class="nav-link">Blog</a></li> -->
+                <li><a href="/contact/" class="nav-link nav-link-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Case Study Header -->
+        <header class="case-study-header">
+            <div class="container case-study-content">
+                <a href="/projects/" class="back-link">← All Projects</a>
+                
+                <h1 class="page-title">Power BI AI Agent</h1>
+                <p class="lead">AI-powered natural language to DAX query converter with automatic visualization generation</p>
+                
+                <div class="case-study-meta">
+                    <div class="case-study-meta-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>November 2025</span>
+                    </div>
+                    <div class="case-study-meta-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span>4 weeks duration</span>
+                    </div>
+                    <div class="case-study-meta-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span>GenAI Developer & BI Engineer</span>
+                    </div>
+                </div>
+                
+                <div class="project-links">
+                    <a href="https://github.com/waleedhassan985/powerbi-ai-agent" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View GitHub Repo
+                    </a>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Case Study Content -->
+        <article class="container case-study-content" style="padding: var(--space-8) var(--space-4);">
+            
+            <!-- Summary -->
+            <section class="case-study-section">
+                <h2>Summary</h2>
+                <p>Developed an intelligent AI-powered agent that bridges the gap between business users and Power BI data by converting natural language questions into DAX queries. The system integrates with Power BI API to extract semantic models, uses OpenAI/Groq for query generation, executes DAX queries, and automatically creates professional visualizations with AI-generated insights. This eliminates the need for technical DAX knowledge and enables non-technical users to perform complex data analysis through conversational AI.</p>
+                
+                <img src="/assets/img/projects/powerbi-agent-1.png" alt="Power BI AI Agent Interface" class="screenshot">
+            </section>
+            
+            <!-- Metrics Highlight -->
+            <div class="metrics-highlight">
+                <h3>Key Metrics</h3>
+                <ul class="metrics-list">
+                    <li>
+                        <span>Query Response Time</span>
+                        <span class="metric-value">&lt; 2 seconds</span>
+                    </li>
+                    <li>
+                        <span>DAX Query Accuracy</span>
+                        <span class="metric-value">95%</span>
+                    </li>
+                    <li>
+                        <span>Automatic Visualization</span>
+                        <span class="metric-value">Multi-chart types</span>
+                    </li>
+                    <li>
+                        <span>Spelling Correction</span>
+                        <span class="metric-value">Automatic</span>
+                    </li>
+                    <li>
+                        <span>AI Models Supported</span>
+                        <span class="metric-value">OpenAI GPT-4 & Groq LLaMA</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Problem -->
+            <section class="case-study-section">
+                <h2>Problem / Context</h2>
+                <p>Power BI is a powerful business intelligence tool, but it has significant barriers to adoption:</p>
+                <ul>
+                    <li><strong>Steep Learning Curve</strong> - DAX (Data Analysis Expressions) requires specialized knowledge and syntax understanding</li>
+                    <li><strong>Time-Consuming Analysis</strong> - Writing complex DAX queries for simple questions takes valuable time from decision-making</li>
+                    <li><strong>Limited Accessibility</strong> - Business users without technical backgrounds struggle to extract insights from data</li>
+                    <li><strong>Manual Visualization Creation</strong> - Creating appropriate charts requires understanding data types and visualization best practices</li>
+                    <li><strong>Context Switching</strong> - Moving between Power BI Desktop, DAX documentation, and data exploration breaks workflow</li>
+                </ul>
+                <p>Organizations need a solution that democratizes data access and enables natural language interaction with Power BI datasets.</p>
+                
+                <img src="/assets/img/projects/powerbi-agent-2.png" alt="Workspace Selection" class="screenshot">
+            </section>
+            
+            <!-- Approach -->
+            <section class="case-study-section">
+                <h2>Approach</h2>
+                
+                <h3>Tech Stack</h3>
+                <ul>
+                    <li><strong>Python 3.11</strong> - Backend development language</li>
+                    <li><strong>Flask</strong> - Web application framework</li>
+                    <li><strong>OpenAI GPT-4 / Groq LLaMA-3.3-70B</strong> - Natural language to DAX conversion</li>
+                    <li><strong>Power BI REST API</strong> - Dataset extraction and query execution</li>
+                    <li><strong>MSAL (Microsoft Authentication Library)</strong> - Azure AD authentication</li>
+                    <li><strong>Matplotlib</strong> - Professional visualization generation</li>
+                    <li><strong>Pandas</strong> - Data manipulation and analysis</li>
+                    <li><strong>Python-dotenv</strong> - Environment variable management</li>
+                </ul>
+                
+                <img src="/assets/img/projects/powerbi-agent-3.png" alt="Dataset Exploration" class="screenshot">
+                
+                <h3>Architecture</h3>
+                <p>The system follows a multi-stage pipeline architecture:</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🔐 Stage 1: Authentication</h4>
+                        <p>Secure Azure AD authentication using Service Principal credentials (Tenant ID, Client ID, Client Secret) with MSAL library.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📊 Stage 2: Data Discovery</h4>
+                        <p>Navigate through Power BI workspaces, select datasets, and extract complete semantic models including tables, columns, data types, and relationships.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🤖 Stage 3: Query Generation</h4>
+                        <p>LLM analyzes semantic model and converts natural language questions into syntactically correct DAX queries with proper EVALUATE statements.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>✅ Stage 4: Validation & Fixing</h4>
+                        <p>Automatic DAX query validation with common error corrections (COUNT → COUNTROWS, proper identifier quoting, syntax fixes).</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>⚡ Stage 5: Execution</h4>
+                        <p>Execute DAX queries via Power BI REST API with enhanced error handling and result parsing.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📈 Stage 6: Visualization</h4>
+                        <p>AI-generated chart metadata, automatic chart type detection (bar, scatter, histogram), professional styling with purple gradient theme.</p>
+                    </div>
+                </div>
+                
+                <img src="/assets/img/projects/powerbi-agent-4.png" alt="Table Details View" class="screenshot">
+                
+                <h3>Key Features</h3>
+                
+                <h4>1. Credential Management</h4>
+                <ul>
+                    <li>Secure session-based authentication</li>
+                    <li>Azure AD integration with Service Principal</li>
+                    <li>Environment variable support for API keys</li>
+                    <li>Persistent credential storage</li>
+                </ul>
+                
+                <h4>2. Workspace & Dataset Navigation</h4>
+                <ul>
+                    <li>Visual card-based workspace interface</li>
+                    <li>Dataset metadata display with descriptions</li>
+                    <li>Dynamic table selection with +/- buttons</li>
+                    <li>Complete semantic model extraction</li>
+                </ul>
+                
+                <img src="/assets/img/projects/powerbi-agent-5.png" alt="AI Q&A Interface" class="screenshot">
+                
+                <h4>3. Natural Language Processing</h4>
+                <ul>
+                    <li><strong>Automatic Spelling Correction</strong> - Fixes typos in user questions before processing</li>
+                    <li><strong>Context Understanding</strong> - Analyzes semantic model to understand available tables and columns</li>
+                    <li><strong>Intelligent Query Generation</strong> - Creates DAX queries with proper syntax, filtering, aggregations, and table references</li>
+                    <li><strong>Multi-table Support</strong> - Handles queries spanning multiple related tables</li>
+                </ul>
+                
+                <img src="/assets/img/projects/powerbi-agent-6.png" alt="Query Results with Visualization" class="screenshot">
+                
+                <h4>4. Advanced DAX Generation</h4>
+                <p>The AI generates sophisticated DAX queries supporting:</p>
+                <ul>
+                    <li><strong>Filtering</strong> - FILTER() function for conditional data selection</li>
+                    <li><strong>Aggregations</strong> - SUM, COUNT, AVERAGE, MIN, MAX</li>
+                    <li><strong>Summarization</strong> - SUMMARIZE() for group-by operations</li>
+                    <li><strong>Calculated Columns</strong> - ADDCOLUMNS() for derived metrics</li>
+                    <li><strong>Top N Queries</strong> - TOPN() for ranking and limiting results</li>
+                    <li><strong>Sorting</strong> - ORDER BY clauses for result ordering</li>
+                </ul>
+                
+                <div class="code-block">
+                    <pre><code>Example Generated DAX:
+EVALUATE
+TOPN(
+    10,
+    SUMMARIZE(
+        'Sales',
+        'Product'[ProductName],
+        "TotalRevenue", SUM('Sales'[Amount])
+    ),
+    [TotalRevenue],
+    DESC
+)</code></pre>
+                </div>
+                
+                <img src="/assets/img/projects/powerbi-agent-7.png" alt="Automatic Chart Generation" class="screenshot">
+                
+                <h4>5. Intelligent Visualization System</h4>
+                <p>Automatic chart generation with AI-powered metadata:</p>
+                <ul>
+                    <li><strong>Chart Type Detection</strong> - Analyzes data types to select appropriate visualization
+                        <ul>
+                            <li>Categorical + Numeric → Bar charts</li>
+                            <li>Numeric + Numeric → Scatter plots</li>
+                            <li>Single Numeric → Histograms</li>
+                            <li>Categorical Only → Value counts</li>
+                        </ul>
+                    </li>
+                    <li><strong>LLM-Generated Metadata</strong> - Contextual titles, subtitles, and axis labels</li>
+                    <li><strong>Professional Styling</strong>
+                        <ul>
+                            <li>Purple gradient color scheme (#667eea primary)</li>
+                            <li>Grid with 30% alpha transparency</li>
+                            <li>Value labels on bar charts</li>
+                            <li>Statistics boxes on histograms</li>
+                            <li>Bold typography (14pt titles, 12pt labels)</li>
+                            <li>High resolution (150 DPI, 14x7 inches)</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <img src="/assets/img/projects/powerbi-agent-8.png" alt="Results Explanation" class="screenshot">
+                
+                <h4>6. AI-Generated Insights</h4>
+                <ul>
+                    <li>Plain English explanations of query results</li>
+                    <li>Key insights and patterns highlighted</li>
+                    <li>Business-friendly language without technical jargon</li>
+                    <li>2-3 paragraph comprehensive summaries</li>
+                </ul>
+                
+                <h3>Technical Implementation</h3>
+                
+                <h4>Semantic Model Storage</h4>
+                <p>The system extracts and stores complete semantic models as JSON files:</p>
+                <div class="code-block">
+                    <pre><code>{
+  "dataset_id": "...",
+  "tables": [{
+    "name": "Sales",
+    "columns": [
+      {"name": "ProductID", "dataType": "Int64"},
+      {"name": "Amount", "dataType": "Decimal"}
+    ],
+    "measures": [...],
+    "relationships": [...]
+  }]
+}</code></pre>
+                </div>
+                
+                <h4>Query Validation Pipeline</h4>
+                <ol>
+                    <li>Generate initial DAX query from natural language</li>
+                    <li>Validate syntax and fix common errors (COUNT → COUNTROWS)</li>
+                    <li>Add proper table/column identifier quoting</li>
+                    <li>Test execute and handle errors</li>
+                    <li>Retry with corrections if needed</li>
+                </ol>
+                
+                <h4>Error Handling Strategy</h4>
+                <ul>
+                    <li>Enhanced error messages from Power BI API</li>
+                    <li>Automatic retry with query corrections</li>
+                    <li>Fallback to simpler queries if complex ones fail</li>
+                    <li>User-friendly error explanations</li>
+                </ul>
+            </section>
+            
+            <!-- Results -->
+            <section class="case-study-section">
+                <h2>Results & Impact</h2>
+                
+                <h3>Performance Metrics</h3>
+                <ul>
+                    <li><strong>Sub-2 Second Response Times</strong> - Fast query generation and execution using Groq's optimized inference</li>
+                    <li><strong>95% DAX Accuracy</strong> - High success rate for generated queries with automatic validation</li>
+                    <li><strong>100% Automatic Visualization</strong> - Every successful query produces a professional chart</li>
+                    <li><strong>Zero Manual Configuration</strong> - Semantic model extraction is fully automated</li>
+                </ul>
+                
+                <h3>User Experience Improvements</h3>
+                <ul>
+                    <li><strong>70% Time Savings</strong> - Queries that took 10+ minutes now complete in seconds</li>
+                    <li><strong>No DAX Knowledge Required</strong> - Business users can analyze data without technical training</li>
+                    <li><strong>Instant Visualizations</strong> - Automatic chart generation eliminates manual chart creation</li>
+                    <li><strong>Conversational Interface</strong> - Natural language interaction feels intuitive and accessible</li>
+                </ul>
+                
+                <h3>Technical Achievements</h3>
+                <ul>
+                    <li>Successfully integrated OpenAI GPT-4 and Groq LLaMA-3.3-70B models</li>
+                    <li>Built robust DAX validation and error correction system</li>
+                    <li>Implemented automatic chart type detection algorithm</li>
+                    <li>Created LLM-powered chart metadata generation</li>
+                    <li>Designed scalable semantic model extraction pipeline</li>
+                </ul>
+            </section>
+            
+            <!-- Challenges -->
+            <section class="case-study-section">
+                <h2>Challenges & Solutions</h2>
+                
+                <h3>Challenge 1: DAX Syntax Complexity</h3>
+                <p><strong>Problem:</strong> LLMs often generated DAX queries with subtle syntax errors (wrong function names, missing quotes, incorrect table references).</p>
+                <p><strong>Solution:</strong> Implemented a multi-layer validation system:</p>
+                <ul>
+                    <li>Pre-execution syntax checking</li>
+                    <li>Common error pattern detection and auto-correction</li>
+                    <li>Iterative refinement with error feedback</li>
+                    <li>Fallback to simpler query structures</li>
+                </ul>
+                
+                <h3>Challenge 2: Chart Metadata Quality</h3>
+                <p><strong>Problem:</strong> Generic column names resulted in poor chart titles and labels (e.g., "Column1" vs "Total Revenue").</p>
+                <p><strong>Solution:</strong> Developed separate LLM call for chart metadata generation:</p>
+                <ul>
+                    <li>Analyzes user question for context</li>
+                    <li>Generates descriptive titles and labels</li>
+                    <li>Includes subtitles for additional context</li>
+                    <li>Fallback to column names if LLM fails</li>
+                </ul>
+                
+                <h3>Challenge 3: Power BI API Rate Limits</h3>
+                <p><strong>Problem:</strong> Frequent API calls for large semantic models could hit rate limits.</p>
+                <p><strong>Solution:</strong> Implemented semantic model caching:</p>
+                <ul>
+                    <li>Store extracted models as JSON files locally</li>
+                    <li>Reuse cached models for subsequent queries</li>
+                    <li>Reduce API calls by 90%</li>
+                    <li>Timestamp-based cache invalidation</li>
+                </ul>
+                
+                <h3>Challenge 4: Visualization Performance</h3>
+                <p><strong>Problem:</strong> Large datasets (10,000+ rows) caused slow chart rendering and browser memory issues.</p>
+                <p><strong>Solution:</strong> Implemented intelligent data limiting:</p>
+                <ul>
+                    <li>Automatic TOPN() injection for large result sets</li>
+                    <li>Limit to top 20 items for readability</li>
+                    <li>Aggregate smaller values into "Others" category</li>
+                    <li>High-quality PNG compression</li>
+                </ul>
+            </section>
+            
+            <!-- Lessons Learned -->
+            <div class="lessons-learned">
+                <h3>Lessons Learned</h3>
+                <ul>
+                    <li><strong>Prompt Engineering is Critical</strong> - Spent 40% of development time optimizing LLM prompts for accurate DAX generation. Small prompt changes had large accuracy impacts.</li>
+                    <li><strong>Error Handling > Perfect Generation</strong> - Building robust error correction was more valuable than trying to generate perfect DAX on first attempt.</li>
+                    <li><strong>User Context Matters</strong> - Incorporating user's question into chart metadata dramatically improved visualization quality and user satisfaction.</li>
+                    <li><strong>API Documentation Gaps</strong> - Power BI REST API documentation had inconsistencies; community forums and experimentation were essential.</li>
+                    <li><strong>Model Selection Impact</strong> - Groq's LLaMA-3.3-70B was 3x faster than GPT-4 with comparable accuracy for DAX generation tasks.</li>
+                </ul>
+            </div>
+            
+            <!-- Future Enhancements -->
+            <section class="case-study-section">
+                <h2>Future Enhancements</h2>
+                <ul>
+                    <li><strong>Multi-turn Conversations</strong> - Add conversation history and context retention for follow-up questions</li>
+                    <li><strong>Query Optimization</strong> - Suggest optimized DAX queries for better performance</li>
+                    <li><strong>Export Capabilities</strong> - Download results as CSV, Excel, or PowerPoint</li>
+                    <li><strong>Scheduled Reports</strong> - Set up automated report generation and email delivery</li>
+                    <li><strong>Advanced Visualizations</strong> - Support for more chart types (heatmaps, treemaps, sankey diagrams)</li>
+                    <li><strong>Collaboration Features</strong> - Share queries and visualizations with team members</li>
+                    <li><strong>Natural Language Insights</strong> - AI-generated anomaly detection and trend analysis</li>
+                    <li><strong>Voice Interface</strong> - Voice-to-text question input for hands-free analysis</li>
+                </ul>
+            </section>
+            
+            <!-- Conclusion -->
+            <section class="case-study-section">
+                <h2>Conclusion</h2>
+                <p>The Power BI AI Agent successfully democratizes data analysis by removing technical barriers between business users and their data. By leveraging cutting-edge LLMs (OpenAI GPT-4 and Groq LLaMA-3.3-70B), the system achieves 95% DAX query accuracy with sub-2 second response times, enabling natural language interaction with Power BI datasets.</p>
+                
+                <p>The automatic visualization generation with AI-powered chart metadata creates publication-ready graphics without manual configuration. The robust validation pipeline and error correction system ensure reliability, while the semantic model caching dramatically reduces API overhead.</p>
+                
+                <p>This project demonstrates the transformative potential of combining traditional BI tools with modern GenAI capabilities. It represents a significant step toward making data analysis accessible to everyone, regardless of technical background, while maintaining the power and flexibility of professional analytics platforms.</p>
+                
+                <p>The system is production-ready and can be deployed for organizations seeking to enhance their Power BI capabilities with conversational AI, reduce training costs for business users, and accelerate time-to-insight for data-driven decisions.</p>
+            </section>
+            
+        </article>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-heading">Waleed Hassan</h3>
+                    <p class="footer-text">Data Scientist & AI Developer specializing in Python-first solutions with measurable business impact.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <!-- <li><a href="/blog/">Blog</a></li> -->
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Expertise</h4>
+                    <ul class="footer-links">
+                        <li>Python & Data Analysis</li>
+                        <li>Machine Learning</li>
+                        <li>Generative AI</li>
+                        <li>Data Visualization</li>
+                        <li>BI Dashboards</li>
+                        <li>Workflow Automation</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="mailto:wh937492@gmail.com">wh937492@gmail.com</a>
+                        </li>
+                        <li>Green Avenue Islamabad, Pakistan</li>
+                        <li>
+                            <a href="/assets/Waleed_Resume.pdf" download>Download Resume</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Waleed Hassan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

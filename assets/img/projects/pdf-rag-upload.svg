@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 640">
+  <!-- Background -->
+  <rect width="1120" height="640" fill="#FFFFFF"/>
+  
+  <!-- Main Title -->
+  <text x="85" y="100" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 46px; fill: #1F2937; font-weight: 700;">Conversational RAG With PDF</text>
+  <text x="85" y="155" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 46px; fill: #1F2937; font-weight: 700;">uploads and chat history 🔗</text>
+  
+  <!-- Subtitle -->
+  <text x="85" y="215" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 18px; fill: #6B7280;">Upload Pdf's and chat with their content</text>
+  
+  <!-- Session ID Label -->
+  <text x="85" y="285" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; fill: #374151; font-weight: 500;">Session ID</text>
+  
+  <!-- Session ID Input -->
+  <rect x="85" y="300" width="950" height="48" fill="#F3F4F6" stroke="transparent" stroke-width="0" rx="6"/>
+  <text x="105" y="330" style="font-family: 'Courier New', monospace; font-size: 16px; fill: #6B7280;">default_session</text>
+  
+  <!-- Choose A Pdf file Label -->
+  <text x="85" y="400" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; fill: #374151; font-weight: 500;">Choose A Pdf file</text>
+  
+  <!-- Upload Area -->
+  <rect x="85" y="420" width="950" height="120" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="2" stroke-dasharray="8,4" rx="8"/>
+  
+  <!-- Upload Icon -->
+  <circle cx="130" cy="470" r="28" fill="#E0E7FF"/>
+  <path d="M 120 475 L 130 465 L 140 475 M 130 465 L 130 485" stroke="#6366F1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <line x1="122" y1="485" x2="138" y2="485" stroke="#6366F1" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Upload Text -->
+  <text x="178" y="475" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 500;">Drag and drop files here</text>
+  <text x="178" y="500" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; fill: #6B7280;">Limit 200MB per file • PDF</text>
+  
+  <!-- Browse Files Button -->
+  <rect x="850" y="450" width="145" height="40" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1" rx="6"/>
+  <text x="922" y="475" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; fill: #374151; font-weight: 500; text-anchor: middle;">Browse files</text>
+  
+  <!-- Uploaded File -->
+  <g transform="translate(85, 560)">
+    <!-- File Icon Background -->
+    <rect x="0" y="0" width="48" height="48" fill="#EFF6FF" rx="6"/>
+    
+    <!-- PDF Icon -->
+    <rect x="10" y="8" width="28" height="32" fill="#3B82F6" rx="2"/>
+    <text x="24" y="32" style="font-family: 'Segoe UI', sans-serif; font-size: 10px; fill: #FFFFFF; font-weight: 700; text-anchor: middle;">PDF</text>
+    
+    <!-- File Name -->
+    <text x="60" y="25" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 15px; fill: #1F2937; font-weight: 500;">Attention.pdf</text>
+    <text x="60" y="43" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; fill: #6B7280;">2.1MB</text>
+  </g>
+  
+  <!-- Remove Button (X) -->
+  <circle cx="1000" cy="584" r="14" fill="transparent" stroke="#D1D5DB" stroke-width="1.5"/>
+  <line x1="995" y1="579" x2="1005" y2="589" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/>
+  <line x1="1005" y1="579" x2="995" y2="589" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/>
+</svg>

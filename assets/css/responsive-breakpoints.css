@@ -1,0 +1,368 @@
+/* ============================================
+   RESPONSIVE BREAKPOINTS QUICK REFERENCE
+   ============================================ */
+
+/* Mobile First Approach
+   Default styles are for mobile (0-767px)
+   Then enhance for larger screens
+*/
+
+/* ============================================
+   BREAKPOINTS
+   ============================================ */
+
+/* Mobile (Default) - 0 to 767px */
+/* No media query needed - this is the default */
+
+/* Tablet / Small Desktop - 768px to 1023px */
+@media (min-width: 768px) {
+    /* Styles for tablets and above */
+}
+
+/* Desktop / Large Screens - 1024px and above */
+@media (min-width: 1024px) {
+    /* Styles for desktops and above */
+}
+
+/* Large Desktop - 1440px and above */
+@media (min-width: 1440px) {
+    /* Styles for large displays */
+}
+
+/* Ultra Wide - 1920px and above */
+@media (min-width: 1920px) {
+    /* Styles for ultra-wide displays */
+}
+
+/* ============================================
+   COMMON RESPONSIVE PATTERNS
+   ============================================ */
+
+/* Example 1: Navigation */
+.nav-menu {
+    /* Mobile: Vertical menu, hidden by default */
+    display: none;
+    flex-direction: column;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .nav-menu {
+        /* Tablet+: Horizontal menu, always visible */
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .nav-toggle {
+        display: none; /* Hide hamburger on desktop */
+    }
+}
+
+/* Example 2: Grid Layout */
+.projects-grid {
+    /* Mobile: 1 column */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+    .projects-grid {
+        /* Tablet: 2 columns */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects-grid {
+        /* Desktop: 3 columns */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Example 3: Two-Column Layout */
+.about-section {
+    /* Mobile: Stack vertically */
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+    .about-section {
+        /* Tablet+: Side by side */
+        flex-direction: row;
+    }
+    
+    .about-image {
+        flex: 0 0 40%; /* Image takes 40% */
+    }
+    
+    .about-content {
+        flex: 1; /* Content takes remaining space */
+    }
+}
+
+/* Example 4: Font Sizes */
+.hero-title {
+    /* Fluid typography - scales automatically */
+    font-size: clamp(36px, 8vw, 72px);
+    /* min: 36px, preferred: 8% of viewport, max: 72px */
+}
+
+/* Example 5: Container Width */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 5vw, 32px);
+}
+
+/* ============================================
+   UTILITY CLASSES FOR RESPONSIVE DESIGN
+   ============================================ */
+
+/* Visibility Utilities */
+.hide-mobile {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .hide-mobile {
+        display: block;
+    }
+    
+    .hide-desktop {
+        display: none;
+    }
+}
+
+/* Spacing Utilities */
+.py-4 {
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-4);
+}
+
+@media (min-width: 768px) {
+    .py-md-6 {
+        padding-top: var(--space-6);
+        padding-bottom: var(--space-6);
+    }
+}
+
+@media (min-width: 1024px) {
+    .py-lg-8 {
+        padding-top: var(--space-8);
+        padding-bottom: var(--space-8);
+    }
+}
+
+/* Text Alignment */
+.text-center {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .text-md-left {
+        text-align: left;
+    }
+}
+
+/* ============================================
+   TOUCH-FRIENDLY SIZES (Mobile)
+   ============================================ */
+
+/* All interactive elements should be at least 44x44px */
+.btn,
+.nav-link,
+button,
+a.clickable {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 12px 24px;
+}
+
+/* ============================================
+   VIEWPORT-SPECIFIC STYLES
+   ============================================ */
+
+/* Portrait Tablets and Phones */
+@media (max-width: 767px) {
+    /* Mobile-specific overrides */
+    h1 { font-size: clamp(32px, 8vw, 48px); }
+    h2 { font-size: clamp(24px, 6vw, 32px); }
+    
+    .container {
+        padding: 0 16px;
+    }
+    
+    /* Stack cards vertically */
+    .card {
+        margin-bottom: var(--space-3);
+    }
+}
+
+/* Landscape Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Tablet-specific styles */
+    .hero {
+        min-height: 70vh;
+    }
+    
+    .grid-cols-md-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    /* Desktop enhancements */
+    .hero {
+        min-height: 100vh;
+    }
+    
+    .container {
+        padding: 0 32px;
+    }
+}
+
+/* ============================================
+   HIGH RESOLUTION DISPLAYS
+   ============================================ */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Retina display styles */
+    /* Use 2x images, adjust borders, etc. */
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    /* Hide navigation, footers, etc. */
+    .nav,
+    .footer,
+    .btn,
+    .hero-cta {
+        display: none;
+    }
+    
+    /* Optimize for print */
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+    
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+    
+    /* Show URLs after links */
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY - REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    /* Disable animations for users who prefer reduced motion */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============================================
+   DARK MODE SUPPORT (System Preference)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    /* Already default in your portfolio */
+    /* But you can add overrides here */
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: #ffffff;
+        --elev: #f6f8fb;
+        --text: #0b1220;
+        --muted: #4b5563;
+        --border: #dde5ee;
+    }
+}
+
+/* ============================================
+   ORIENTATION-SPECIFIC STYLES
+   ============================================ */
+
+@media (orientation: portrait) {
+    /* Portrait mode adjustments */
+    .hero {
+        padding: var(--space-6) 0;
+    }
+}
+
+@media (orientation: landscape) {
+    /* Landscape mode adjustments */
+    .hero {
+        padding: var(--space-4) 0;
+    }
+}
+
+/* ============================================
+   ASPECT RATIO UTILITIES
+   ============================================ */
+
+.aspect-ratio-16-9 {
+    position: relative;
+    padding-top: 56.25%; /* 9/16 = 0.5625 */
+}
+
+.aspect-ratio-16-9 > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============================================
+   COMMON RESPONSIVE PATTERNS SUMMARY
+   ============================================
+
+Mobile First Workflow:
+1. Write base styles for mobile (default)
+2. Add tablet enhancements at 768px
+3. Add desktop enhancements at 1024px
+4. Test on real devices
+
+Key Principles:
+- Use flexible units (%, em, rem, vw, vh)
+- Use clamp() for fluid typography
+- Use CSS Grid/Flexbox for layouts
+- Min touch target: 44x44px
+- Test with browser DevTools device emulation
+- Check on real devices before launch
+
+Quick Testing:
+Chrome DevTools → Toggle Device Toolbar (Ctrl+Shift+M)
+Test these devices:
+- iPhone SE (375px width)
+- iPad (768px width)
+- Desktop HD (1920px width)
+
+*/

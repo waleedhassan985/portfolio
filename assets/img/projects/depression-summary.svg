@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 975 708">
+  <!-- Background -->
+  <rect width="975" height="708" fill="#FFFFFF"/>
+  
+  <!-- Icon -->
+  <rect x="94" y="50" width="40" height="40" fill="#10B981" rx="6"/>
+  <text x="114" y="78" style="font-family: monospace; font-size: 24px; fill: #FFFFFF; text-anchor: middle;">📊</text>
+  
+  <!-- Header -->
+  <text x="145" y="80" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 28px; fill: #1F2937; font-weight: 700;">Input Data Summary</text>
+  
+  <!-- Subheader -->
+  <text x="87" y="135" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #6B7280; font-weight: 600;">Encoded values used for prediction:</text>
+  
+  <!-- Left Column -->
+  <text x="119" y="195" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 700;">•</text>
+  <text x="142" y="195" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 600;">Gender:</text>
+  <text x="218" y="195" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #6B7280;">1 (Male)</text>
+  
+  <text x="119" y="255" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 700;">•</text>
+  <text x="142" y="255" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 600;">Profession:</text>
+  <text x="245" y="255" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #6B7280;">1 (Student)</text>
+  
+  <text x="119" y="315" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 700;">•</text>
+  <text x="142" y="315" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 600;">Family History:</text>
+  <text x="285" y="315" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #6B7280;">0 (No)</text>
+  
+  <text x="119" y="375" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 700;">•</text>
+  <text x="142" y="375" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 600;">Suicidal Thoughts:</text>
+  <text x="300" y="375" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #6B7280;">0 (No)</text>
+  
+  <text x="119" y="435" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 700;">•</text>
+  <text x="142" y="435" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 600;">Dietary Habits:</text>
+  <text x="275" y="435" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #6B7280;">0 (Healthy)</text>
+  
+  <!-- Right Column -->
+  <text x="606" y="195" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 700;">•</text>
+  <text x="629" y="195" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 600;">Sleep Duration:</text>
+  <text x="770" y="195" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #6B7280;">0.8 (More than 8 hours)</text>
+  
+  <text x="606" y="255" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 700;">•</text>
+  <text x="629" y="255" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 600;">Age:</text>
+  <text x="675" y="255" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #6B7280;">23</text>
+  
+  <text x="606" y="315" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 700;">•</text>
+  <text x="629" y="315" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 600;">CGPA:</text>
+  <text x="695" y="315" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #6B7280;">3.94</text>
+  
+  <text x="606" y="375" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 700;">•</text>
+  <text x="629" y="375" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 600;">Academic Pressure:</text>
+  <text x="810" y="375" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #6B7280;">2</text>
+  
+  <text x="606" y="435" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 700;">•</text>
+  <text x="629" y="435" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 600;">Work Pressure:</text>
+  <text x="770" y="435" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #6B7280;">2</text>
+  
+  <text x="606" y="495" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 700;">•</text>
+  <text x="629" y="495" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 600;">Study Satisfaction:</text>
+  <text x="800" y="495" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #6B7280;">4</text>
+  
+  <text x="606" y="555" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 700;">•</text>
+  <text x="629" y="555" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 600;">Job Satisfaction:</text>
+  <text x="780" y="555" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #6B7280;">3</text>
+  
+  <text x="606" y="615" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 700;">•</text>
+  <text x="629" y="615" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 600;">Work/Study Hours:</text>
+  <text x="805" y="615" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #6B7280;">7</text>
+  
+  <text x="606" y="675" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 700;">•</text>
+  <text x="629" y="675" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #1F2937; font-weight: 600;">Financial Stress:</text>
+  <text x="780" y="675" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #6B7280;">2</text>
+</svg>

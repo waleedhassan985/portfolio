@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 500">
+  <defs>
+    <linearGradient id="table-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e2e8f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cbd5e1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1400" height="500" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="700" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e293b" text-anchor="middle">Power BI Data Model - Sales Analytics</text>
+  
+  <!-- Table 1: products -->
+  <g transform="translate(100, 80)">
+    <rect width="180" height="280" rx="8" fill="url(#table-bg)" stroke="#94a3b8" stroke-width="2"/>
+    <!-- Header -->
+    <rect width="180" height="30" rx="8" fill="#64748b"/>
+    <text x="15" y="20" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9">📦 products</text>
+    <text x="158" y="20" font-family="Courier" font-size="12" fill="#cbd5e1">...</text>
+    
+    <!-- Fields -->
+    <g transform="translate(12, 42)">
+      <text y="15" font-family="Courier" font-size="11" fill="#1e293b">cat_id</text>
+      <text y="30" font-family="Courier" font-size="11" fill="#1e293b">cat_name</text>
+      <text y="45" font-family="Courier" font-size="11" fill="#0284c7">📅 disc_date</text>
+      <text y="60" font-family="Courier" font-size="11" fill="#475569">Σ disc_pct</text>
+      <text y="75" font-family="Courier" font-size="11" fill="#475569">Σ inv_min_lvl</text>
+      <text y="90" font-family="Courier" font-size="11" fill="#0284c7">📅 launch_date</text>
+      <text y="105" font-family="Courier" font-size="11" fill="#1e293b">prod_desc</text>
+      <text y="120" font-family="Courier" font-size="11" fill="#1e293b">prod_dim</text>
+      <text y="135" font-family="Courier" font-size="11" fill="#1e293b">prod_id</text>
+      <text y="150" font-family="Courier" font-size="11" fill="#1e293b">prod_name</text>
+      <text y="165" font-family="Courier" font-size="11" fill="#1e293b">prod_status</text>
+      <text y="180" font-family="Courier" font-size="11" fill="#1e293b">supp_id</text>
+      <text y="195" font-family="Courier" font-size="11" fill="#475569">Σ prod_weight</text>
+      <text y="210" font-family="Courier" font-size="11" fill="#1e293b">subcat_id</text>
+      <text y="225" font-family="Courier" font-size="11" fill="#1e293b">subcat_name</text>
+      <text y="240" font-family="Courier" font-size="11" fill="#475569">Σ unit_cost</text>
+      <text y="255" font-family="Courier" font-size="11" fill="#475569">Σ unit_price</text>
+    </g>
+    <text x="90" y="275" font-family="Arial, sans-serif" font-size="10" fill="#7c3aed" text-anchor="middle" style="cursor:pointer">▼ Collapse</text>
+  </g>
+  
+  <!-- Table 2: inventory -->
+  <g transform="translate(300, 80)">
+    <rect width="150" height="240" rx="8" fill="url(#table-bg)" stroke="#94a3b8" stroke-width="2"/>
+    <rect width="150" height="30" rx="8" fill="#64748b"/>
+    <text x="15" y="20" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9">📊 inventory</text>
+    <text x="128" y="20" font-family="Courier" font-size="12" fill="#cbd5e1">...</text>
+    
+    <g transform="translate(12, 42)">
+      <text y="15" font-family="Courier" font-size="11" fill="#1e293b">disc_reason</text>
+      <text y="30" font-family="Courier" font-size="11" fill="#1e293b">inv_date</text>
+      <text y="45" font-family="Courier" font-size="11" fill="#1e293b">inv_id</text>
+      <text y="60" font-family="Courier" font-size="11" fill="#475569">Σ inv_qty_adj</text>
+      <text y="75" font-family="Courier" font-size="11" fill="#475569">Σ inv_value</text>
+      <text y="90" font-family="Courier" font-size="11" fill="#0284c7">📅 last_count_date</text>
+      <text y="105" font-family="Courier" font-size="11" fill="#1e293b">loc_name</text>
+      <text y="120" font-family="Courier" font-size="11" fill="#475569">Σ next_count_date</text>
+      <text y="135" font-family="Courier" font-size="11" fill="#1e293b">prod_id</text>
+      <text y="150" font-family="Courier" font-size="11" fill="#475569">Σ qty_allocated</text>
+      <text y="165" font-family="Courier" font-size="11" fill="#475569">Σ qty_on_hand</text>
+      <text y="180" font-family="Courier" font-size="11" fill="#475569">Σ reorder_point</text>
+      <text y="195" font-family="Courier" font-size="11" fill="#475569">Σ restock_level</text>
+    </g>
+    <text x="75" y="230" font-family="Arial, sans-serif" font-size="10" fill="#7c3aed" text-anchor="middle">▼ Collapse</text>
+  </g>
+  
+  <!-- Table 3: marketing_campaign -->
+  <g transform="translate(540, 30)">
+    <rect width="150" height="320" rx="8" fill="url(#table-bg)" stroke="#94a3b8" stroke-width="2"/>
+    <rect width="150" height="30" rx="8" fill="#64748b"/>
+    <text x="15" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9">📢 marketing_campaig...</text>
+    <text x="128" y="20" font-family="Courier" font-size="12" fill="#cbd5e1">...</text>
+    
+    <g transform="translate(12, 42)">
+      <text y="15" font-family="Courier" font-size="11" fill="#475569">Σ budget_alloc</text>
+      <text y="30" font-family="Courier" font-size="11" fill="#475569">Σ budget_spent</text>
+      <text y="45" font-family="Courier" font-size="11" fill="#1e293b">camp_desc</text>
+      <text y="60" font-family="Courier" font-size="11" fill="#1e293b">camp_id</text>
+      <text y="75" font-family="Courier" font-size="11" fill="#1e293b">camp_manager</text>
+      <text y="90" font-family="Courier" font-size="11" fill="#1e293b">camp_name</text>
+      <text y="105" font-family="Courier" font-size="11" fill="#1e293b">camp_status</text>
+      <text y="120" font-family="Courier" font-size="11" fill="#1e293b">camp_type</text>
+      <text y="135" font-family="Courier" font-size="11" fill="#1e293b">channel</text>
+      <text y="150" font-family="Courier" font-size="11" fill="#475569">Σ click_count</text>
+      <text y="165" font-family="Courier" font-size="11" fill="#475569">Σ conv_count</text>
+      <text y="180" font-family="Courier" font-size="11" fill="#0284c7">📅 end_date</text>
+      <text y="195" font-family="Courier" font-size="11" fill="#475569">Σ imp_count</text>
+      <text y="210" font-family="Courier" font-size="11" fill="#475569">Σ rev_gen</text>
+      <text y="225" font-family="Courier" font-size="11" fill="#1e293b">roi_calc</text>
+      <text y="240" font-family="Courier" font-size="11" fill="#0284c7">📅 start_date</text>
+      <text y="255" font-family="Courier" font-size="11" fill="#1e293b">target_aud</text>
+      <text y="270" font-family="Courier" font-size="11" fill="#1e293b">🔗 Campaign Revenue</text>
+      <text y="285" font-family="Courier" font-size="11" fill="#1e293b">🔗 Campaign ROI</text>
+    </g>
+    <text x="75" y="310" font-family="Arial, sans-serif" font-size="10" fill="#7c3aed" text-anchor="middle">▼ Collapse</text>
+  </g>
+  
+  <!-- Table 4: orders -->
+  <g transform="translate(750, 80)">
+    <rect width="130" height="220" rx="8" fill="url(#table-bg)" stroke="#94a3b8" stroke-width="2"/>
+    <rect width="130" height="30" rx="8" fill="#64748b"/>
+    <text x="15" y="20" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9">📋 orders</text>
+    <text x="108" y="20" font-family="Courier" font-size="12" fill="#cbd5e1">...</text>
+    
+    <g transform="translate(12, 42)">
+      <text y="15" font-family="Courier" font-size="11" fill="#1e293b">camp_id</text>
+      <text y="30" font-family="Courier" font-size="11" fill="#1e293b">cust_id</text>
+      <text y="45" font-family="Courier" font-size="11" fill="#0284c7">📅 daily_date</text>
+      <text y="60" font-family="Courier" font-size="11" fill="#0284c7">📅 disc_amt</text>
+      <text y="75" font-family="Courier" font-size="11" fill="#1e293b">order_id</text>
+      <text y="90" font-family="Courier" font-size="11" fill="#1e293b">order_sec</text>
+      <text y="105" font-family="Courier" font-size="11" fill="#1e293b">order_status</text>
+      <text y="120" font-family="Courier" font-size="11" fill="#1e293b">pay_method</text>
+      <text y="135" font-family="Courier" font-size="11" fill="#1e293b">promo_flag</text>
+      <text y="150" font-family="Courier" font-size="11" fill="#1e293b">sales_rep_id</text>
+      <text y="165" font-family="Courier" font-size="11" fill="#0284c7">📅 ship_date</text>
+      <text y="180" font-family="Courier" font-size="11" fill="#1e293b">ship_method</text>
+    </g>
+    <text x="65" y="210" font-family="Arial, sans-serif" font-size="10" fill="#7c3aed" text-anchor="middle">▼ Collapse</text>
+  </g>
+  
+  <!-- Table 5: customers -->
+  <g transform="translate(1170, 30)">
+    <rect width="180" height="300" rx="8" fill="url(#table-bg)" stroke="#94a3b8" stroke-width="2"/>
+    <rect width="180" height="30" rx="8" fill="#64748b"/>
+    <text x="15" y="20" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9">👤 customers</text>
+    <text x="158" y="20" font-family="Courier" font-size="12" fill="#cbd5e1">...</text>
+    
+    <g transform="translate(12, 42)">
+      <text y="15" font-family="Courier" font-size="11" fill="#0284c7">📅 acct_date</text>
+      <text y="30" font-family="Courier" font-size="11" fill="#1e293b">cust_addr</text>
+      <text y="45" font-family="Courier" font-size="11" fill="#1e293b">cust_city</text>
+      <text y="60" font-family="Courier" font-size="11" fill="#1e293b">cust_country</text>
+      <text y="75" font-family="Courier" font-size="11" fill="#1e293b">cust_email</text>
+      <text y="90" font-family="Courier" font-size="11" fill="#1e293b">cust_id</text>
+      <text y="105" font-family="Courier" font-size="11" fill="#1e293b">cust_name</text>
+      <text y="120" font-family="Courier" font-size="11" fill="#1e293b">cust_phone</text>
+      <text y="135" font-family="Courier" font-size="11" fill="#1e293b">cust_postal</text>
+      <text y="150" font-family="Courier" font-size="11" fill="#1e293b">cust_seg</text>
+      <text y="165" font-family="Courier" font-size="11" fill="#0284c7">📅 cust_state</text>
+      <text y="180" font-family="Courier" font-size="11" fill="#0284c7">📅 first_purch_dt</text>
+      <text y="195" font-family="Courier" font-size="11" fill="#0284c7">📅 last_state</text>
+      <text y="210" font-family="Courier" font-size="11" fill="#1e293b">🔗 Customer Count</text>
+      <text y="225" font-family="Courier" font-size="11" fill="#1e293b">🔗 CustomerFrequency</text>
+      <text y="240" font-family="Courier" font-size="11" fill="#1e293b">🔗 CustomerLifetimeValu</text>
+      <text y="255" font-family="Courier" font-size="11" fill="#1e293b">🔗 CustomerSpend</text>
+      <text y="270" font-family="Courier" font-size="11" fill="#1e293b">🔗 CustomerType</text>
+    </g>
+    <text x="90" y="290" font-family="Arial, sans-serif" font-size="10" fill="#7c3aed" text-anchor="middle">▼ Collapse</text>
+  </g>
+  
+  <!-- Additional tables row 2 -->
+  <g transform="translate(100, 380)">
+    <rect width="140" height="100" rx="8" fill="url(#table-bg)" stroke="#94a3b8" stroke-width="2"/>
+    <rect width="140" height="30" rx="8" fill="#64748b"/>
+    <text x="15" y="20" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9">🚚 suppliers</text>
+    <g transform="translate(12, 42)">
+      <text y="15" font-family="Courier" font-size="11" fill="#1e293b">contract_end</text>
+      <text y="30" font-family="Courier" font-size="11" fill="#1e293b">contract_start</text>
+      <text y="45" font-family="Courier" font-size="11" fill="#1e293b">lead_time_days</text>
+      <text y="60" font-family="Courier" font-size="11" fill="#1e293b">...</text>
+    </g>
+  </g>
+  
+  <g transform="translate(260, 380)">
+    <rect width="150" height="100" rx="8" fill="url(#table-bg)" stroke="#94a3b8" stroke-width="2"/>
+    <rect width="150" height="30" rx="8" fill="#64748b"/>
+    <text x="15" y="20" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9">📦 order_details</text>
+    <g transform="translate(12, 42)">
+      <text y="15" font-family="Courier" font-size="11" fill="#1e293b">disc_pct</text>
+      <text y="30" font-family="Courier" font-size="11" fill="#1e293b">line_tot</text>
+      <text y="45" font-family="Courier" font-size="11" fill="#1e293b">order_detail_id</text>
+      <text y="60" font-family="Courier" font-size="11" fill="#1e293b">...</text>
+    </g>
+  </g>
+  
+  <g transform="translate(510, 370)">
+    <rect width="130" height="110" rx="8" fill="url(#table-bg)" stroke="#94a3b8" stroke-width="2"/>
+    <rect width="130" height="30" rx="8" fill="#64748b"/>
+    <text x="15" y="20" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9">↩️ returns</text>
+    <g transform="translate(12, 42)">
+      <text y="15" font-family="Courier" font-size="11" fill="#1e293b">cond_code</text>
+      <text y="30" font-family="Courier" font-size="11" fill="#1e293b">order_id</text>
+      <text y="45" font-family="Courier" font-size="11" fill="#1e293b">price_by</text>
+      <text y="60" font-family="Courier" font-size="11" fill="#1e293b">...</text>
+    </g>
+  </g>
+  
+  <g transform="translate(880, 330)">
+    <rect width="130" height="150" rx="8" fill="url(#table-bg)" stroke="#94a3b8" stroke-width="2"/>
+    <rect width="130" height="30" rx="8" fill="#64748b"/>
+    <text x="15" y="20" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9">📅 Date</text>
+    <g transform="translate(12, 42)">
+      <text y="15" font-family="Courier" font-size="11" fill="#0284c7">📅 Date</text>
+      <text y="30" font-family="Courier" font-size="11" fill="#1e293b">Date&areegor</text>
+      <text y="45" font-family="Courier" font-size="11" fill="#1e293b">MonthLong</text>
+      <text y="60" font-family="Courier" font-size="11" fill="#1e293b">MonthNo</text>
+      <text y="75" font-family="Courier" font-size="11" fill="#1e293b">MonthShort</text>
+      <text y="90" font-family="Courier" font-size="11" fill="#1e293b">Quarter</text>
+      <text y="105" font-family="Courier" font-size="11" fill="#1e293b">WeekDay</text>
+      <text y="120" font-family="Courier" font-size="11" fill="#1e293b">...</text>
+    </g>
+  </g>
+  
+  <!-- Relationship Lines -->
+  <line x1="280" y1="190" x2="300" y2="190" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="285" cy="190" r="4" fill="#7c3aed"/>
+  
+  <line x1="450" y1="190" x2="540" y2="190" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="455" cy="190" r="4" fill="#7c3aed"/>
+  
+  <line x1="690" y1="140" x2="750" y2="140" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="695" cy="140" r="4" fill="#7c3aed"/>
+  
+  <line x1="815" y1="300" x2="815" y2="330" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="815" cy="305" r="4" fill="#7c3aed"/>
+  
+  <line x1="880" y1="190" x2="1170" y2="190" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="885" cy="190" r="4" fill="#7c3aed"/>
+  
+  <!-- Legend -->
+  <g transform="translate(20, 460)">
+    <rect width="280" height="30" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+    <line x1="15" y1="15" x2="40" y2="15" stroke="#7c3aed" stroke-width="2"/>
+    <circle cx="45" cy="15" r="3" fill="#7c3aed"/>
+    <text x="55" y="19" font-family="Arial, sans-serif" font-size="11" fill="#334155">One-to-Many Relationships (1:*)</text>
+  </g>
+</svg>

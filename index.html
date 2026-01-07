@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Waleed Hassan - Data Scientist specializing in Python, Machine Learning, Data Analytics, and Data Visualization with measurable business impact.">
+    <meta name="author" content="Waleed Hassan">
+    <meta name="theme-color" content="#0b1220">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Waleed Hassan - Data Scientist">
+    <meta property="og:description" content="Data Science that delivers. Python-first approach with measurable impact.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoursite.com/">
+    <meta property="og:image" content="https://yoursite.com/assets/img/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Waleed Hassan - Data Scientist">
+    <meta name="twitter:description" content="Data Science that delivers. Python-first approach with measurable impact.">
+    <meta name="twitter:image" content="https://yoursite.com/assets/img/og-image.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://yoursite.com/">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    
+    <title>Waleed Hassan - Data Scientist | Python, ML & Data Analytics</title>
+    
+    <!-- Critical CSS Inlined -->
+    <style>
+        /* Critical above-the-fold styles */
+        :root {
+            --bg: #0b1220;
+            --elev: #0f172a;
+            --text: #e6eaf2;
+            --muted: #9aa4b2;
+            --accent: #30c48d;
+            --accent-2: #7aa2f7;
+            --warn: #f59e0b;
+            --danger: #ef4444;
+            --border: #24405a;
+        }
+        
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: #ffffff;
+                --elev: #f6f8fb;
+                --text: #0b1220;
+                --muted: #4b5563;
+                --border: #dde5ee;
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: clamp(14px, 2vw, 16px);
+        }
+        
+        .nav {
+            position: sticky;
+            top: 0;
+            background: var(--elev);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: clamp(32px, 5vw, 96px) 0;
+        }
+    </style>
+    
+    <!-- Non-critical CSS -->
+    <link rel="stylesheet" href="/assets/css/base.css?v=2">
+    <link rel="stylesheet" href="/assets/css/components.css?v=2">
+    <link rel="stylesheet" href="/assets/css/modern-enhancements.css?v=2">
+    
+    <!-- Preconnect for performance (optional external resources) -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Waleed Hassan",
+        "jobTitle": "Data Scientist",
+        "description": "Data Scientist specializing in Python, Machine Learning, Data Analytics, and Data Visualization",
+        "url": "https://yoursite.com",
+        "sameAs": [
+            "https://github.com/waleedhassan985",
+            "https://www.linkedin.com/in/waleed-hassan-091804279/"
+        ],
+        "knowsAbout": ["Python", "Machine Learning", "Data Analysis", "Data Visualization", "Business Analysis", "Power BI", "Tableau", "SQL", "Databases", "Microsoft Power BI", "scikit-learn", "TensorFlow"]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://yoursite.com/"
+        }]
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="Waleed Hassan - Home">
+                <span class="logo-text">Waleed Hassan</span>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="/" class="nav-link active" aria-current="page">Home</a></li>
+                <li><a href="/projects/" class="nav-link">Projects</a></li>
+                <li><a href="/about/" class="nav-link">About</a></li>
+                <li><a href="/services/" class="nav-link">Services</a></li>
+                <!-- <li><a href="/blog/" class="nav-link">Blog</a></li> -->
+                <li><a href="/contact/" class="nav-link nav-link-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+            </div>
+            
+            <div class="container hero-container fade-in">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge badge-sm">Data Scientist</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Data Science that delivers.<br>
+                        <span class="text-accent">Python-first approach</span> with measurable impact.
+                    </h1>
+                    <p class="hero-subtitle">
+                        From ML models to BI dashboards and data visualization—built with precision and insight.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="/projects/" class="btn btn-primary btn-lg">View Projects</a>
+                        <a href="/assets/Waleed_Resume.pdf" class="btn btn-primary btn-lg" download>Download Resume</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <img src="/assets/img/waleed.jpg" alt="Waleed Hassan - Data Scientist" class="hero-image" width="400" height="400">
+                        <div class="hero-image-decoration"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Proof Bar -->
+        <section class="proof-bar">
+            <div class="container">
+                <p class="proof-label">Technologies & Tools</p>
+                <div class="proof-logos">
+                    <span class="proof-item">Python</span>
+                    <span class="proof-item">Pandas</span>
+                    <span class="proof-item">NumPy</span>
+                    <span class="proof-item">Matplotlib</span>
+                    <span class="proof-item">Seaborn</span>
+                    <span class="proof-item">scikit-learn</span>
+                    <span class="proof-item">TensorFlow</span>
+                    <span class="proof-item">LangChain</span>
+                    <span class="proof-item">Power BI</span>
+                    <span class="proof-item">Tableau</span>
+                    <span class="proof-item">Excel</span>
+                    <span class="proof-item">Google Sheets</span>
+                    <span class="proof-item">N8N</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Key Metrics -->
+        <section class="metrics fade-in">
+            <div class="container">
+                <div class="metrics-grid">
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">20+</div>
+                        <div class="metric-label">Dashboards Shipped</div>
+                    </div>
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">90%</div>
+                        <div class="metric-label">Time Reduction via Automation</div>
+                    </div>
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">0.84</div>
+                        <div class="metric-label">ML Model AUC Score</div>
+                    </div>
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">15+</div>
+                        <div class="metric-label">N8N Workflows Deployed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Projects -->
+        <section class="featured-projects slide-in-left">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Real-world data science solutions with quantified business impact</p>
+                </header>
+                
+                <div class="projects-grid">
+                    <!-- Project 1: Titanic Survival Prediction -->
+                    <article class="project-card scale-in">
+                        <a href="/projects/titanic-survival-prediction.html" class="project-link">
+                            <div class="project-image">
+                                <img src="/assets/img/projects/titanic-survival.png" alt="Titanic Survival Prediction" width="400" height="250" loading="lazy">
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Titanic Survival Prediction</h3>
+                                <p class="project-summary">Comparative ML analysis achieving 76% accuracy with Naive Bayes on the famous Titanic dataset.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">scikit-learn</span>
+                                    <span class="tag">ML</span>
+                                    <span class="tag">Classification</span>
+                                </div>
+                                <span class="project-cta">View Case Study →</span>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <!-- Project 2: Conversational RAG with PDF -->
+                    <article class="project-card">
+                        <a href="/projects/pdf-qa-chatbot.html" class="project-link">
+                            <div class="project-image">
+                                <img src="/assets/img/projects/pdf-rag-cover-new.svg" alt="Conversational RAG with PDF" width="400" height="250" loading="lazy">
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Conversational RAG with PDF</h3>
+                                <p class="project-summary">Intelligent document assistant using LangChain and RAG for natural language PDF querying with chat history.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">LangChain</span>
+                                    <span class="tag">RAG</span>
+                                    <span class="tag">Groq API</span>
+                                </div>
+                                <span class="project-cta">View Case Study →</span>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <!-- Project 3: Q&A Chatbot with Groq -->
+                    <article class="project-card scale-in">
+                        <a href="/projects/qa-chatbot-groq.html" class="project-link">
+                            <div class="project-image">
+                                <img src="/assets/img/projects/qa-chatbot-cover.png" alt="Q&A Chatbot with Groq" width="400" height="250" loading="lazy">
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Q&A Chatbot with Groq</h3>
+                                <p class="project-summary">Fast AI chatbot using LangChain and Groq API with sub-2s response times and 4 LLM models.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">LangChain</span>
+                                    <span class="tag">Groq</span>
+                                    <span class="tag">Streamlit</span>
+                                </div>
+                                <span class="project-cta">View Case Study →</span>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <!-- Project 4: Student Depression Prediction -->
+                    <article class="project-card scale-in">
+                        <a href="/projects/student-depression-prediction.html" class="project-link">
+                            <div class="project-image">
+                                <img src="/assets/img/projects/student-depression-cover.svg" alt="Student Depression Prediction" width="400" height="250" loading="lazy">
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Student Depression Prediction</h3>
+                                <p class="project-summary">ANN-based mental health risk assessment with 13-feature profiling and real-time probability predictions.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">TensorFlow</span>
+                                    <span class="tag">Keras</span>
+                                    <span class="tag">ANN</span>
+                                </div>
+                                <span class="project-cta">View Case Study →</span>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <!-- Project 5: Social Media Analytics Dashboard -->
+                    <article class="project-card scale-in">
+                        <a href="/projects/social-media-dashboard.html" class="project-link">
+                            <div class="project-image">
+                                <img src="/assets/img/projects/social-media-dashboard-cover.svg" alt="Social Media Analytics Dashboard" width="400" height="250" loading="lazy">
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Social Media Analytics Dashboard</h3>
+                                <p class="project-summary">Interactive Power BI dashboard tracking 568K followers, 5.56% engagement rate, and content performance across 4 platforms.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Power BI</span>
+                                    <span class="tag">DAX</span>
+                                    <span class="tag">Analytics</span>
+                                </div>
+                                <span class="project-cta">View Case Study →</span>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <!-- Project 6: Sales Analytics Dashboard -->
+                    <article class="project-card scale-in">
+                        <a href="/projects/sales-analytics-dashboard.html" class="project-link">
+                            <div class="project-image">
+                                <img src="/assets/img/projects/sales-dashboard-1.png" alt="Sales Analytics Dashboard" width="400" height="250" loading="lazy">
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Sales Analytics Dashboard</h3>
+                                <p class="project-summary">Comprehensive Power BI dashboard analyzing $53.38M revenue, 72K units sold, customer lifetime value, and marketing ROI.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Power BI</span>
+                                    <span class="tag">DAX</span>
+                                    <span class="tag">Sales</span>
+                                </div>
+                                <span class="project-cta">View Case Study →</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                
+                <div class="section-cta">
+                    <a href="/projects/" class="btn btn-secondary">View All Projects</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services -->
+        <section class="services fade-in">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">What I Do</h2>
+                    <p class="section-subtitle">End-to-end data science services from analysis to deployment</p>
+                </header>
+                
+                <div class="services-grid">
+                    <div class="service-card scale-in">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M3 9h18M9 21V9"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Data Analytics & BI</h3>
+                        <p class="service-description">Interactive dashboards in Power BI, Tableau, and Excel. Transform raw data into actionable insights with automated reporting pipelines.</p>
+                        <ul class="service-list">
+                            <li>ETL pipeline development</li>
+                            <li>Dashboard design & deployment</li>
+                            <li>KPI tracking & visualization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card scale-in">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Machine Learning</h3>
+                        <p class="service-description">Production-ready ML models with scikit-learn and TensorFlow. From exploratory analysis to deployment with explainability.</p>
+                        <ul class="service-list">
+                            <li>Predictive modeling & classification</li>
+                            <li>Model tuning & optimization</li>
+                            <li>SHAP explainability analysis</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card scale-in">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Generative AI & LangChain Apps</h3>
+                        <p class="service-description">LLM-powered applications with RAG pipelines, guardrails, and evaluation frameworks for reliable GenAI deployment.</p>
+                        <ul class="service-list">
+                            <li>RAG systems with vector stores</li>
+                            <li>LangChain orchestration</li>
+                            <li>Prompt engineering & testing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card scale-in">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">AI Chatbots</h3>
+                        <p class="service-description">Intelligent conversational agents for customer service, internal knowledge bases, and support automation.</p>
+                        <ul class="service-list">
+                            <li>NLP-powered conversations</li>
+                            <li>Multi-platform integration</li>
+                            <li>Intent classification & routing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card scale-in">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">N8N Workflow Automation</h3>
+                        <p class="service-description">No-code/low-code automation connecting APIs, databases, and services to eliminate manual workflows.</p>
+                        <ul class="service-list">
+                            <li>API orchestration & integration</li>
+                            <li>Scheduled data pipelines</li>
+                            <li>Event-driven automation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="section-cta">
+                    <a href="/services/" class="btn btn-primary">Explore Services</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials -->
+        <section class="testimonials testimonials--light fade-in">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">What People Say</h2>
+                </header>
+                
+                <div class="testimonial-scroller" data-animated="true" aria-label="Testimonials carousel">
+                    <div class="scroller-inner">
+                    <!-- Review 1: Social Media Analytics Dashboard -->
+                    <blockquote class="testimonial-card scale-in">
+                        <div class="testimonial-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v6H3zM3 15h18v6H3zM3 9h18M9 21V9"/></svg>
+                        </div>
+                        <p class="testimonial-text">The Social Media Analytics dashboard became our daily command center. We grew engagement by 23% in a quarter because we finally knew which content worked and when to post.</p>
+                        <div class="testimonial-tags">
+                            <span class="chip">Power BI</span>
+                            <span class="chip">DAX</span>
+                            <span class="chip">Analytics</span>
+                        </div>
+                        <footer class="testimonial-footer">
+                            <cite class="testimonial-author">Amira Khan</cite>
+                            <span class="testimonial-role">Head of Marketing</span>
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review 2: PDF RAG Chatbot -->
+                    <blockquote class="testimonial-card scale-in">
+                        <div class="testimonial-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H5l-1 4z"/></svg>
+                        </div>
+                        <p class="testimonial-text">Our teams can ask questions to thousands of pages of PDFs and get instant, sourced answers. Support tickets dropped overnight after the RAG assistant went live.</p>
+                        <div class="testimonial-tags">
+                            <span class="chip">Python</span>
+                            <span class="chip">LangChain</span>
+                            <span class="chip">RAG</span>
+                        </div>
+                        <footer class="testimonial-footer">
+                            <cite class="testimonial-author">Daniel Ortiz</cite>
+                            <span class="testimonial-role">Operations Lead</span>
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review 3: Sales Analytics Dashboard -->
+                    <blockquote class="testimonial-card scale-in">
+                        <div class="testimonial-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4v8H3zM10 7h4v13h-4zM17 3h4v17h-4z"/></svg>
+                        </div>
+                        <p class="testimonial-text">The sales dashboard surfaces margin, cohort and funnel trends in one view. Weekly reports are fully automated—our team reclaimed hours every Monday.</p>
+                        <div class="testimonial-tags">
+                            <span class="chip">Power BI</span>
+                            <span class="chip">ETL</span>
+                            <span class="chip">Automation</span>
+                        </div>
+                        <footer class="testimonial-footer">
+                            <cite class="testimonial-author">Hassan R.</cite>
+                            <span class="testimonial-role">VP Sales</span>
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review 4: Q&A Chatbot with Groq -->
+                    <blockquote class="testimonial-card scale-in">
+                        <div class="testimonial-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <p class="testimonial-text">The Groq-powered chatbot is lightning fast—answers arrive in under two seconds. It now handles 70% of internal queries without human help.</p>
+                        <div class="testimonial-tags">
+                            <span class="chip">Groq</span>
+                            <span class="chip">LangChain</span>
+                            <span class="chip">Chatbot</span>
+                        </div>
+                        <footer class="testimonial-footer">
+                            <cite class="testimonial-author">Leena Patel</cite>
+                            <span class="testimonial-role">Product Manager</span>
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review 5: Healthcare Data Warehousing -->
+                    <blockquote class="testimonial-card scale-in">
+                        <div class="testimonial-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="M4 10h16"/></svg>
+                        </div>
+                        <p class="testimonial-text">Waleed unified our EMR, claims and lab systems into a single warehouse. Clinical analysts can build ad‑hoc reports in minutes instead of days.</p>
+                        <div class="testimonial-tags">
+                            <span class="chip">SQL</span>
+                            <span class="chip">ETL</span>
+                            <span class="chip">Data Warehouse</span>
+                        </div>
+                        <footer class="testimonial-footer">
+                            <cite class="testimonial-author">Dr. Sofia Mendes</cite>
+                            <span class="testimonial-role">Director of Analytics</span>
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review 6: SQL Chatbot & BI Agent -->
+                    <blockquote class="testimonial-card scale-in">
+                        <div class="testimonial-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h9"/></svg>
+                        </div>
+                        <p class="testimonial-text">Our non‑technical team now asks the database in plain English. The SQL chatbot and BI agent dramatically reduced ad‑hoc request backlogs.</p>
+                        <div class="testimonial-tags">
+                            <span class="chip">LLM</span>
+                            <span class="chip">SQL</span>
+                            <span class="chip">Streamlit</span>
+                        </div>
+                        <footer class="testimonial-footer">
+                            <cite class="testimonial-author">Omar Saleh</cite>
+                            <span class="testimonial-role">Data Lead</span>
+                        </footer>
+                    </blockquote>
+
+                    <!-- DUPLICATE SET for seamless looping -->
+                    <!-- Review 1 duplicate -->
+                    <blockquote class="testimonial-card scale-in">
+                        <div class="testimonial-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v6H3zM3 15h18v6H3zM3 9h18M9 21V9"/></svg>
+                        </div>
+                        <p class="testimonial-text">The Social Media Analytics dashboard became our daily command center. We grew engagement by 23% in a quarter because we finally knew which content worked and when to post.</p>
+                        <div class="testimonial-tags">
+                            <span class="chip">Power BI</span>
+                            <span class="chip">DAX</span>
+                            <span class="chip">Analytics</span>
+                        </div>
+                        <footer class="testimonial-footer">
+                            <cite class="testimonial-author">Amira Khan</cite>
+                            <span class="testimonial-role">Head of Marketing</span>
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review 2 duplicate -->
+                    <blockquote class="testimonial-card scale-in">
+                        <div class="testimonial-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H5l-1 4z"/></svg>
+                        </div>
+                        <p class="testimonial-text">Our teams can ask questions to thousands of pages of PDFs and get instant, sourced answers. Support tickets dropped overnight after the RAG assistant went live.</p>
+                        <div class="testimonial-tags">
+                            <span class="chip">Python</span>
+                            <span class="chip">LangChain</span>
+                            <span class="chip">RAG</span>
+                        </div>
+                        <footer class="testimonial-footer">
+                            <cite class="testimonial-author">Daniel Ortiz</cite>
+                            <span class="testimonial-role">Operations Lead</span>
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review 3 duplicate -->
+                    <blockquote class="testimonial-card scale-in">
+                        <div class="testimonial-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4v8H3zM10 7h4v13h-4zM17 3h4v17h-4z"/></svg>
+                        </div>
+                        <p class="testimonial-text">The sales dashboard surfaces margin, cohort and funnel trends in one view. Weekly reports are fully automated—our team reclaimed hours every Monday.</p>
+                        <div class="testimonial-tags">
+                            <span class="chip">Power BI</span>
+                            <span class="chip">ETL</span>
+                            <span class="chip">Automation</span>
+                        </div>
+                        <footer class="testimonial-footer">
+                            <cite class="testimonial-author">Hassan R.</cite>
+                            <span class="testimonial-role">VP Sales</span>
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review 4 duplicate -->
+                    <blockquote class="testimonial-card scale-in">
+                        <div class="testimonial-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <p class="testimonial-text">The Groq-powered chatbot is lightning fast—answers arrive in under two seconds. It now handles 70% of internal queries without human help.</p>
+                        <div class="testimonial-tags">
+                            <span class="chip">Groq</span>
+                            <span class="chip">LangChain</span>
+                            <span class="chip">Chatbot</span>
+                        </div>
+                        <footer class="testimonial-footer">
+                            <cite class="testimonial-author">Leena Patel</cite>
+                            <span class="testimonial-role">Product Manager</span>
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review 5 duplicate -->
+                    <blockquote class="testimonial-card scale-in">
+                        <div class="testimonial-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="M4 10h16"/></svg>
+                        </div>
+                        <p class="testimonial-text">Waleed unified our EMR, claims and lab systems into a single warehouse. Clinical analysts can build ad‑hoc reports in minutes instead of days.</p>
+                        <div class="testimonial-tags">
+                            <span class="chip">SQL</span>
+                            <span class="chip">ETL</span>
+                            <span class="chip">Data Warehouse</span>
+                        </div>
+                        <footer class="testimonial-footer">
+                            <cite class="testimonial-author">Dr. Sofia Mendes</cite>
+                            <span class="testimonial-role">Director of Analytics</span>
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review 6 duplicate -->
+                    <blockquote class="testimonial-card scale-in">
+                        <div class="testimonial-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h9"/></svg>
+                        </div>
+                        <p class="testimonial-text">Our non‑technical team now asks the database in plain English. The SQL chatbot and BI agent dramatically reduced ad‑hoc request backlogs.</p>
+                        <div class="testimonial-tags">
+                            <span class="chip">LLM</span>
+                            <span class="chip">SQL</span>
+                            <span class="chip">Streamlit</span>
+                        </div>
+                        <footer class="testimonial-footer">
+                            <cite class="testimonial-author">Omar Saleh</cite>
+                            <span class="testimonial-role">Data Lead</span>
+                        </footer>
+                    </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section fade-in">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to turn data into decisions?</h2>
+                    <p class="cta-text">Let's discuss how Python and data science can drive measurable results for your business.</p>
+                    <div class="cta-buttons">
+                        <a href="/contact/" class="btn btn-primary btn-lg">Start a Conversation</a>
+                        <a href="/projects/" class="btn btn-secondary btn-lg">See More Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-heading">Waleed Hassan</h3>
+                    <p class="footer-text">Data Scientist & AI Developer specializing in Python-first solutions with measurable business impact.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/waleedhassan985" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/waleed-hassan-091804279/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <!-- <li><a href="/blog/">Blog</a></li> -->
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Expertise</h4>
+                    <ul class="footer-links">
+                        <li>Python & Data Analysis</li>
+                        <li>Machine Learning</li>
+                        <li>Generative AI</li>
+                        <li>Data Visualization</li>
+                        <li>BI Dashboards</li>
+                        <li>Workflow Automation</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="mailto:wh937492@gmail.com">wh937492@gmail.com</a>
+                        </li>
+                        <li>Green Avenue Islamabad, Pakistan</li>
+                        <li>
+                            <a href="/assets/Waleed_Resume.pdf" download>Download Resume</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Waleed Hassan. All rights reserved.</p>
+                <p class="footer-note">Built with semantic HTML5, CSS3, and vanilla JavaScript. No frameworks, maximum performance.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript (deferred for performance) -->
+    <script src="/assets/js/main.js?v=2" defer></script>
+    <script src="/assets/js/modern-interactions.js?v=2" defer></script>
+    
+    <!-- Analytics Placeholder (uncomment to enable) -->
+    <!--
+    <script defer data-domain="yoursite.com" src="https://plausible.io/js/script.js"></script>
+    -->
+    
+    <!-- Alternative: Google Analytics 4 (uncomment to enable)
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 975 492">
+  <!-- Background -->
+  <rect width="975" height="492" fill="#FFFFFF"/>
+  
+  <!-- Icon -->
+  <circle cx="48" cy="100" r="24" fill="#8B5CF6"/>
+  <text x="48" y="112" style="font-family: monospace; font-size: 24px; fill: #FFFFFF; text-anchor: middle;">🔮</text>
+  
+  <!-- Header -->
+  <text x="83" y="110" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 28px; fill: #1F2937; font-weight: 600;">Prediction Results</text>
+  
+  <!-- Depression Probability Label -->
+  <text x="23" y="180" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; fill: #6B7280;">Depression Probability</text>
+  
+  <!-- Large Percentage -->
+  <text x="23" y="245" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 64px; fill: #1F2937; font-weight: 700;">57.99%</text>
+  
+  <!-- Progress Bar Background -->
+  <rect x="23" y="287" width="929" height="12" fill="#E0E7FF" rx="6"/>
+  <!-- Progress Bar Fill -->
+  <rect x="23" y="287" width="539" height="12" fill="#3B82F6" rx="6"/>
+  
+  <!-- Alert Box -->
+  <rect x="23" y="318" width="929" height="70" fill="#FEF2F2" stroke="#FECACA" stroke-width="1" rx="8"/>
+  
+  <!-- Alert Icon -->
+  <text x="43" y="360" style="font-family: monospace; font-size: 20px;">🚨</text>
+  
+  <!-- Alert Text -->
+  <text x="78" y="348" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #991B1B; font-weight: 600;">Prediction: Yes</text>
+  <text x="228" y="348" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #991B1B;"> - The student is likely to have depression.</text>
+  
+  <!-- Encoding Note -->
+  <text x="23" y="428" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; fill: #9CA3AF;">📌 Depression Encoding: 1 = Yes (Depression detected)</text>
+</svg>

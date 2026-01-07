@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enhanced Q&A Chatbot using Groq, LangChain & Streamlit - Fast AI-powered conversational assistant with multiple LLM options and adjustable parameters.">
+    <title>Q&A Chatbot with Groq - Waleed | Data Scientist</title>
+    
+    <link rel="canonical" href="https://yoursite.com/projects/qa-chatbot-groq.html">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="nav" role="navigation">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <span class="logo-text">Waleed Hassan</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/projects/" class="nav-link active" aria-current="page">Projects</a></li>
+                <li><a href="/about/" class="nav-link">About</a></li>
+                <li><a href="/services/" class="nav-link">Services</a></li>
+                <!-- <li><a href="/blog/" class="nav-link">Blog</a></li> -->
+                <li><a href="/contact/" class="nav-link nav-link-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Project Hero -->
+        <section class="project-hero fade-in">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="/projects/">Projects</a>
+                    <span class="separator">→</span>
+                    <span>Q&A Chatbot</span>
+                </div>
+                
+                <h1 class="project-hero-title">Enhanced Q&A Chatbot with Groq & LangChain</h1>
+                <p class="project-hero-subtitle">Fast AI-powered conversational assistant with multiple LLM options and real-time adjustable parameters</p>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">GenAI Engineer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">October 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tools</span>
+                        <span class="meta-value">Python, LangChain, Groq, Streamlit</span>
+                    </div>
+                </div>
+                
+                <div class="project-links">
+                    <!-- <a href="https://github.com/waleedhassan985/qa-chatbot-groq" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View on GitHub
+                    </a> -->
+                    <a href="http://localhost:8502" class="btn btn-primary" target="_blank" rel="noopener">
+                        Try Live Demo
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Key Metrics -->
+        <section class="metrics-highlight fade-in">
+            <div class="container">
+                <div class="metrics-grid">
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">&lt;2s</div>
+                        <div class="metric-label">Response Time</div>
+                        <div class="metric-detail">Groq inference</div>
+                    </div>
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">4</div>
+                        <div class="metric-label">LLM Models</div>
+                        <div class="metric-detail">Available</div>
+                    </div>
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Streaming</div>
+                        <div class="metric-detail">Real-time responses</div>
+                    </div>
+                    <div class="metric-card scale-in">
+                        <div class="metric-value">LangSmith</div>
+                        <div class="metric-label">Tracing</div>
+                        <div class="metric-detail">Enabled</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Overview -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Project Overview</h2>
+                <p class="lead">An enhanced Q&A chatbot built with Streamlit that leverages Groq's ultra-fast inference API and LangChain's powerful orchestration framework. The application provides an intuitive interface for users to interact with multiple state-of-the-art language models with adjustable parameters for customized responses.</p>
+                
+                <div class="info-card">
+                    <h3>Challenge</h3>
+                    <p>Traditional chatbot interfaces often lack flexibility in model selection and parameter tuning. Users need a simple yet powerful interface that allows them to experiment with different LLMs and adjust response characteristics (temperature, max tokens) in real-time without diving into code.</p>
+                </div>
+                
+                <!-- Project Visual -->
+                <div class="project-visual" style="margin-top: 3rem;">
+                    <img src="/assets/img/projects/qa-chatbot-cover.png" 
+                         alt="Q&A Chatbot Interface showing Streamlit UI with Settings sidebar (API Key, Model selection, Temperature 0.70, Max Tokens 150) and main chat area with Pakistan geography question and detailed AI response" 
+                         loading="lazy"
+                         style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                    <p style="margin-top: 1rem; text-align: center; font-size: 0.9rem; color: #64748b;">
+                        Live Streamlit interface showing the chatbot answering "Give me The Details About Pakistan?" with adjustable parameters (Temperature: 0.70, Max Tokens: 150) using Llama 3.1 8B Instant model via Groq API.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technical Approach -->
+        <section class="project-section bg-elevated fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Technical Approach</h2>
+                
+                <div class="approach-timeline">
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">1</div>
+                        <div class="step-content">
+                            <h3>Architecture & Framework Selection</h3>
+                            <p>Designed a modular architecture using LangChain for LLM orchestration and Streamlit for rapid prototyping of the user interface. Integrated Groq API for ultra-fast inference speeds.</p>
+                            <ul>
+                                <li><strong>Streamlit:</strong> Interactive web interface with real-time updates</li>
+                                <li><strong>LangChain:</strong> Prompt engineering and LLM chain orchestration</li>
+                                <li><strong>Groq API:</strong> Sub-2-second inference for multiple open-source models</li>
+                                <li><strong>LangSmith:</strong> Tracing and monitoring for production debugging</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">2</div>
+                        <div class="step-content">
+                            <h3>Prompt Engineering & Chain Design</h3>
+                            <p>Implemented a structured prompt template using LangChain's ChatPromptTemplate with system and human message roles for consistent behavior across different models.</p>
+                            
+                            <div class="code-block">
+<pre><code>from langchain_core.prompts import ChatPromptTemplate
+
+prompt = ChatPromptTemplate.from_messages([
+    ("system", "You are a helpful assistant. Please respond to the user queries."),
+    ("human", "{question}"),
+])
+
+# Chain: Prompt → LLM → Parser
+chain = prompt | llm | output_parser
+answer = chain.invoke({"question": question})</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">3</div>
+                        <div class="step-content">
+                            <h3>Multi-Model Integration</h3>
+                            <p>Integrated four different LLM models accessible through Groq's API, each with unique characteristics for different use cases.</p>
+                            <ul>
+                                <li><strong>Llama 3.1 8B Instant:</strong> Fast, balanced performance for general queries</li>
+                                <li><strong>GPT-OSS 120B:</strong> Larger model for complex reasoning tasks</li>
+                                <li><strong>Qwen3 32B:</strong> Multilingual capabilities and instruction following</li>
+                                <li><strong>Gemma2 9B-IT:</strong> Instruction-tuned for high accuracy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step">
+                        <div class="step-number" style="min-width: 45px; height: 45px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">4</div>
+                        <div class="step-content">
+                            <h3>UI/UX & Parameter Controls</h3>
+                            <p>Built an intuitive Streamlit interface with sidebar controls for model selection and hyperparameter tuning. Implemented secure API key handling with environment variable fallback.</p>
+                            <ul>
+                                <li>Model selector dropdown with 4 options</li>
+                                <li>Temperature slider (0.0 - 1.0) for creativity control</li>
+                                <li>Max tokens slider (50 - 1024) for response length</li>
+                                <li>Secure API key input with password masking</li>
+                                <li>Real-time response generation with loading spinner</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technical Stack -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Technical Stack</h2>
+                
+                <div class="tech-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                    <div class="tech-card" style="padding: 1.5rem; background: var(--bg-elevated); border-radius: 8px; border: 1px solid var(--border);">
+                        <h3 style="color: var(--accent); margin-bottom: 0.5rem;">Framework</h3>
+                        <ul style="margin: 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Streamlit 1.50.0</li>
+                            <li>Python 3.10+</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tech-card" style="padding: 1.5rem; background: var(--bg-elevated); border-radius: 8px; border: 1px solid var(--border);">
+                        <h3 style="color: var(--accent); margin-bottom: 0.5rem;">LLM Orchestration</h3>
+                        <ul style="margin: 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>LangChain 0.3.27</li>
+                            <li>LangChain-Groq 0.3.8</li>
+                            <li>LangSmith (tracing)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tech-card" style="padding: 1.5rem; background: var(--bg-elevated); border-radius: 8px; border: 1px solid var(--border);">
+                        <h3 style="color: var(--accent); margin-bottom: 0.5rem;">APIs & Services</h3>
+                        <ul style="margin: 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Groq API (inference)</li>
+                            <li>LangChain API</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tech-card" style="padding: 1.5rem; background: var(--bg-elevated); border-radius: 8px; border: 1px solid var(--border);">
+                        <h3 style="color: var(--accent); margin-bottom: 0.5rem;">Environment</h3>
+                        <ul style="margin: 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>python-dotenv</li>
+                            <li>Virtual environment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Key Features -->
+        <section class="project-section bg-elevated fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Key Features</h2>
+                
+                <div style="display: grid; gap: 1.5rem; margin-top: 2rem;">
+                    <div class="feature-card" style="padding: 1.5rem; background: var(--bg); border-radius: 8px; border-left: 4px solid var(--accent);">
+                        <h3>🚀 Ultra-Fast Inference</h3>
+                        <p>Leverages Groq's optimized inference engine for sub-2-second response times, significantly faster than traditional cloud LLM APIs.</p>
+                    </div>
+                    
+                    <div class="feature-card" style="padding: 1.5rem; background: var(--bg); border-radius: 8px; border-left: 4px solid var(--accent);">
+                        <h3>🎛️ Dynamic Parameter Tuning</h3>
+                        <p>Real-time adjustment of temperature and max tokens without restarting the application, allowing users to fine-tune response creativity and length on-the-fly.</p>
+                    </div>
+                    
+                    <div class="feature-card" style="padding: 1.5rem; background: var(--bg); border-radius: 8px; border-left: 4px solid var(--accent);">
+                        <h3>🤖 Multi-Model Support</h3>
+                        <p>Switch between 4 different LLMs seamlessly, each optimized for different tasks: speed, reasoning, multilingual support, or instruction following.</p>
+                    </div>
+                    
+                    <div class="feature-card" style="padding: 1.5rem; background: var(--bg); border-radius: 8px; border-left: 4px solid var(--accent);">
+                        <h3>🔍 LangSmith Tracing</h3>
+                        <p>Built-in observability with LangSmith for debugging chain execution, monitoring latency, and analyzing model performance in production.</p>
+                    </div>
+                    
+                    <div class="feature-card" style="padding: 1.5rem; background: var(--bg); border-radius: 8px; border-left: 4px solid var(--accent);">
+                        <h3>🔐 Secure API Management</h3>
+                        <p>Supports both environment variable and UI-based API key input with secure password masking, enabling flexible deployment options.</p>
+                    </div>
+                    
+                    <div class="feature-card" style="padding: 1.5rem; background: var(--bg); border-radius: 8px; border-left: 4px solid var(--accent);">
+                        <h3>💬 Clean Conversational UI</h3>
+                        <p>Intuitive Streamlit interface with clear input/output separation, loading indicators, and helpful prompts for better user experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Results & Impact -->
+        <section class="project-section fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Results & Impact</h2>
+                
+                <div class="results-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div class="result-card">
+                        <h3>⚡ Performance</h3>
+                        <ul>
+                            <li>Sub-2-second average response time</li>
+                            <li>Real-time parameter adjustment</li>
+                            <li>Zero cold-start delays with Groq</li>
+                            <li>Efficient token usage monitoring</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>🎯 Functionality</h3>
+                        <ul>
+                            <li>4 production-ready LLM models</li>
+                            <li>Accurate, contextual responses</li>
+                            <li>Customizable system prompts</li>
+                            <li>Extensible chain architecture</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>📈 Developer Experience</h3>
+                        <ul>
+                            <li>Simple 3-file project structure</li>
+                            <li>Easy local deployment (one command)</li>
+                            <li>Clear separation of concerns</li>
+                            <li>Production-ready with tracing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Lessons Learned -->
+        <section class="project-section bg-elevated fade-in">
+            <div class="container content-container">
+                <h2 class="section-title">Lessons Learned</h2>
+                
+                <div class="lessons-box">
+                    <h3>Key Insights</h3>
+                    <ul>
+                        <li><strong>Groq's Speed Advantage:</strong> Groq's inference speed (sub-2s) is significantly faster than standard cloud APIs, making real-time chat experiences viable even with larger models.</li>
+                        <li><strong>LangChain Abstraction:</strong> LangChain's chain abstraction simplifies swapping between different LLM providers without rewriting application logic.</li>
+                        <li><strong>Parameter Sensitivity:</strong> Temperature and max tokens have dramatic effects on response quality—exposing these controls to users increases flexibility but requires good defaults.</li>
+                        <li><strong>Observability Matters:</strong> LangSmith tracing is invaluable for debugging prompt issues and understanding model behavior in production.</li>
+                        <li><strong>Streamlit Limitations:</strong> While great for prototyping, Streamlit's stateful session management can be tricky for complex conversation history—consider alternatives for production chat applications.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section fade-in">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Interested in Building GenAI Applications?</h2>
+                    <p class="cta-text">I can help you build production-ready chatbots, RAG systems, and LLM-powered applications tailored to your business needs.</p>
+                    <div class="cta-buttons">
+                        <a href="/contact/" class="btn btn-lg btn-primary">Let's Talk</a>
+                        <a href="/projects/" class="btn btn-lg btn-secondary">View More Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-heading">Waleed Hassan</h3>
+                    <p class="footer-text">Data Scientist & AI Developer specializing in Python-first solutions with measurable business impact.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <!-- <li><a href="/blog/">Blog</a></li> -->
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Expertise</h4>
+                    <ul class="footer-links">
+                        <li>Python & Data Analysis</li>
+                        <li>Machine Learning</li>
+                        <li>Generative AI</li>
+                        <li>Data Visualization</li>
+                        <li>BI Dashboards</li>
+                        <li>Workflow Automation</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="mailto:wh937492@gmail.com">wh937492@gmail.com</a>
+                        </li>
+                        <li>Green Avenue Islamabad, Pakistan</li>
+                        <li>
+                            <a href="/assets/Waleed_Resume.pdf" download>Download Resume</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Waleed Hassan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
