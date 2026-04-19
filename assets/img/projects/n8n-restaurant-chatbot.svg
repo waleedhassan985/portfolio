@@ -1,0 +1,59 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgRest" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#20103A"/>
+      <stop offset="56%" stop-color="#3A185F"/>
+      <stop offset="100%" stop-color="#150A27"/>
+    </linearGradient>
+    <linearGradient id="panelRest" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2C1249"/>
+      <stop offset="100%" stop-color="#1B0D2F"/>
+    </linearGradient>
+    <linearGradient id="accentRest" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bgRest)"/>
+  <circle cx="1320" cy="140" r="220" fill="#A78BFA" fill-opacity="0.15"/>
+  <circle cx="240" cy="760" r="260" fill="#F97316" fill-opacity="0.12"/>
+
+  <rect x="110" y="120" width="1380" height="660" rx="38" fill="url(#panelRest)" stroke="#674890" stroke-width="2"/>
+
+  <rect x="170" y="180" width="430" height="88" rx="22" fill="#3B1C62" stroke="#C4B5FD" stroke-opacity="0.5"/>
+  <text x="206" y="236" fill="#F3E8FF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Hospitality AI Assistant</text>
+
+  <text x="170" y="345" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800">Restaurant WhatsApp Llama Chatbot</text>
+  <text x="170" y="404" fill="#E9D5FF" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">Bookings, Menu Queries, Timings, and Promo Broadcasts</text>
+
+  <rect x="170" y="468" width="1220" height="190" rx="26" fill="#1B0D2F" stroke="#7A57A8"/>
+
+  <rect x="215" y="510" width="350" height="105" rx="20" fill="#291046" stroke="#A78BFA"/>
+  <rect x="605" y="510" width="350" height="105" rx="20" fill="#291046" stroke="#22D3EE"/>
+  <rect x="995" y="510" width="350" height="105" rx="20" fill="#291046" stroke="#F97316"/>
+
+  <circle cx="267" cy="562" r="24" fill="#A78BFA"/>
+  <path d="M255 562h24M267 550v24" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  <text x="307" y="556" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">Reservation Flow</text>
+  <text x="307" y="588" fill="#E9D5FF" font-family="Inter, Arial, sans-serif" font-size="20">Collect and confirm tables</text>
+
+  <circle cx="657" cy="562" r="24" fill="#22D3EE"/>
+  <path d="M646 554h22M646 570h22" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  <text x="697" y="556" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">Menu Support</text>
+  <text x="697" y="588" fill="#E9D5FF" font-family="Inter, Arial, sans-serif" font-size="20">Instant dish and pricing info</text>
+
+  <circle cx="1047" cy="562" r="24" fill="#F97316"/>
+  <path d="M1036 562l8 8 14-16" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1087" y="556" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">Promo Automation</text>
+  <text x="1087" y="588" fill="#E9D5FF" font-family="Inter, Arial, sans-serif" font-size="20">Campaign and offer replies</text>
+
+  <g>
+    <ellipse cx="1310" cy="290" rx="88" ry="28" fill="#F8FAFC"/>
+    <path d="M1222 290c8-58 48-96 88-96s80 38 88 96" stroke="#F8FAFC" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="1310" cy="290" r="10" fill="#F97316"/>
+  </g>
+
+  <rect x="170" y="684" width="1220" height="58" rx="18" fill="url(#accentRest)"/>
+  <text x="780" y="721" text-anchor="middle" fill="#250E40" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">For demo, contact us.</text>
+</svg>

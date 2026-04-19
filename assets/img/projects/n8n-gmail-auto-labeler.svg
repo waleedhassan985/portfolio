@@ -1,0 +1,58 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgMail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2A0B16"/>
+      <stop offset="60%" stop-color="#4A1325"/>
+      <stop offset="100%" stop-color="#1C0610"/>
+    </linearGradient>
+    <linearGradient id="panelMail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3B0F1F"/>
+      <stop offset="100%" stop-color="#2A0A16"/>
+    </linearGradient>
+    <linearGradient id="accentMail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bgMail)"/>
+  <circle cx="1330" cy="140" r="220" fill="#FB7185" fill-opacity="0.14"/>
+  <circle cx="260" cy="730" r="250" fill="#F97316" fill-opacity="0.11"/>
+
+  <rect x="110" y="120" width="1380" height="660" rx="38" fill="url(#panelMail)" stroke="#653247" stroke-width="2"/>
+
+  <rect x="170" y="180" width="360" height="88" rx="22" fill="#5B1D34" stroke="#FB7185" stroke-opacity="0.5"/>
+  <text x="206" y="236" fill="#FFE8EE" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Email Intelligence</text>
+
+  <text x="170" y="345" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="70" font-weight="800">Gmail AI Auto-Labeler</text>
+  <text x="170" y="404" fill="#FBCFE8" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">Gmail Trigger + Gemini Classification + Auto Tags</text>
+
+  <rect x="170" y="468" width="1220" height="240" rx="26" fill="#2A0A16" stroke="#6A344A"/>
+
+  <rect x="215" y="516" width="350" height="150" rx="20" fill="#3E1021" stroke="#FB7185"/>
+  <rect x="605" y="516" width="350" height="150" rx="20" fill="#3E1021" stroke="#F59E0B"/>
+  <rect x="995" y="516" width="350" height="150" rx="20" fill="#3E1021" stroke="#F97316"/>
+
+  <circle cx="267" cy="564" r="24" fill="#FB7185"/>
+  <path d="M255 558h24M255 570h24" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  <text x="307" y="558" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">Priority Inbox</text>
+  <text x="307" y="592" fill="#FBCFE8" font-family="Inter, Arial, sans-serif" font-size="20">Surface urgent emails first</text>
+
+  <circle cx="657" cy="564" r="24" fill="#F59E0B"/>
+  <path d="M646 556h22M646 572h14" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  <text x="697" y="558" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">Work Labels</text>
+  <text x="697" y="592" fill="#FBCFE8" font-family="Inter, Arial, sans-serif" font-size="20">Client and team categorization</text>
+
+  <circle cx="1047" cy="564" r="24" fill="#F97316"/>
+  <path d="M1036 564l8 8 14-16" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1087" y="558" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">Promo Sorting</text>
+  <text x="1087" y="592" fill="#FBCFE8" font-family="Inter, Arial, sans-serif" font-size="20">Keep inbox clean and focused</text>
+
+  <g>
+    <rect x="1240" y="190" width="160" height="110" rx="14" fill="#FFE4EC"/>
+    <path d="M1240 205l80 55 80-55" stroke="#E11D48" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <rect x="170" y="730" width="1220" height="58" rx="18" fill="url(#accentMail)"/>
+  <text x="780" y="767" text-anchor="middle" fill="#3A0D1B" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">If you need this project or need this type of service, get in touch.</text>
+</svg>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case study: NYC Taxi Analytics Medallion Data Pipeline built with Bronze, Silver, Gold, and EDA notebooks with dashboard-driven business insights.">
+    <meta name="author" content="Waleed Hassan">
+    <meta name="theme-color" content="#0b1220">
+    <title>NYC Taxi Analytics: Medallion Data Pipeline - Waleed Hassan</title>
+    <link rel="canonical" href="https://dswaleed.live/projects/nyc-taxi-analytics-medallion-data-pipeline.html">
+    <link rel="stylesheet" href="/assets/css/base.css?v=6">
+    <link rel="stylesheet" href="/assets/css/components.css?v=6">
+    <link rel="stylesheet" href="/assets/css/modern-enhancements.css?v=6">
+    <style>
+        .project-hero {
+            background: var(--elev);
+            border-bottom: 1px solid var(--border);
+            padding: clamp(48px, 8vw, 96px) 0 clamp(32px, 5vw, 64px);
+        }
+
+        .project-hero .lead {
+            max-width: 780px;
+        }
+
+        .project-hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: var(--space-5);
+            align-items: center;
+        }
+
+        .project-hero-visual img,
+        .architecture-frame img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--border);
+            display: block;
+        }
+
+        .content-container {
+            max-width: 1080px;
+        }
+
+        .project-section {
+            padding: clamp(40px, 6vw, 72px) 0;
+        }
+
+        .pipeline-grid,
+        .artifact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: var(--space-3);
+            margin-top: var(--space-4);
+        }
+
+        .stage-card,
+        .artifact-card {
+            background: var(--elev);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: var(--space-4);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stage-card h3,
+        .artifact-card h3 {
+            margin-top: 0;
+            margin-bottom: var(--space-2);
+            color: var(--accent);
+        }
+
+        .stage-card ul,
+        .artifact-card ul {
+            margin: var(--space-2) 0 0;
+            padding-left: 1.1rem;
+        }
+
+        .stage-card li,
+        .artifact-card li {
+            margin-bottom: var(--space-1);
+        }
+
+        .architecture-frame {
+            background: var(--elev);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-3);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .architecture-caption,
+        .report-caption {
+            margin-top: var(--space-2);
+            text-align: center;
+            color: var(--muted);
+            font-size: var(--text-sm);
+        }
+
+        .dashboard-preview-shell {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--border);
+            background: #ffffff;
+        }
+
+        .dashboard-preview-shell img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 0;
+        }
+
+        .flow-grid {
+            display: grid;
+            gap: var(--space-3);
+            margin-top: var(--space-4);
+        }
+
+        .flow-step {
+            background: var(--elev);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: var(--space-4);
+        }
+
+        .flow-step h3 {
+            margin-top: 0;
+            margin-bottom: var(--space-2);
+            color: var(--accent);
+        }
+
+        .cta-panel {
+            text-align: center;
+            background: var(--elev);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: clamp(24px, 4vw, 40px);
+        }
+
+        .cta-panel .lead {
+            margin-bottom: var(--space-4);
+        }
+
+        @media (max-width: 900px) {
+            .project-hero-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "NYC Taxi Analytics: Medallion Data Pipeline",
+        "author": {
+            "@type": "Person",
+            "name": "Waleed Hassan"
+        },
+        "description": "End-to-end NYC Taxi medallion pipeline using Bronze, Silver, Gold, and EDA notebooks with an embedded Power BI report.",
+        "keywords": "Power BI, ETL, Data Engineering, Medallion Architecture, NYC Taxi, Fabric, SQL, Delta Lake",
+        "datePublished": "2026-04-19"
+    }
+    </script>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="Waleed Hassan - Home">
+                <span class="logo-text">Waleed Hassan</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/projects/" class="nav-link">Projects</a></li>
+                <li><a href="/about/" class="nav-link">About</a></li>
+                <li><a href="/services/" class="nav-link">Services</a></li>
+                <li><a href="/contact/" class="nav-link nav-link-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main">
+        <header class="project-hero fade-in">
+            <div class="container">
+                <div class="project-hero-grid">
+                    <div>
+                        <div class="breadcrumb">
+                            <a href="/projects/">Projects</a>
+                            <span class="separator">→</span>
+                            <span>NYC Taxi Analytics: Medallion Data Pipeline</span>
+                        </div>
+                        <h1 class="project-hero-title">NYC Taxi Analytics: Medallion Data Pipeline</h1>
+                        <p class="lead">A complete medallion-style analytics pipeline for NYC taxi trips, built from Bronze, Silver, Gold, and EDA notebooks and delivered through a Power BI report for operational insight.</p>
+                        <div class="project-meta">
+                            <div class="meta-item"><span class="meta-label">Role</span><span class="meta-value">Data Engineer & BI Developer</span></div>
+                            <div class="meta-item"><span class="meta-label">Timeline</span><span class="meta-value">April 2026</span></div>
+                            <div class="meta-item"><span class="meta-label">Tools</span><span class="meta-value">Spark, Delta Lake, Fabric, Power BI, SQL</span></div>
+                        </div>
+                        <div class="project-links">
+                            <a href="/contact/" class="btn btn-primary">Get in touch</a>
+                            <a href="#report" class="btn btn-secondary">View Report</a>
+                        </div>
+                    </div>
+                    <div class="project-hero-visual">
+                        <img src="/assets/img/projects/nyc-taxi-medallion-architecture.svg" alt="NYC Taxi medallion architecture diagram" loading="lazy" width="1600" height="900">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="project-section">
+            <div class="container content-container">
+                <h2 class="section-title">Project Overview</h2>
+                <p class="lead">This project transforms raw NYC taxi trip files into a curated analytics model through a classic medallion pipeline. The Bronze notebook ingests monthly parquet files from the NYC Open Data API, the Silver notebook validates and enriches the rows, the Gold notebook aggregates the data into business-friendly tables, and the EDA notebook validates the outputs and explores trip demand patterns before the Power BI report turns the pipeline into actionable insight.</p>
+                <div class="info-card">
+                    <h3>Challenge</h3>
+                    <p>Raw taxi trip data is high-volume and noisy. The main challenge was to convert operational records into business-ready insights while keeping data quality high, preserving refresh reliability, and enabling non-technical users to explore trends such as daily demand, hourly peaks, and revenue behavior.</p>
+                </div>
+                <div class="artifact-grid">
+                    <div class="artifact-card">
+                        <h3>Bronze to Silver</h3>
+                        <p>Raw taxi files are downloaded, profiled, filtered to 2019, and cleaned for invalid dates, passengers, fares, and distances.</p>
+                    </div>
+                    <div class="artifact-card">
+                        <h3>Silver to Gold</h3>
+                        <p>The cleansed dataset is shaped into daily, hourly, and zone-level aggregates for reporting and analysis.</p>
+                    </div>
+                    <div class="artifact-card">
+                        <h3>EDA and Validation</h3>
+                        <p>Notebook checks verify row counts and trends, then compare demand patterns across dates, hours, and pickup zones.</p>
+                    </div>
+                    <div class="artifact-card">
+                        <h3>Consumption Layer</h3>
+                        <p>The final Power BI report surfaces the pipeline as a business dashboard for trend exploration and decision support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section bg-elevated">
+            <div class="container content-container">
+                <h2 class="section-title">Data Flow (End-to-End)</h2>
+                <div class="flow-grid">
+                    <div class="flow-step">
+                        <h3>1. Ingestion Layer</h3>
+                        <p>The Bronze notebook uses Python requests inside Fabric/Spark runtime to download monthly 2019 yellow taxi parquet files from the NYC Open Data source. Files are landed into the raw zone and persisted as <strong>bronze_nyc_taxi_trips</strong>.</p>
+                    </div>
+                    <div class="flow-step">
+                        <h3>2. Validation & Cleansing Layer</h3>
+                        <p>The Silver notebook applies quality rules: valid pickup/dropoff sequence, positive trip distance, and non-negative fare/total amounts. It also derives trip duration and temporal features (pickup hour, day, month) for analysis.</p>
+                    </div>
+                    <div class="flow-step">
+                        <h3>3. Aggregation Layer</h3>
+                        <p>The Gold notebook builds analytical marts for consumption: daily metrics, hourly demand, and zone-level performance. This decouples heavy transformation from reporting and improves dashboard performance.</p>
+                    </div>
+                    <div class="flow-step">
+                        <h3>4. Analytical Validation Layer</h3>
+                        <p>The EDA notebook validates business behavior in the curated tables, checks trend consistency, and confirms that metrics are decision-ready before visualization publishing.</p>
+                    </div>
+                    <div class="flow-step">
+                        <h3>5. BI Consumption Layer</h3>
+                        <p>Power BI consumes the Gold outputs to deliver KPI cards and trend visuals for total trips, total revenue, average fare, hourly demand, and date-based movement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section bg-elevated">
+            <div class="container content-container">
+                <h2 class="section-title">Medallion Workflow</h2>
+                <div class="pipeline-grid">
+                    <div class="stage-card">
+                        <h3>Bronze Notebook</h3>
+                        <p>Downloads the 2019 yellow taxi parquet files, checks schema and volume, and writes the raw table.</p>
+                        <ul>
+                            <li>bronze_nyc_taxi_trips</li>
+                            <li>Raw landing zone</li>
+                            <li>Source: NYC Open Data API</li>
+                        </ul>
+                    </div>
+                    <div class="stage-card">
+                        <h3>Silver Notebook</h3>
+                        <p>Filters bad records, keeps 2019 trips only, and adds trip duration plus time-based features.</p>
+                        <ul>
+                            <li>silver_nyc_taxi_trips</li>
+                            <li>Trip duration minutes</li>
+                            <li>Pickup hour, day, month</li>
+                        </ul>
+                    </div>
+                    <div class="stage-card">
+                        <h3>Gold Notebook</h3>
+                        <p>Creates curated analytics tables for daily, hourly, and zone-level reporting.</p>
+                        <ul>
+                            <li>gold_daily_trips</li>
+                            <li>gold_hourly_demand</li>
+                            <li>gold_zone_metrics</li>
+                        </ul>
+                    </div>
+                    <div class="stage-card">
+                        <h3>EDA Notebook</h3>
+                        <p>Explores trends from the curated tables and checks the reporting layer before dashboard delivery.</p>
+                        <ul>
+                            <li>Daily trip trend</li>
+                            <li>Hourly demand shape</li>
+                            <li>Top pickup zones</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="container content-container">
+                <h2 class="section-title">Data Pipeline Architecture</h2>
+                <div class="architecture-frame">
+                    <img src="/assets/img/projects/nyc-taxi-medallion-architecture.svg" alt="NYC taxi medallion data pipeline architecture diagram" loading="lazy" width="1600" height="900">
+                    <p class="architecture-caption">Source data moves from ingestion into Bronze, Silver, and Gold layers before reaching Power BI and exploratory analysis.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="container content-container">
+                <h2 class="section-title">Notebook Outputs</h2>
+                <div class="artifact-grid">
+                    <div class="artifact-card">
+                        <h3>Bronze Notebook Output</h3>
+                        <ul>
+                            <li>Raw rows loaded into bronze_nyc_taxi_trips</li>
+                            <li>Schema and timestamp range validated</li>
+                            <li>Invalid passenger, fare, and distance checks</li>
+                        </ul>
+                    </div>
+                    <div class="artifact-card">
+                        <h3>Silver Notebook Output</h3>
+                        <ul>
+                            <li>Filtered to 2019 and positive trip durations</li>
+                            <li>Derived pickup_hour, pickup_day, and pickup_month</li>
+                            <li>Wrote cleaned silver_nyc_taxi_trips table</li>
+                        </ul>
+                    </div>
+                    <div class="artifact-card">
+                        <h3>Gold Notebook Output</h3>
+                        <ul>
+                            <li>Daily trip, revenue, and average fare metrics</li>
+                            <li>Hourly demand and zone performance tables</li>
+                            <li>Ready for semantic modeling in Power BI</li>
+                        </ul>
+                    </div>
+                    <div class="artifact-card">
+                        <h3>EDA Notebook Output</h3>
+                        <ul>
+                            <li>Trend checks for trip volume and revenue</li>
+                            <li>Hourly demand analysis across all 24 hours</li>
+                            <li>Pickup zone comparison for operational planning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="report" class="project-section bg-elevated">
+            <div class="container content-container">
+                <h2 class="section-title">Power BI Dashboard Preview</h2>
+                <div class="dashboard-preview-shell">
+                    <img src="/assets/img/projects/nyc-taxi-dashboard-2019.png" alt="NYC Taxi Trips Dashboard 2019 showing KPI cards, hourly demand, average fare by hour, and date-based trend lines" loading="lazy" width="2792" height="1458">
+                </div>
+                <p class="report-caption">Dashboard snapshot with KPI cards (82M trips, 1.55bn revenue, 19.00 avg fare), hourly demand and fare behavior, plus daily trip and revenue trends.</p>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="container content-container">
+                <h2 class="section-title">Technical Stack Used</h2>
+                <div class="artifact-grid">
+                    <div class="artifact-card">
+                        <h3>Data Engineering</h3>
+                        <ul>
+                            <li>Microsoft Fabric Notebook</li>
+                            <li>PySpark DataFrames</li>
+                            <li>Delta tables (Bronze/Silver/Gold)</li>
+                        </ul>
+                    </div>
+                    <div class="artifact-card">
+                        <h3>Processing & Modeling</h3>
+                        <ul>
+                            <li>SQL and Spark transformations</li>
+                            <li>Feature engineering on timestamps</li>
+                            <li>Curated marts for BI consumption</li>
+                        </ul>
+                    </div>
+                    <div class="artifact-card">
+                        <h3>Analytics & Validation</h3>
+                        <ul>
+                            <li>EDA notebook checks on trends</li>
+                            <li>Demand and revenue sanity checks</li>
+                            <li>Zone-level demand prioritization</li>
+                        </ul>
+                    </div>
+                    <div class="artifact-card">
+                        <h3>Visualization Layer</h3>
+                        <ul>
+                            <li>Power BI dashboard design</li>
+                            <li>KPI cards and trend visuals</li>
+                            <li>Time filters and interactive slicing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="container content-container">
+                <div class="cta-panel">
+                    <h2 class="section-title">Need this project or need this type of service?</h2>
+                    <p class="lead">Get in touch if you want a similar medallion pipeline, Power BI report, or end-to-end data engineering solution.</p>
+                    <a href="/contact/" class="btn btn-primary">Get in touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-heading">Waleed Hassan</h3>
+                    <p class="footer-text">Data Scientist & AI Developer specializing in Python-first solutions with measurable business impact.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/waleedhassan985" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/waleed-hassan-091804279/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://www.upwork.com/freelancers/~015f1e851e8e9483d9?mp_source=share" class="social-link" aria-label="Upwork" target="_blank" rel="noopener noreferrer">Upwork</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Expertise</h4>
+                    <ul class="footer-links">
+                        <li>Python & Data Analysis</li>
+                        <li>Machine Learning</li>
+                        <li>Generative AI</li>
+                        <li>Data Visualization</li>
+                        <li>BI Dashboards</li>
+                        <li>Workflow Automation</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@dswaleed.live">info@dswaleed.live</a></li>
+                        <li>Green Avenue Islamabad, Pakistan</li>
+                        <li><a href="/assets/Waleed_Resume.pdf" download>Download Resume</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Waleed Hassan. All rights reserved.</p>
+                <p class="footer-note">Built with semantic HTML5, CSS3, and vanilla JavaScript. No frameworks, maximum performance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/modern-interactions.js" defer></script>
+</body>
+</html>

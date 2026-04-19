@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Hidden admin panel for managing portfolio content and projects.">
+    <title>Admin Panel | Waleed Hassan</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="/assets/css/base.css?v=6">
+    <link rel="stylesheet" href="/assets/css/components.css?v=6">
+    <link rel="stylesheet" href="/assets/css/modern-enhancements.css?v=6">
+    <link rel="stylesheet" href="/assets/css/admin.css?v=1">
+</head>
+<body class="admin-body">
+    <main class="admin-shell">
+        <section class="admin-login-view" id="login-view">
+            <div class="admin-login-card card">
+                <p class="admin-kicker">Hidden Workspace</p>
+                <h1 class="admin-title">Admin Login</h1>
+                <p class="text-muted">Access to the portfolio editor, page content, and project manager.</p>
+
+                <form id="login-form" class="admin-form">
+                    <label class="admin-label" for="username">Username</label>
+                    <input id="username" name="username" type="text" class="form-input" autocomplete="username" required>
+
+                    <label class="admin-label" for="password">Password</label>
+                    <input id="password" name="password" type="password" class="form-input" autocomplete="current-password" required>
+
+                    <button type="submit" class="btn btn-primary btn-lg admin-login-btn">Sign In</button>
+                    <p class="admin-note">Default credentials are provided by the site owner.</p>
+                    <p class="admin-error" id="login-error" hidden>Invalid username or password.</p>
+                </form>
+            </div>
+        </section>
+
+        <section class="admin-app" id="admin-app" hidden>
+            <header class="admin-topbar">
+                <div>
+                    <p class="admin-kicker">Portfolio Admin</p>
+                    <h1 class="admin-title">Edit Pages, Content, and Projects</h1>
+                </div>
+                <div class="admin-topbar-actions">
+                    <span class="admin-status" id="workspace-status">Workspace not connected</span>
+                    <button class="btn btn-secondary" id="connect-workspace-btn">Connect Workspace</button>
+                    <button class="btn btn-secondary" id="save-page-btn">Save Page</button>
+                    <button class="btn btn-primary" id="save-projects-btn">Save Projects</button>
+                    <button class="btn btn-secondary" id="export-btn">Export Files</button>
+                    <button class="btn btn-secondary" id="logout-btn">Logout</button>
+                </div>
+            </header>
+
+            <div class="admin-layout">
+                <aside class="admin-sidebar card">
+                    <div class="admin-sidebar-section">
+                        <h2 class="admin-section-title">Tools</h2>
+                        <button class="admin-tab active" data-tab="page-editor">Page Editor</button>
+                        <button class="admin-tab" data-tab="project-manager">Project Manager</button>
+                        <button class="admin-tab" data-tab="page-content">Quick Content</button>
+                        <button class="admin-tab" data-tab="publish">Publish</button>
+                    </div>
+
+                    <div class="admin-sidebar-section">
+                        <h2 class="admin-section-title">Pages</h2>
+                        <div id="page-list" class="admin-page-list"></div>
+                    </div>
+                </aside>
+
+                <section class="admin-main">
+                    <div class="admin-panel card active" id="page-editor-panel">
+                        <div class="admin-panel-header">
+                            <div>
+                                <h2>Visual Page Editor</h2>
+                                <p class="text-muted">Click text to edit it directly. Drag blocks to reorder sections.</p>
+                            </div>
+                            <div class="admin-panel-actions">
+                                <button class="btn btn-secondary" id="toggle-edit-btn">Enable Edit Mode</button>
+                                <button class="btn btn-secondary" id="reload-page-btn">Reload Page</button>
+                            </div>
+                        </div>
+                        <div class="admin-preview-wrap">
+                            <iframe id="preview-frame" class="admin-preview" title="Page preview"></iframe>
+                        </div>
+                        <div class="admin-image-manager card" id="page-image-manager">
+                            <div class="admin-panel-header">
+                                <div>
+                                    <h3>Page Images</h3>
+                                    <p class="text-muted">Edit every image on the selected page from here, or click an image in the preview.</p>
+                                </div>
+                            </div>
+                            <div id="page-image-list" class="page-image-list"></div>
+                        </div>
+                    </div>
+
+                    <div class="admin-panel card" id="project-manager-panel">
+                        <div class="admin-panel-header">
+                            <div>
+                                <h2>Project Manager</h2>
+                                <p class="text-muted">Reorder projects with drag and drop, add a new project, or edit an existing one.</p>
+                            </div>
+                            <div class="admin-panel-actions">
+                                <button class="btn btn-primary" id="add-project-btn">Add New Project</button>
+                            </div>
+                        </div>
+                        <div class="admin-projects-grid">
+                            <div class="admin-project-list card">
+                                <h3>Project Order</h3>
+                                <div id="project-list" class="project-list"></div>
+                            </div>
+                            <form id="project-form" class="admin-form card">
+                                <h3 id="project-form-title">Edit Project</h3>
+                                <input type="hidden" id="project-id">
+                                <label class="admin-label" for="project-title">Title</label>
+                                <input id="project-title" class="form-input" type="text" required>
+
+                                <label class="admin-label" for="project-slug">Slug</label>
+                                <input id="project-slug" class="form-input" type="text" required>
+
+                                <label class="admin-label" for="project-role">Role</label>
+                                <input id="project-role" class="form-input" type="text">
+
+                                <label class="admin-label" for="project-date">Date</label>
+                                <input id="project-date" class="form-input" type="date">
+
+                                <label class="admin-label" for="project-summary">Summary</label>
+                                <textarea id="project-summary" class="form-textarea" rows="4"></textarea>
+
+                                <label class="admin-label" for="project-tags">Tags, comma separated</label>
+                                <input id="project-tags" class="form-input" type="text" placeholder="Python, Power BI, GenAI">
+
+                                <label class="admin-label" for="project-image">Image path</label>
+                                <input id="project-image" class="form-input" type="text">
+
+                                <label class="admin-label" for="project-image-file">Upload image file</label>
+                                <input id="project-image-file" class="form-input" type="file" accept="image/*">
+
+                                <div class="admin-image-preview" id="project-image-preview">
+                                    <img id="project-image-preview-img" src="/assets/img/projects/placeholder.png" alt="Project image preview">
+                                </div>
+
+                                <label class="admin-label" for="project-repo">GitHub repo</label>
+                                <input id="project-repo" class="form-input" type="url" placeholder="https://github.com/...">
+
+                                <label class="admin-label" for="project-demo">Demo link</label>
+                                <input id="project-demo" class="form-input" type="url" placeholder="https://...">
+
+                                <label class="admin-toggle">
+                                    <input id="project-featured" type="checkbox">
+                                    <span>Featured on the homepage</span>
+                                </label>
+
+                                <label class="admin-toggle">
+                                    <input id="project-create-page" type="checkbox" checked>
+                                    <span>Generate project detail page</span>
+                                </label>
+
+                                <div class="admin-form-actions">
+                                    <button type="submit" class="btn btn-primary">Save Project</button>
+                                    <button type="button" class="btn btn-secondary" id="delete-project-btn">Delete</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="admin-panel card" id="page-content-panel">
+                        <div class="admin-panel-header">
+                            <div>
+                                <h2>Quick Content</h2>
+                                <p class="text-muted">Edit the most important site copy without opening a code editor.</p>
+                            </div>
+                        </div>
+                        <div id="quick-content-list" class="quick-content-list"></div>
+                    </div>
+
+                    <div class="admin-panel card" id="publish-panel">
+                        <div class="admin-panel-header">
+                            <div>
+                                <h2>Publish Workflow</h2>
+                                <p class="text-muted">Save locally through browser file access or export updated files as downloads.</p>
+                            </div>
+                        </div>
+                        <div class="publish-grid">
+                            <div class="card publish-card">
+                                <h3>What this admin can do</h3>
+                                <ul class="publish-list">
+                                    <li>Edit page text in a visual preview.</li>
+                                    <li>Reorder blocks by dragging them.</li>
+                                    <li>Add, edit, and remove projects.</li>
+                                    <li>Generate a new project detail page.</li>
+                                    <li>Export updated HTML and JSON files.</li>
+                                </ul>
+                            </div>
+                            <div class="card publish-card">
+                                <h3>Login details</h3>
+                                <p class="text-muted">Use the credentials defined in the admin script. You can change them later if needed.</p>
+                                <p class="text-muted">This page is hidden from navigation and excluded from indexing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <template id="quick-content-template">
+        <div class="quick-content-card card">
+            <div class="quick-content-header">
+                <div>
+                    <h3 class="quick-content-title"></h3>
+                    <p class="text-muted quick-content-page"></p>
+                </div>
+                <button class="btn btn-secondary btn-sm quick-content-expand">Edit</button>
+            </div>
+            <div class="quick-content-body" hidden>
+                <textarea class="form-textarea quick-content-input" rows="5"></textarea>
+                <div class="admin-form-actions">
+                    <button class="btn btn-primary quick-content-save">Save</button>
+                    <button class="btn btn-secondary quick-content-reset" type="button">Reset</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="project-item-template">
+        <button class="project-list-item" type="button" draggable="true">
+            <span class="project-drag-handle">Drag</span>
+            <span class="project-list-title"></span>
+            <span class="project-list-slug"></span>
+        </button>
+    </template>
+
+    <input id="global-image-picker" type="file" accept="image/*" hidden>
+
+    <script src="/assets/js/admin.js?v=1" defer></script>
+</body>
+</html>

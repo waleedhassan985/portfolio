@@ -182,11 +182,16 @@
     const contactForm = document.querySelector('#contact-form');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
             // Get form fields
             const name = this.querySelector('#name');
             const email = this.querySelector('#email');
             const message = this.querySelector('#message');
+            const submitButton = this.querySelector('button[type="submit"]');
+            const successBox = document.querySelector('#contact-form-success');
+            const fallbackBox = document.querySelector('#contact-form-fallback');
             
             let isValid = true;
             
@@ -221,11 +226,57 @@
                 isValid = false;
             }
             
-            // Only prevent submission if validation fails
+            // Stop if validation fails
             if (!isValid) {
-                e.preventDefault();
+                return;
             }
-            // If valid, let the form submit naturally to Netlify
+
+            // Submit to Netlify in the background and keep user on the same page
+            const formData = new FormData(this);
+            const encodedData = new URLSearchParams(formData).toString();
+
+            const originalButtonText = submitButton ? submitButton.textContent : '';
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+            }
+
+            try {
+                const response = await fetch('/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: encodedData
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                this.style.display = 'none';
+                if (fallbackBox) {
+                    fallbackBox.style.display = 'none';
+                }
+                if (successBox) {
+                    successBox.style.display = 'block';
+                    successBox.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'nearest' });
+                }
+            } catch (error) {
+                const formTop = this.querySelector('.form-group');
+                if (formTop) {
+                    const errorEl = document.createElement('div');
+                    errorEl.className = 'form-error';
+                    errorEl.style.marginBottom = 'var(--space-2)';
+                    errorEl.textContent = 'Unable to send right now. Please try again or email directly.';
+                    this.insertBefore(errorEl, formTop);
+                }
+            } finally {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                }
+            }
         });
         
         function showError(field, message) {
@@ -246,6 +297,15 @@
     
     // Make sure project cards are visible on projects page
     if (window.location.pathname.includes('/projects/')) {
+        const projectsSection = document.querySelector('.projects-section');
+
+        if (projectsSection) {
+            projectsSection.style.opacity = '1';
+            projectsSection.style.visibility = 'visible';
+            projectsSection.style.transform = 'none';
+            projectsSection.classList.add('visible');
+        }
+
         // Force all project cards to be visible immediately on projects page
         document.querySelectorAll('.project-card').forEach(el => {
             el.style.opacity = '1';

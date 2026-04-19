@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">NYC Taxi Analytics Medallion Data Pipeline</title>
+  <desc id="desc">Source data flows through Bronze, Silver, Gold, and Consumption layers with Power BI and EDA notebooks.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="100%" stop-color="#0f1e33"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#13243d"/>
+      <stop offset="100%" stop-color="#0c1728"/>
+    </linearGradient>
+    <linearGradient id="bronze" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e2a36b"/>
+      <stop offset="100%" stop-color="#a15f28"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0f3f6"/>
+      <stop offset="100%" stop-color="#a5b3c4"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffd978"/>
+      <stop offset="100%" stop-color="#c39109"/>
+    </linearGradient>
+    <linearGradient id="consumption" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38d1a8"/>
+      <stop offset="100%" stop-color="#0b8c69"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { font: 700 44px Arial, Helvetica, sans-serif; fill: #f7fafc; }
+      .subtitle { font: 400 20px Arial, Helvetica, sans-serif; fill: #b7c2d3; }
+      .label { font: 700 24px Arial, Helvetica, sans-serif; fill: #f7fafc; }
+      .small { font: 400 18px Arial, Helvetica, sans-serif; fill: #d4dbe6; }
+      .micro { font: 400 15px Arial, Helvetica, sans-serif; fill: #9fb1c8; }
+      .box-title { font: 700 24px Arial, Helvetica, sans-serif; fill: #f7fafc; }
+      .box-copy { font: 400 17px Arial, Helvetica, sans-serif; fill: #d7dfeb; }
+      .chip { font: 700 14px Arial, Helvetica, sans-serif; letter-spacing: .06em; fill: #08111d; }
+      .arrow { stroke: #7fd2ff; stroke-width: 5; fill: none; marker-end: url(#arrowhead); }
+      .arrow-soft { stroke: #4d6990; stroke-width: 4; fill: none; marker-end: url(#arrowheadSoft); }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#7fd2ff"/>
+    </marker>
+    <marker id="arrowheadSoft" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#4d6990"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="155" cy="165" r="110" fill="#12314f" opacity="0.55"/>
+  <circle cx="1420" cy="150" r="140" fill="#163b2f" opacity="0.35"/>
+  <circle cx="1360" cy="770" r="180" fill="#17314d" opacity="0.25"/>
+
+  <text x="800" y="82" text-anchor="middle" class="title">NYC Taxi Analytics: Medallion Data Pipeline</text>
+  <text x="800" y="118" text-anchor="middle" class="subtitle">From raw yellow taxi files to curated Power BI reporting and exploratory analysis</text>
+
+  <g filter="url(#shadow)">
+    <rect x="130" y="190" rx="18" ry="18" width="1340" height="520" fill="url(#panel)" stroke="#305170" stroke-width="2"/>
+  </g>
+
+  <text x="800" y="235" text-anchor="middle" class="label">Microsoft Fabric Medallion Architecture</text>
+
+  <!-- Source -->
+  <g filter="url(#shadow)">
+    <circle cx="135" cy="438" r="92" fill="#0d1524" stroke="#3d5b7a" stroke-width="3"/>
+    <circle cx="135" cy="438" r="78" fill="#101b2e" stroke="#4b7197" stroke-width="2"/>
+  </g>
+  <text x="135" y="414" text-anchor="middle" class="box-title">Source</text>
+  <text x="135" y="445" text-anchor="middle" class="small">NYC Open Data API</text>
+  <text x="135" y="471" text-anchor="middle" class="small">Yellow Taxi 2019</text>
+
+  <!-- Ingestion -->
+  <g filter="url(#shadow)">
+    <rect x="240" y="270" width="210" height="320" rx="20" fill="#102338" stroke="#35506d" stroke-width="2"/>
+  </g>
+  <rect x="272" y="302" width="146" height="34" rx="17" fill="#6ae3c0"/>
+  <text x="345" y="325" text-anchor="middle" class="chip">INGESTION</text>
+  <text x="345" y="382" text-anchor="middle" class="box-title">Fabric + Synapse</text>
+  <text x="345" y="417" text-anchor="middle" class="box-copy">Notebook: Bronze</text>
+  <text x="345" y="449" text-anchor="middle" class="box-copy">Python Requests</text>
+  <text x="345" y="481" text-anchor="middle" class="box-copy">Raw monthly parquet files</text>
+  <text x="345" y="513" text-anchor="middle" class="box-copy">Landing to Files/raw</text>
+
+  <!-- Bronze -->
+  <g filter="url(#shadow)">
+    <rect x="500" y="250" width="230" height="360" rx="24" fill="#111e30" stroke="#5c4227" stroke-width="2"/>
+  </g>
+  <text x="615" y="288" text-anchor="middle" class="box-title">Bronze Layer</text>
+  <text x="615" y="320" text-anchor="middle" class="small">Landing / Raw Data</text>
+  <ellipse cx="615" cy="410" rx="72" ry="22" fill="url(#bronze)"/>
+  <rect x="543" y="410" width="144" height="96" fill="url(#bronze)"/>
+  <ellipse cx="615" cy="506" rx="72" ry="22" fill="#8a4f1f" opacity="0.95"/>
+  <text x="615" y="564" text-anchor="middle" class="box-copy">bronze_nyc_taxi_trips</text>
+  <text x="615" y="593" text-anchor="middle" class="micro">Raw ingested files and archival history</text>
+
+  <!-- Silver -->
+  <g filter="url(#shadow)">
+    <rect x="785" y="250" width="230" height="360" rx="24" fill="#111e30" stroke="#6b7a8a" stroke-width="2"/>
+  </g>
+  <text x="900" y="288" text-anchor="middle" class="box-title">Silver Layer</text>
+  <text x="900" y="320" text-anchor="middle" class="small">Validated / Cleansed</text>
+  <ellipse cx="900" cy="410" rx="72" ry="22" fill="url(#silver)"/>
+  <rect x="828" y="410" width="144" height="96" fill="url(#silver)"/>
+  <ellipse cx="900" cy="506" rx="72" ry="22" fill="#a5b3c4" opacity="0.95"/>
+  <text x="900" y="564" text-anchor="middle" class="box-copy">silver_nyc_taxi_trips</text>
+  <text x="900" y="593" text-anchor="middle" class="micro">2019-only, valid durations, clean fares</text>
+
+  <!-- Gold -->
+  <g filter="url(#shadow)">
+    <rect x="1070" y="250" width="230" height="360" rx="24" fill="#111e30" stroke="#6a5412" stroke-width="2"/>
+  </g>
+  <text x="1185" y="288" text-anchor="middle" class="box-title">Gold Layer</text>
+  <text x="1185" y="320" text-anchor="middle" class="small">Enriched / Curated</text>
+  <rect x="1128" y="372" width="114" height="114" rx="14" fill="url(#gold)" stroke="#7c5b00" stroke-width="4"/>
+  <circle cx="1185" cy="429" r="28" fill="none" stroke="#8b6800" stroke-width="8"/>
+  <circle cx="1185" cy="429" r="8" fill="#8b6800"/>
+  <text x="1185" y="528" text-anchor="middle" class="box-copy">gold_daily_trips</text>
+  <text x="1185" y="556" text-anchor="middle" class="box-copy">gold_hourly_demand</text>
+  <text x="1185" y="584" text-anchor="middle" class="box-copy">gold_zone_metrics</text>
+
+  <!-- Consumption -->
+  <g filter="url(#shadow)">
+    <rect x="1320" y="270" width="170" height="320" rx="20" fill="#102338" stroke="#2a6b59" stroke-width="2"/>
+  </g>
+  <rect x="1345" y="302" width="120" height="34" rx="17" fill="#6ae3c0"/>
+  <text x="1405" y="325" text-anchor="middle" class="chip">CONSUMPTION</text>
+  <text x="1405" y="381" text-anchor="middle" class="box-title">Power BI</text>
+  <text x="1405" y="414" text-anchor="middle" class="box-copy">Semantic model</text>
+  <text x="1405" y="446" text-anchor="middle" class="box-copy">EDA Notebook</text>
+  <text x="1405" y="478" text-anchor="middle" class="box-copy">Dashboard insights</text>
+  <text x="1405" y="510" text-anchor="middle" class="box-copy">Business decisions</text>
+
+  <!-- Arrows -->
+  <path d="M225 438 L238 438" class="arrow"/>
+  <path d="M450 438 L496 438" class="arrow"/>
+  <path d="M734 438 L781 438" class="arrow"/>
+  <path d="M1015 438 L1066 438" class="arrow"/>
+  <path d="M1300 438 L1316 438" class="arrow"/>
+
+  <text x="470" y="215" class="micro">Raw files</text>
+  <text x="742" y="215" class="micro">Cleaned rows</text>
+  <text x="1026" y="215" class="micro">Aggregations</text>
+  <text x="1320" y="215" class="micro">Insights</text>
+
+  <!-- Bottom notebook strip -->
+  <g filter="url(#shadow)">
+    <rect x="170" y="760" width="1260" height="88" rx="18" fill="#0f1b2d" stroke="#31495f" stroke-width="2"/>
+  </g>
+  <text x="800" y="794" text-anchor="middle" class="box-title">Notebook Journey</text>
+  <text x="800" y="826" text-anchor="middle" class="small">Bronze.ipynb  |  Silver.ipynb  |  Gold.ipynb  |  EDA (NYC Taxi Trips).ipynb</text>
+  <text x="800" y="852" text-anchor="middle" class="micro">Validated counts, cleaned dimensions, curated tables, and Power BI reporting</text>
+</svg>

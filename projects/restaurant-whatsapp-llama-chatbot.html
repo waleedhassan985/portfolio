@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurant WhatsApp Llama Chatbot - an n8n automation that handles bookings, menu queries, timings, and promotional messages through WhatsApp.">
+    <meta name="author" content="Waleed Hassan">
+    <meta name="theme-color" content="#0b1220">
+    <title>Restaurant WhatsApp Llama Chatbot - Waleed Hassan</title>
+    <link rel="canonical" href="https://dswaleed.live/projects/restaurant-whatsapp-llama-chatbot.html">
+    <link rel="stylesheet" href="/assets/css/base.css?v=6">
+    <link rel="stylesheet" href="/assets/css/components.css?v=6">
+    <link rel="stylesheet" href="/assets/css/modern-enhancements.css?v=6">
+    <style>
+        .project-hero { background: var(--elev); border-bottom: 1px solid var(--border); padding: clamp(48px, 8vw, 96px) 0 clamp(32px, 5vw, 64px); }
+        .project-hero .lead { max-width: 780px; }
+        .project-hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-5); align-items: center; }
+        .project-hero-visual img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl); border: 1px solid var(--border); }
+        .content-container { max-width: 980px; }
+        .project-section { padding: clamp(40px, 6vw, 72px) 0; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-3); margin-top: var(--space-4); }
+        .feature-card { background: var(--elev); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-4); }
+        .feature-card h3 { margin-top: 0; margin-bottom: var(--space-2); color: var(--accent); }
+        .steps-list { display: grid; gap: var(--space-3); margin-top: var(--space-4); }
+        .step-card { background: var(--elev); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-4); }
+        .cta-panel { text-align: center; background: var(--elev); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: clamp(24px, 4vw, 40px); }
+        .cta-panel .lead { margin-bottom: var(--space-4); }
+        @media (max-width: 900px) { .project-hero-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="/" class="logo"><span class="logo-text">Waleed Hassan</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu"><span class="hamburger"></span></button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/projects/" class="nav-link active" aria-current="page">Projects</a></li>
+                <li><a href="/about/" class="nav-link">About</a></li>
+                <li><a href="/services/" class="nav-link">Services</a></li>
+                <li><a href="/contact/" class="nav-link nav-link-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main">
+        <header class="project-hero fade-in">
+            <div class="container">
+                <div class="project-hero-grid">
+                    <div>
+                        <div class="breadcrumb">
+                            <a href="/projects/">Projects</a>
+                            <span class="separator">→</span>
+                            <span>Restaurant WhatsApp Llama Chatbot</span>
+                        </div>
+                        <h1 class="project-hero-title">Restaurant WhatsApp Llama Chatbot</h1>
+                        <p class="lead">An n8n workflow that automates restaurant customer service on WhatsApp by handling table bookings, menu questions, opening hours, service availability, and promotional requests with AI-powered intent routing.</p>
+                        <div class="project-meta">
+                            <div class="meta-item"><span class="meta-label">Role</span><span class="meta-value">AI Automation Developer</span></div>
+                            <div class="meta-item"><span class="meta-label">Timeline</span><span class="meta-value">November 2025</span></div>
+                            <div class="meta-item"><span class="meta-label">Tools</span><span class="meta-value">n8n, WhatsApp, Llama, AI Router, Google Sheets/DB</span></div>
+                        </div>
+                        <div class="project-links">
+                            <a href="/contact/" class="btn btn-primary">Contact us for demo</a>
+                        </div>
+                    </div>
+                    <div class="project-hero-visual">
+                        <img src="/assets/img/projects/n8n-restaurant-workflow.png" alt="Restaurant WhatsApp Llama chatbot n8n workflow" loading="lazy" width="1366" height="768">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="project-section">
+            <div class="container content-container">
+                <h2 class="section-title">What This Workflow Does</h2>
+                <p class="lead">This assistant acts like a digital front desk for restaurants. It receives messages on WhatsApp, detects customer intent with AI, routes requests to the right workflow branch, and responds instantly without staff intervention.</p>
+                <div class="feature-grid">
+                    <div class="feature-card"><h3>Booking Automation</h3><p>Captures reservation details, confirms availability, and stores booking data for operations and reporting.</p></div>
+                    <div class="feature-card"><h3>Menu & Service Queries</h3><p>Responds to customer questions about menu items, pricing, dietary preferences, and available services.</p></div>
+                    <div class="feature-card"><h3>Timing & Location Support</h3><p>Automatically shares opening hours, location details, and service availability in real time.</p></div>
+                    <div class="feature-card"><h3>24/7 Customer Response</h3><p>Maintains quick response times across booking and support use cases, even outside business hours.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section bg-elevated">
+            <div class="container content-container">
+                <h2 class="section-title">Workflow Flow</h2>
+                <div class="steps-list">
+                    <div class="step-card"><h3>1. WhatsApp Message Trigger</h3><p>Incoming customer messages start the workflow and pass conversation content into the AI layer.</p></div>
+                    <div class="step-card"><h3>2. Intent Recognition</h3><p>The AI classifier detects whether the user needs booking help, menu information, timing details, or promotional support.</p></div>
+                    <div class="step-card"><h3>3. Conditional Routing</h3><p>n8n routes the conversation to the correct branch for reservation handling or general information response.</p></div>
+                    <div class="step-card"><h3>4. Data Logging & Confirmation</h3><p>Booking records are stored in Google Sheets or a database and confirmation messages are sent back to the customer.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="container content-container">
+                <h2 class="section-title">Workflow Blueprint</h2>
+                <div class="project-visual">
+                    <img src="/assets/img/projects/n8n-restaurant-workflow.png" alt="Detailed n8n workflow for restaurant customer service automation" loading="lazy" width="1366" height="768">
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="container content-container">
+                <div class="cta-panel">
+                    <h2 class="section-title">Need this for your restaurant?</h2>
+                    <p class="lead">For demo, contact us.</p>
+                    <a href="/contact/" class="btn btn-primary">Contact us for demo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-heading">Waleed Hassan</h3>
+                    <p class="footer-text">Data Scientist & AI Developer specializing in Python-first solutions with measurable business impact.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/waleedhassan985" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/waleed-hassan-091804279/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://www.upwork.com/freelancers/~015f1e851e8e9483d9?mp_source=share" class="social-link" aria-label="Upwork" target="_blank" rel="noopener noreferrer">Upwork</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Expertise</h4>
+                    <ul class="footer-links">
+                        <li>Python & Data Analysis</li>
+                        <li>Machine Learning</li>
+                        <li>Generative AI</li>
+                        <li>Data Visualization</li>
+                        <li>BI Dashboards</li>
+                        <li>Workflow Automation</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@dswaleed.live">info@dswaleed.live</a></li>
+                        <li>Green Avenue Islamabad, Pakistan</li>
+                        <li><a href="/assets/Waleed_Resume.pdf" download>Download Resume</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Waleed Hassan. All rights reserved.</p>
+                <p class="footer-note">Built with semantic HTML5, CSS3, and vanilla JavaScript. No frameworks, maximum performance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/modern-interactions.js" defer></script>
+</body>
+</html>

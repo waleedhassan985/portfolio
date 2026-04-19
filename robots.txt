@@ -1,16 +1,11 @@
-# Robots.txt for Waleed's Portfolio
-# Allow all search engines to crawl the site
-
 User-agent: *
 Allow: /
+Sitemap: https://dswaleed.live/sitemap.xml
 
-# Sitemap location
-Sitemap: https://yoursite.com/sitemap.xml
-
-# Performance optimization: no crawl delay needed
-Crawl-delay: 0
-
-# Disallow crawling of any future admin or utility pages
-Disallow: /admin/
 Disallow: /.git/
-Disallow: /node_modules/
+Disallow: /admin/
+Disallow: /.env
+Disallow: /.vscode/
+Disallow: /server-status
+Disallow: /graphql
+Disallow: /api/

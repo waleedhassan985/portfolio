@@ -23,7 +23,7 @@
       "tags": ["Python", "LangChain", "OpenAI", "RAG", "GenAI"],
       "image": "/assets/img/projects/pdf-rag-cover-new.svg",
       "repo": "https://github.com/waleedhassan985/pdf-qa-chatbot",
-      "demo": "https://demo.yoursite.com/pdf-chatbot",
+      "demo": "https://demo.dswaleed.live/pdf-chatbot",
       "featured": true
     },
     {
@@ -144,6 +144,19 @@
       "featured": true
     },
     {
+      "id": "nyc-taxi-analytics-medallion-data-pipeline",
+      "title": "NYC Taxi Analytics: Medallion Data Pipeline",
+      "slug": "nyc-taxi-analytics-medallion-data-pipeline",
+      "summary": "Medallion-style NYC taxi analytics pipeline with Bronze, Silver, Gold, and EDA notebooks plus an embedded Power BI report.",
+      "role": "Data Engineer & BI Developer",
+      "date": "2026-04-19",
+      "tags": ["Spark", "Delta Lake", "Fabric", "Power BI", "ETL", "Data Warehouse", "SQL"],
+      "image": "/assets/img/projects/nyc-taxi-medallion-architecture.svg",
+      "repo": null,
+      "demo": null,
+      "featured": true
+    },
+    {
       "id": "powerbi-ai-agent",
       "title": "Power BI AI Agent",
       "slug": "powerbi-ai-agent",
@@ -155,6 +168,48 @@
       "repo": "https://github.com/waleedhassan985/powerbi-ai-agent",
       "demo": null,
       "featured": true
+    },
+    {
+      "id": "doctor-appointment-ai-assistant",
+      "title": "Doctor Appointment AI Assistant",
+      "slug": "doctor-appointment-ai-assistant",
+      "summary": "n8n-powered clinic assistant that books, reschedules, and cancels appointments through WhatsApp while syncing patients, payments, and reminders in Google Sheets.",
+      "role": "AI Automation Developer",
+      "date": "2025-11-20",
+      "tags": ["n8n", "AI Agents", "Gemini", "WhatsApp", "Stripe", "Google Sheets", "Automation"],
+      "image": "/assets/img/projects/n8n-doctor-appointment.svg",
+      "repo": null,
+      "demo": null,
+      "featured": true,
+      "cta": "Get in touch"
+    },
+    {
+      "id": "gmail-ai-auto-labeler",
+      "title": "Gmail AI Auto-Labeler",
+      "slug": "gmail-ai-auto-labeler",
+      "summary": "n8n workflow that classifies incoming Gmail messages with Google Gemini and applies the right label for high-priority, work, and promotional emails.",
+      "role": "AI Automation Developer",
+      "date": "2025-11-21",
+      "tags": ["n8n", "AI Agents", "Gmail", "Gemini", "Automation", "Productivity"],
+      "image": "/assets/img/projects/n8n-gmail-auto-labeler.svg",
+      "repo": null,
+      "demo": null,
+      "featured": true,
+      "cta": "Get in touch"
+    },
+    {
+      "id": "restaurant-whatsapp-llama-chatbot",
+      "title": "Restaurant WhatsApp Llama Chatbot",
+      "slug": "restaurant-whatsapp-llama-chatbot",
+      "summary": "n8n-powered restaurant assistant that automates WhatsApp customer service for bookings, menu questions, opening hours, and promotions using an AI intent router.",
+      "role": "AI Automation Developer",
+      "date": "2025-11-24",
+      "tags": ["n8n", "AI Chatbot", "Llama", "WhatsApp", "Restaurant", "Automation", "Booking"],
+      "image": "/assets/img/projects/n8n-restaurant-chatbot.svg",
+      "repo": null,
+      "demo": null,
+      "featured": true,
+      "cta": "Contact us for demo"
     }
   ]
 }

@@ -1,0 +1,56 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgDoc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06233A"/>
+      <stop offset="55%" stop-color="#0B3A5D"/>
+      <stop offset="100%" stop-color="#041A2C"/>
+    </linearGradient>
+    <linearGradient id="panelDoc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B2E49"/>
+      <stop offset="100%" stop-color="#082236"/>
+    </linearGradient>
+    <linearGradient id="pillDoc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bgDoc)"/>
+  <circle cx="1280" cy="170" r="210" fill="#14B8A6" fill-opacity="0.16"/>
+  <circle cx="300" cy="760" r="260" fill="#22D3EE" fill-opacity="0.1"/>
+
+  <rect x="110" y="120" width="1380" height="660" rx="38" fill="url(#panelDoc)" stroke="#2A506D" stroke-width="2"/>
+
+  <rect x="170" y="180" width="420" height="88" rx="22" fill="#0B3F60" stroke="#22D3EE" stroke-opacity="0.45"/>
+  <text x="206" y="236" fill="#E6F6FF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Healthcare Automation</text>
+
+  <text x="170" y="345" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="800">Doctor Appointment AI Assistant</text>
+  <text x="170" y="404" fill="#CFE8F8" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">Gemini + WhatsApp + Stripe + Google Sheets</text>
+
+  <rect x="170" y="468" width="1220" height="180" rx="26" fill="#071C2E" stroke="#31546F"/>
+
+  <rect x="215" y="510" width="350" height="100" rx="20" fill="#0E2D45" stroke="#2FD3E8"/>
+  <rect x="605" y="510" width="350" height="100" rx="20" fill="#0E2D45" stroke="#34D399"/>
+  <rect x="995" y="510" width="350" height="100" rx="20" fill="#0E2D45" stroke="#60A5FA"/>
+
+  <circle cx="265" cy="560" r="24" fill="#2FD3E8"/>
+  <path d="M253 560h24M265 548v24" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  <text x="305" y="553" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">Smart Booking</text>
+  <text x="305" y="585" fill="#CFE8F8" font-family="Inter, Arial, sans-serif" font-size="20">Patient chat scheduling</text>
+
+  <circle cx="655" cy="560" r="24" fill="#34D399"/>
+  <path d="M643 560l9 9 15-18" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="695" y="553" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">Slot Validation</text>
+  <text x="695" y="585" fill="#CFE8F8" font-family="Inter, Arial, sans-serif" font-size="20">No overlaps, no confusion</text>
+
+  <circle cx="1045" cy="560" r="24" fill="#60A5FA"/>
+  <path d="M1034 552h22M1034 568h14" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  <text x="1085" y="553" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">Payment + Reminders</text>
+  <text x="1085" y="585" fill="#CFE8F8" font-family="Inter, Arial, sans-serif" font-size="20">Stripe and follow-up alerts</text>
+
+  <circle cx="1330" cy="292" r="84" fill="#0F3A58" stroke="#5EEAD4"/>
+  <path d="M1330 248v88M1286 292h88" stroke="url(#pillDoc)" stroke-width="20" stroke-linecap="round"/>
+
+  <rect x="170" y="676" width="1220" height="58" rx="18" fill="url(#pillDoc)"/>
+  <text x="780" y="713" text-anchor="middle" fill="#06233A" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">If you need this project or need this type of service, get in touch.</text>
+</svg>

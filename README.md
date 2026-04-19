@@ -183,7 +183,7 @@ Upload files via FTP to any web host (Bluehost, SiteGround, etc.). Ensure `index
 ```
 {NAME} → Waleed Hassan
 {TAGLINE} → Data Scientist & AI Developer
-{EMAIL} → wh937492@gmail.com
+{EMAIL} → info@dswaleed.live
 {LOCATION} → Green Avenue Islamabad, Pakistan
 {GITHUB} → https://github.com/waleedhassan985
 {LINKEDIN} → https://www.linkedin.com/in/waleed-hassan-091804279/
@@ -229,7 +229,7 @@ All components automatically update.
 Uncomment in `index.html` (bottom):
 
 ```html
-<script defer data-domain="yoursite.com" src="https://plausible.io/js/script.js"></script>
+<script defer data-domain="dswaleed.live" src="https://plausible.io/js/script.js"></script>
 ```
 
 **Google Analytics 4:**
@@ -308,7 +308,7 @@ Point `action` to your API endpoint (Node.js, Python Flask, etc.)
 npm install -g lighthouse
 
 # Run audit
-lighthouse https://yoursite.com --view
+lighthouse https://dswaleed.live --view
 ```
 
 **Target Scores:**
@@ -432,8 +432,8 @@ Placeholder images are CC0/royalty-free. Replace with your own.
 **Waleed**  
 Data Scientist & AI Developer
 
-- 🌐 Website: [yoursite.com](https://yoursite.com)
-- 📧 Email: wh937492@gmail.com
+- 🌐 Website: [dswaleed.live](https://dswaleed.live)
+- 📧 Email: info@dswaleed.live
 - 💼 LinkedIn: [linkedin.com/in/waleed-hassan-091804279](https://www.linkedin.com/in/waleed-hassan-091804279/)
 - 🐙 GitHub: [github.com/waleedhassan985](https://github.com/waleedhassan985)
 
